@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos DosRuedas - Resumen Ejecutivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a1128;
+            color: white;
+        }
+        .a4-container {
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(180deg, #0a1128 0%, #0d1b3e 100%);
+            position: relative;
+        }
+        .table-row-border {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-accent { color: #fbbd08; }
+        .text-success { color: #10b981; }
+        .border-success { border-color: #10b981; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="a4-container shadow-2xl">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-10">
+            <div class="text-3xl font-black italic tracking-tighter">
+                ENVIOS <span class="text-accent">DOSRUEDAS</span>
+            </div>
+            <div class="bg-accent text-[#0a1128] px-4 py-1.5 rounded-full text-xs font-bold tracking-widest">
+                RESUMEN EJECUTIVO
+            </div>
+        </header>
+
+        <!-- Main Hero Box -->
+        <div class="border-2 border-success rounded-3xl p-8 mb-12 relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 left-0 w-full h-full bg-success opacity-5 pointer-events-none"></div>
+            
+            <div class="flex items-start gap-4 mb-4">
+                <!-- Icon SVG -->
+                <div class="text-success mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
+                        <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
+                        <path d="m2 16 6 6"></path>
+                        <circle cx="16" cy="9" r="2"></circle>
+                        <path d="M16 5V3"></path>
+                        <path d="M16 15v-2"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-4xl font-black text-success leading-none mb-2 italic">
+                        GESTIÓN DE COBRANZAS EN DESTINO
+                    </h1>
+                    <p class="text-success font-bold text-sm tracking-wide">
+                        (SERVICIO DE CONTRAREEMBOLSO SIN COSTO)
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6 text-slate-300 text-sm leading-relaxed max-w-3xl">
+                <p>
+                    Para potenciar sus canales de venta, nos encargamos de recaudar el valor de sus productos al momento de la entrega en la puerta de su cliente. Garantizamos una transacción profesional y segura.
+                </p>
+                <p>
+                    La rendición de los fondos se realiza con la agilidad que su caja requiere (en el día, a las 24hs o semanalmente) mediante transferencia bancaria o efectivo, siempre acompañada de un arqueo detallado.
+                </p>
+                <p class="italic text-xs text-slate-500 mt-4">
+                    * Nota de seguridad: El valor físico transportado corre por cuenta y orden del cliente solicitante.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="text-center mb-8">
+            <h2 class="text-accent font-black text-lg tracking-[0.2em]">
+                TABLA COMPARATIVA DE MODELOS
+            </h2>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-[10px] sm:text-xs">
+                <thead>
+                    <tr class="text-accent uppercase font-bold text-center">
+                        <th class="p-4 text-left w-1/6">Característica</th>
+                        <th class="p-4 w-1/6">Express</th>
+                        <th class="p-4 w-1/6">Lowcost</th>
+                        <th class="p-4 w-1/6">Cta. Corriente</th>
+                        <th class="p-4 w-1/6">Flex (ML)</th>
+                        <th class="p-4 w-1/6">E-Commerce 3PL</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center font-medium">
+                    <!-- Row 1 -->
+                    <tr class="table-row-border">
+                        <td class="p-4 text-left font-bold text-white text-sm">Estructura Tarifa</td>
+                        <td class="p-4">Zonificada</td>
+                        <td class="p-4">Zonificada</td>
+                        <td class="p-4 text-accent">Tarifa LowCost</td>
+                        <td class="p-4">Por Nivel (Zon. / Plana)</td>
+                        <td class="p-4 text-success font-bold">Tarifa Plana</td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="table-row-border">
+                        <td class="p-4 text-left font-bold text-white text-sm">Rango Horario</td>
+                        <td class="p-4">Sí (Elección)</td>
+                        <td class="p-4">No (Transcurso día)</td>
+                        <td class="p-4 text-accent">Sí (Beneficio Exclusivo)</td>
+                        <td class="p-4">No (Antes 20hs)</td>
+                        <td class="p-4 text-success">No (Transcurso día)</td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr class="table-row-border">
+                        <td class="p-4 text-left font-bold text-white text-sm">Corte de Pedidos</td>
+                        <td class="p-4">Hasta 15hs</td>
+                        <td class="p-4">Hasta 13hs</td>
+                        <td class="p-4 text-accent">Hasta 15hs</td>
+                        <td class="p-4">Hasta 15hs</td>
+                        <td class="p-4 text-success">Hasta 15hs</td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr class="table-row-border">
+                        <td class="p-4 text-left font-bold text-white text-sm">Anticipación Mín.</td>
+                        <td class="p-4">2 Horas</td>
+                        <td class="p-4">2 Horas</td>
+                        <td class="p-4 text-accent">2 Horas</td>
+                        <td class="p-4 text-slate-400 italic">No aplica</td>
+                        <td class="p-4 text-success">Fulfillment propio</td>
+                    </tr>
+                    <!-- Row 5 -->
+                    <tr class="table-row-border">
+                        <td class="p-4 text-left font-bold text-white text-sm">Pago en Destino</td>
+                        <td class="p-4">Sí (Sin Costo)</td>
+                        <td class="p-4">Sí (Sin Costo)</td>
+                        <td class="p-4 text-accent">Sí (Sin Costo)</td>
+                        <td class="p-4">N/A (Pago en App)</td>
+                        <td class="p-4 text-success">Sí (Sin Costo)</td>
+                    </tr>
+                    <!-- Row 6 -->
+                    <tr class="">
+                        <td class="p-4 text-left font-bold text-white text-sm">2da Visita</td>
+                        <td class="p-4">100% (Nuevo Envío)</td>
+                        <td class="p-4">100% (Nuevo Envío)</td>
+                        <td class="p-4 text-accent">50% del valor</td>
+                        <td class="p-4">Según Nivel (50% a S/C)</td>
+                        <td class="p-4 text-success font-bold text-sm">100% Bonificada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer Decoration -->
+        <div class="mt-20 border-t border-slate-800 pt-8 flex justify-between items-center opacity-50">
+            <div class="text-[10px] tracking-widest font-bold">SISTEMA INTEGRAL DE LOGÍSTICA DE ÚLTIMA MILLA</div>
+            <div class="flex gap-4">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

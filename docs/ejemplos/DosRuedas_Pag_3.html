@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos DosRuedas - Tarifario LowCost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a1128;
+        }
+        .a4-container {
+            width: 100%;
+            max-width: 800px;
+            min-height: 1131px; /* Aprox A4 ratio */
+            margin: 0 auto;
+            position: relative;
+            background: radial-gradient(circle at center, #162650 0%, #0a1128 100%);
+        }
+        .italic-extra-bold {
+            font-weight: 900;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="text-white p-4 md:p-8">
+
+    <div class="a4-container p-8 md:p-12 shadow-2xl rounded-sm overflow-hidden flex flex-col">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-2xl italic-extra-bold tracking-tighter">
+                ENVIOS <span class="text-[#fbbd08]">DOSRUEDAS</span>
+            </h1>
+            <div class="bg-[#fbbd08] text-[#0a1128] font-bold px-4 py-1 rounded text-xs tracking-wider">
+                LOGÍSTICA URBANA
+            </div>
+        </header>
+
+        <!-- Main Title Section -->
+        <div class="border-b border-[#fbbd08] pb-2 mb-8">
+            <div class="flex items-center gap-4">
+                <!-- Motorcycle SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fbbd08" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/>
+                    <circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/>
+                </svg>
+                <h2 class="text-5xl font-black text-[#fbbd08] tracking-tight">ENVÍOS LOWCOST</h2>
+            </div>
+        </div>
+
+        <!-- Info Card -->
+        <div class="bg-[#111c44]/60 border-l-[6px] border-[#fbbd08] rounded-r-2xl p-6 mb-12">
+            <h3 class="text-[#fbbd08] font-black text-xl mb-4 tracking-wide uppercase">Eficiencia en ruteo diario</h3>
+            <p class="text-gray-200 leading-relaxed text-base mb-4">
+                La modalidad LowCost prioriza la eficiencia de nuestras rutas. Son entregas en el transcurso del día, <span class="font-bold">sin elección de rango horario</span>. Todos los pedidos solicitados antes de las 13:00hs, serán entregados de forma garantizada antes de las 19:00hs.
+            </p>
+            <div class="bg-[#0c1635] p-4 rounded-xl flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-[#fbbd08] shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <p class="text-[#fbbd08] text-sm font-semibold">
+                    Importante: Al igual que en envíos Express, se requiere un mínimo de 2 horas de anticipación en la solicitud para organizar el retiro y la ruta del cadete.
+                </p>
+            </div>
+        </div>
+
+        <!-- Table Title -->
+        <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="h-[1px] bg-gray-600 grow"></div>
+            <h4 class="text-xl font-bold tracking-[0.2em] uppercase whitespace-nowrap">Tarifario Zonificado LowCost</h4>
+            <div class="h-[1px] bg-gray-600 grow"></div>
+        </div>
+
+        <!-- Pricing Table -->
+        <div class="mb-12">
+            <div class="flex justify-between border-b-2 border-[#fbbd08] pb-3 px-4">
+                <span class="text-[#fbbd08] font-bold text-lg">ZONIFICACIÓN DE ENTREGA</span>
+                <span class="text-[#fbbd08] font-bold text-lg text-right">VALOR FINAL</span>
+            </div>
+            
+            <div class="space-y-1 mt-2">
+                <!-- Row 1 -->
+                <div class="flex justify-between items-center px-4 py-4 bg-gradient-to-r from-transparent to-[#1a2b5a]/40">
+                    <span class="font-medium text-lg">Zona 1 (Hasta 3 km)</span>
+                    <span class="text-[#fbbd08] font-black text-2xl">$3.000</span>
+                </div>
+                <!-- Row 2 -->
+                <div class="flex justify-between items-center px-4 py-4">
+                    <span class="font-medium text-lg">Zona 2 (3 a 5 km)</span>
+                    <span class="text-[#fbbd08] font-black text-2xl">$4.000</span>
+                </div>
+                <!-- Row 3 -->
+                <div class="flex justify-between items-center px-4 py-4 bg-gradient-to-r from-transparent to-[#1a2b5a]/40">
+                    <span class="font-medium text-lg">Zona 3 (5 a 7 km)</span>
+                    <span class="text-[#fbbd08] font-black text-2xl">$5.300</span>
+                </div>
+                <!-- Row 4 -->
+                <div class="flex justify-between items-center px-4 py-4">
+                    <span class="font-medium text-lg">Zona 4 (7 a 10 km)</span>
+                    <span class="text-[#fbbd08] font-black text-2xl">$7.000</span>
+                </div>
+                <!-- Row 5 -->
+                <div class="flex justify-between items-center px-4 py-4 bg-gradient-to-r from-transparent to-[#1a2b5a]/40">
+                    <span class="font-medium text-lg">Zona 5 (Más de 10 km)</span>
+                    <span class="text-[#fbbd08] font-black text-2xl">$700 x km</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Conditions -->
+        <div class="mt-auto">
+            <h4 class="text-[#fbbd08] font-bold tracking-wider uppercase mb-4 border-b border-gray-700 pb-2">Condiciones Adicionales Estándar</h4>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-[#111c44] p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                    <span class="text-[#fbbd08] font-bold text-xs mb-1 uppercase tracking-widest">Lluvia</span>
+                    <span class="text-gray-300 text-sm">Recargo +50%</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-[#111c44] p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                    <span class="text-[#fbbd08] font-bold text-xs mb-1 uppercase tracking-widest">Bulto</span>
+                    <span class="text-gray-300 text-sm">Adicional +$1.800</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#111c44] p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                    <span class="text-[#fbbd08] font-bold text-xs mb-1 uppercase tracking-widest">Demora</span>
+                    <span class="text-gray-300 text-sm">+$2.200 c/10min</span>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-[#111c44] p-4 rounded-xl flex flex-col items-center justify-center text-center">
+                    <span class="text-[#fbbd08] font-bold text-xs mb-1 uppercase tracking-widest">2da Visita</span>
+                    <span class="text-gray-300 text-sm">50% del valor</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 flex justify-between items-center text-gray-500 text-xs font-medium">
+            <span>Envíos Económicos Programados</span>
+            <span>3 / 11</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos DosRuedas - FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a1128;
+            color: white;
+            -webkit-print-color-adjust: exact;
+        }
+        .a4-container {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 40px 50px;
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .text-accent { color: #fbbd08; }
+        .bg-accent { background-color: #fbbd08; }
+        .card-bg { background-color: rgba(255, 255, 255, 0.03); }
+        @media print {
+            body { background-color: #0a1128 !important; }
+            .a4-container { margin: 0; box-shadow: none; }
+        }
+    </style>
+</head>
+<body class="bg-[#0a1128]">
+
+    <div class="a4-container">
+        <!-- HEADER -->
+        <header class="flex justify-between items-start mb-6">
+            <div class="flex items-baseline space-x-2">
+                <span class="text-2xl italic font-light tracking-tighter">ENVIOS</span>
+                <span class="text-2xl italic font-black text-accent tracking-tighter">DOSRUEDAS</span>
+            </div>
+            <div class="bg-accent text-[#0a1128] text-[10px] font-bold px-4 py-1.5 rounded shadow-sm">
+                SOPORTE Y CONDICIONES
+            </div>
+        </header>
+
+        <!-- TITLE SECTION -->
+        <div class="relative mb-8">
+            <div class="flex items-baseline gap-3 border-b border-gray-600 pb-2">
+                <h1 class="text-4xl font-black tracking-tight">PREGUNTAS FRECUENTES</h1>
+                <span class="text-2xl font-light text-gray-500">(1/2)</span>
+            </div>
+        </div>
+
+        <!-- FAQ CONTENT -->
+        <div class="flex-grow space-y-5">
+            
+            <!-- Question 1 -->
+            <div class="card-bg border-l-4 border-accent rounded-r-lg p-5">
+                <h2 class="text-accent font-bold text-[13px] uppercase mb-2 tracking-wide">
+                    ¿CÓMO SE SOLICITAN LOS ENVÍOS Y CÓMO ES EL SEGUIMIENTO?
+                </h2>
+                <p class="text-[13px] leading-relaxed text-gray-200">
+                    La gestión es ágil y directa: los envíos se solicitan <span class="font-bold">vía WhatsApp</span>. Si bien por el momento no contamos con seguimiento en tiempo real (GPS), si usted lo requiere, le avisaremos inmediatamente apenas el paquete haya sido entregado en destino.
+                </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="card-bg border-l-4 border-accent rounded-r-lg p-5">
+                <h2 class="text-accent font-bold text-[13px] uppercase mb-2 tracking-wide">
+                    ¿CUÁLES SON LAS MODALIDADES DE PAGO Y FACTURACIÓN?
+                </h2>
+                <p class="text-[13px] leading-relaxed text-gray-200">
+                    Nos adaptamos a su ritmo. No tenemos días fijos inflexibles; la frecuencia de liquidación (diaria, semanal, quincenal o mensual) se organiza de forma <span class="font-bold">personalizada con cada cliente</span>. Para todos nuestros servicios emitimos <span class="font-bold">Factura C</span>.
+                </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="card-bg border-l-4 border-accent rounded-r-lg p-5">
+                <h2 class="text-accent font-bold text-[13px] uppercase mb-2 tracking-wide">
+                    ¿QUÉ TAMAÑO MÁXIMO DE PAQUETES TRANSPORTAN?
+                </h2>
+                <p class="text-[13px] leading-relaxed text-gray-200">
+                    Nuestra flota está compuesta <span class="font-bold">exclusivamente por motos</span>. Llevamos paquetes que puedan ser trasladados de forma segura en este medio. Se aplica recargo por "Bulto" si supera los 5kg o 40x40x30cm, pero el límite máximo definitivo lo marca la capacidad física y segura de la moto.
+                </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="card-bg border-l-4 border-accent rounded-r-lg p-5">
+                <h2 class="text-accent font-bold text-[13px] uppercase mb-2 tracking-wide">
+                    ¿CÓMO SE ACTUALIZAN LOS NIVELES DE DESCUENTO EN E-COMMERCE?
+                </h2>
+                <p class="text-[13px] leading-relaxed text-gray-200">
+                    Su nivel dependerá de su corte de facturación. Si elige liquidación semanal, el nivel varía semana a semana. <span class="font-bold">Recomendamos el cierre Mensual</span> para promediar los días bajos con sus picos de ventas y garantizarse una mejor escala tarifaria en toda la ciudad.
+                </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="card-bg border-l-4 border-accent rounded-r-lg p-5">
+                <h2 class="text-accent font-bold text-[13px] uppercase mb-2 tracking-wide">
+                    ¿QUÉ OCURRE CON LOS RETIROS (COLECTAS) DE BAJO VOLUMEN?
+                </h2>
+                <p class="text-[13px] leading-relaxed text-gray-200">
+                    En planes E-Commerce, el retiro es diario y gratuito superando la cuota de <span class="font-bold">10 paquetes</span> listos. Si el volumen es menor, el costo de pase de la moto es de <span class="font-bold">$4.000</span>. <span class="italic text-gray-300">Alternativa: Puede despachar en nuestra modalidad "Drop-Off" en Friuli 1972 y evitar este costo, sumando además un descuento.</span>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="mt-auto pt-10">
+            <div class="border-t border-gray-800 pt-4 flex justify-between items-center text-[11px] text-gray-500 font-medium">
+                <span>Operativa Diaria y Pagos</span>
+                <span class="tracking-widest">9 / 11</span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
