@@ -17,6 +17,18 @@
       "description": "Digital logistics tracking on a tablet",
       "imageUrl": "https://picsum.photos/seed/dosruedas-tech/600/400",
       "imageHint": "logistics technology"
+    },
+    {
+      "id": "page-bg-1",
+      "description": "Dark logistics background with subtle textures",
+      "imageUrl": "https://picsum.photos/seed/dr-bg-1/1200/1600",
+      "imageHint": "dark warehouse"
+    },
+    {
+      "id": "dr-logo",
+      "description": "Envíos DosRuedas Logo Placeholder",
+      "imageUrl": "https://picsum.photos/seed/dr-logo/200/200",
+      "imageHint": "logistics logo"
     }
   ]
 }
