@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -42,7 +41,7 @@ export default function ExportacionPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 py-12 px-4 flex flex-col items-center gap-12" suppressHydrationWarning>
+    <div className="min-h-screen bg-slate-900 py-12 px-4 flex flex-col items-center gap-12 print:bg-white print:py-0 print:px-0 print:gap-0" suppressHydrationWarning>
       {/* Print Button */}
       <div className="fixed bottom-8 right-8 z-50 no-print" suppressHydrationWarning>
         <Button 
@@ -67,7 +66,7 @@ export default function ExportacionPage() {
       </div>
 
       {/* A4 Sheets */}
-      <div className="flex flex-col gap-8 w-full max-w-[210mm]" suppressHydrationWarning>
+      <div className="flex flex-col gap-8 w-full max-w-[210mm] print:block print:gap-0 print:max-w-none" suppressHydrationWarning>
         {paginas.map((pagina, index) => (
           <div key={index} className="print:m-0 print:p-0 print:shadow-none break-after-page shadow-2xl" suppressHydrationWarning>
             {pagina}
