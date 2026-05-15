@@ -5,22 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envíos DosRuedas - Resumen Ejecutivo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a1128',
+                            gold: '#fbbd08',
+                            card: '#16203d'
+                        }
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #0a1128;
-            color: white;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
         }
-        .a4-container {
-            width: 100%;
-            max-width: 210mm;
-            min-height: 297mm;
-            margin: 0 auto;
-            padding: 40px;
-            background: linear-gradient(180deg, #0a1128 0%, #0d1b3e 100%);
+
+        .page-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
             position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(10, 17, 40, 0.9), rgba(10, 17, 40, 0.95)), url('img/background_.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding: 16mm;
         }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                background-color: white;
+            }
+            .page-container {
+                margin: 0;
+                width: 210mm;
+                height: 297mm;
+                box-shadow: none;
+            }
+        }
+
+        .italic-extra {
+            font-style: italic;
+            transform: skewX(-5deg);
+        }
+
         .table-row-border {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -29,21 +85,40 @@
         .border-success { border-color: #10b981; }
     </style>
 </head>
-<body class="antialiased">
+<body class="text-white">
 
-    <div class="a4-container shadow-2xl">
-        <!-- Header -->
-        <header class="flex justify-between items-center mb-10">
-            <div class="text-3xl font-black italic tracking-tighter">
-                ENVIOS <span class="text-accent">DOSRUEDAS</span>
+    <div class="page-container shadow-2xl">
+
+        <!-- Header Section -->
+        <header>
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center gap-4">
+                    <div class="h-16">
+                        <img src="img/LogoEnviosDosRuedas.webp" alt="Envíos DosRuedas Logo" class="h-full w-auto">
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-black italic-extra tracking-tighter leading-none">
+                            <span class="text-white">ENVIOS</span>
+                            <span class="text-brand-gold">DOSRUEDAS</span>
+                        </div>
+                        <div class="text-[10px] font-bold tracking-[0.3em] text-brand-gold uppercase mt-1">
+                            TU SOLUCION CONFIABLE
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex items-center h-12">
+                    <div class="absolute -left-2 w-1 h-8 bg-brand-gold rounded-full opacity-70"></div>
+                    <div class="bg-brand-dark/40 border border-brand-gold/30 text-brand-gold px-6 h-10 rounded-xl text-[13px] font-black tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl shadow-black/20 uppercase">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-gold shadow-[0_0_8px_#fbbd08]"></div>
+                        RESUMEN EJECUTIVO
+                    </div>
+                </div>
             </div>
-            <div class="bg-accent text-[#0a1128] px-4 py-1.5 rounded-full text-xs font-bold tracking-widest">
-                RESUMEN EJECUTIVO
-            </div>
+            <div class="h-0.5 w-full bg-brand-gold opacity-50 mb-6"></div>
         </header>
 
         <!-- Main Hero Box -->
-        <div class="border-2 border-success rounded-3xl p-8 mb-12 relative overflow-hidden">
+        <div class="border-2 border-success rounded-3xl p-8 mb-6 relative overflow-hidden">
             <!-- Background Decoration -->
             <div class="absolute top-0 left-0 w-full h-full bg-success opacity-5 pointer-events-none"></div>
             
@@ -83,7 +158,7 @@
         </div>
 
         <!-- Section Title -->
-        <div class="text-center mb-8">
+        <div class="text-center mb-4">
             <h2 class="text-accent font-black text-lg tracking-[0.2em]">
                 TABLA COMPARATIVA DE MODELOS
             </h2>
@@ -161,14 +236,28 @@
             </table>
         </div>
 
-        <!-- Footer Decoration -->
-        <div class="mt-20 border-t border-slate-800 pt-8 flex justify-between items-center opacity-50">
-            <div class="text-[10px] tracking-widest font-bold">SISTEMA INTEGRAL DE LOGÍSTICA DE ÚLTIMA MILLA</div>
-            <div class="flex gap-4">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <!-- Footer Section -->
+        <footer class="mt-auto pt-4 pb-4">
+            <div class="h-[1px] w-full bg-white/10 mb-4"></div>
+            
+            <div class="flex justify-between items-center text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">
+                <div class="w-1/3 text-left">Propuesta Operativa 2026</div>
+                
+                <div class="w-1/3 flex justify-center items-center gap-4 lowercase tracking-normal text-white/50">
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="hover:text-white transition-colors">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-white transition-colors">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 2.16c3.203 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16.16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                    <span>@enviosdosruedas</span>
+                </div>
+                
+                <div class="w-1/3 text-right">8 / 11</div>
             </div>
-        </div>
+        </footer>
     </div>
 
 </body>
