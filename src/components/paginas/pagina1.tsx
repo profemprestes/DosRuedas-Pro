@@ -1,18 +1,28 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Pagina1() {
+  const bgImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
+
   return (
     <div className="a4-container mx-auto bg-[#0a1128] relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
       {/* Background with Overlay */}
-      <div className="absolute inset-0 z-0" suppressHydrationWarning>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/85 to-[#0a1128]/95 z-10" />
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src={bgImg?.imageUrl || 'https://picsum.photos/seed/dosruedas-hero/1200/800'} 
+          alt="Background" 
+          fill 
+          className="object-cover opacity-15"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/85 via-[#0a1128]/90 to-[#0a1128]/95 z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full p-16" suppressHydrationWarning>
+      <div className="relative z-20 flex flex-col h-full p-16 justify-between">
         {/* Header Section */}
-        <header className="mb-8">
+        <header>
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-4">
               <div className="h-16 w-32 relative">
@@ -25,7 +35,7 @@ export default function Pagina1() {
                 />
               </div>
               <div className="flex flex-col">
-                <div className="text-2xl font-black italic skew-x-[-5deg] tracking-tighter leading-none flex gap-1">
+                <div className="text-2xl font-black italic -skew-x-12 tracking-tighter leading-none">
                   <span className="text-white">ENVIOS</span>
                   <span className="text-[#fbbd08]">DOSRUEDAS</span>
                 </div>
@@ -35,8 +45,10 @@ export default function Pagina1() {
               </div>
             </div>
             <div className="relative flex items-center h-12">
+              {/* Accent Line */}
               <div className="absolute -left-2 w-1 h-8 bg-[#fbbd08] rounded-full opacity-70"></div>
-              <div className="bg-[#0a1128]/40 border border-[#fbbd08]/30 text-[#fbbd08] px-6 h-10 rounded-xl text-[13px] font-black tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl">
+              {/* Badge Body */}
+              <div className="bg-[#0a1128]/40 border border-[#fbbd08]/30 text-[#fbbd08] px-6 h-10 rounded-xl text-[13px] font-black tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl shadow-black/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#fbbd08] shadow-[0_0_8px_#fbbd08]"></div>
                 LOGÍSTICA CORPORATIVA
               </div>
@@ -47,6 +59,7 @@ export default function Pagina1() {
 
         {/* Hero Section */}
         <main className="flex-grow flex flex-col items-center justify-center text-center -mt-6">
+          {/* Title */}
           <h1 className="text-[52px] leading-none font-black text-white mb-2 tracking-tight uppercase">
             Partner Logístico
           </h1>
@@ -54,15 +67,18 @@ export default function Pagina1() {
             Especializado
           </h1>
 
-          <p className="text-xl italic font-light text-gray-300 mb-8 tracking-widest uppercase">
+          {/* Slogan */}
+          <p className="text-xl italic font-light text-gray-300 mb-8">
             TU SOLUCION CONFIABLE
           </p>
 
-          <div className="inline-block border border-[#fbbd08]/50 bg-[#0a1128]/50 px-8 py-2 rounded-full text-[#fbbd08] font-semibold text-sm tracking-wide mb-10">
+          {/* Pill */}
+          <div className="inline-block border border-[#fbbd08]/50 bg-[#0a1128]/50 px-8 py-2 rounded-full text-[#fbbd08] font-semibold text-sm tracking-wide">
             Cobertura Integral en Mar del Plata
           </div>
 
-          <div className="text-left max-w-2xl w-full relative">
+          {/* Content Card */}
+          <div className="mt-10 text-left max-w-2xl w-full relative">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#fbbd08] rounded-full"></div>
             <div className="bg-[#16203d]/40 backdrop-blur-sm p-10 rounded-r-2xl border border-white/5 ml-1">
               <h2 className="text-2xl font-bold text-[#fbbd08] mb-6 uppercase tracking-wider">
@@ -91,11 +107,25 @@ export default function Pagina1() {
         </main>
 
         {/* Footer Section */}
-        <footer className="mt-12">
+        <footer className="mt-auto pt-8 pb-4">
           <div className="h-[1px] w-full bg-white/10 mb-4"></div>
-          <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-400 font-semibold">
-            <div>Propuesta Operativa 2026</div>
-            <div>1 / 11</div>
+          
+          <div className="flex justify-between items-center text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">
+            <div className="w-1/3 text-left">Propuesta Operativa 2026</div>
+            
+            <div className="w-1/3 flex justify-center items-center gap-4 lowercase tracking-normal text-white/50">
+              <div className="flex items-center gap-2">
+                <a href="#" className="hover:text-white transition-colors">
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" className="hover:text-white transition-colors">
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 2.16c3.203 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16.16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+              </div>
+              <span>@enviosdosruedas</span>
+            </div>
+            
+            <div className="w-1/3 text-right">1 / 11</div>
           </div>
         </footer>
       </div>
