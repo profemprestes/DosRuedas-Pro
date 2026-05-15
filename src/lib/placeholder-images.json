@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern warehouse at night with blue lighting",
+      "imageUrl": "https://picsum.photos/seed/dosruedas-hero/1200/800",
+      "imageHint": "logistics warehouse night"
+    },
+    {
+      "id": "delivery-truck",
+      "description": "Electric delivery motorcycle in urban setting",
+      "imageUrl": "https://picsum.photos/seed/dosruedas-moto/600/400",
+      "imageHint": "delivery motorcycle"
+    },
+    {
+      "id": "logistics-tech",
+      "description": "Digital logistics tracking on a tablet",
+      "imageUrl": "https://picsum.photos/seed/dosruedas-tech/600/400",
+      "imageHint": "logistics technology"
+    }
+  ]
 }

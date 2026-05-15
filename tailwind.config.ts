@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -11,7 +12,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -26,20 +27,20 @@ export default {
           foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: '#121F32',
+          foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: '#1A2B44',
+          foreground: '#FFFFFF',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: '#FDC322',
+          foreground: '#121F32',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
