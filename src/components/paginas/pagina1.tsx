@@ -8,7 +8,7 @@ export default function Pagina1() {
   const logoImg = PlaceHolderImages.find(img => img.id === 'dr-logo');
 
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat">
+    <div className="a4-container mx-auto bg-[#0a1128] relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,34 +26,34 @@ export default function Pagina1() {
         <header className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-4">
-              <div className="h-16 w-16 relative">
+              <div className="h-16 w-32 relative">
                 <Image 
-                  src={logoImg?.imageUrl || ''} 
+                  src={logoImg?.imageUrl || '/LogoEnviosDosRuedas.webp'} 
                   alt="Envíos DosRuedas Logo" 
                   fill 
                   className="object-contain"
-                  data-ai-hint="logistics logo"
+                  priority
                 />
               </div>
               <div className="flex flex-col">
-                <div className="text-2xl font-black italic tracking-tighter leading-none flex gap-1">
+                <div className="text-2xl font-black skew-x-[-5deg] tracking-tighter leading-none flex gap-1">
                   <span className="text-white">ENVIOS</span>
-                  <span className="text-accent">DOSRUEDAS</span>
+                  <span className="text-[#fbbd08]">DOSRUEDAS</span>
                 </div>
-                <div className="text-[10px] font-bold tracking-[0.3em] text-accent uppercase mt-1">
+                <div className="text-[10px] font-bold tracking-[0.3em] text-[#fbbd08] uppercase mt-1">
                   TU SOLUCION CONFIABLE
                 </div>
               </div>
             </div>
             <div className="relative flex items-center h-12">
-              <div className="absolute -left-2 w-1 h-8 bg-accent rounded-full opacity-70"></div>
-              <div className="bg-[#0a1128]/40 border border-accent/30 text-accent px-6 h-10 rounded-xl text-[13px] font-black tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#fbbd08]"></div>
+              <div className="absolute -left-2 w-1 h-8 bg-[#fbbd08] rounded-full opacity-70"></div>
+              <div className="bg-[#0a1128]/40 border border-[#fbbd08]/30 text-[#fbbd08] px-6 h-10 rounded-xl text-[13px] font-black tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#fbbd08] shadow-[0_0_8px_#fbbd08]"></div>
                 LOGÍSTICA CORPORATIVA
               </div>
             </div>
           </div>
-          <div className="h-0.5 w-full bg-accent opacity-50"></div>
+          <div className="h-0.5 w-full bg-[#fbbd08] opacity-50"></div>
         </header>
 
         {/* Hero Section */}
@@ -61,22 +61,22 @@ export default function Pagina1() {
           <h1 className="text-[52px] leading-none font-black text-white mb-2 tracking-tight uppercase">
             Partner Logístico
           </h1>
-          <h1 className="text-[52px] leading-none font-black text-accent mb-8 tracking-tight uppercase">
+          <h1 className="text-[52px] leading-none font-black text-[#fbbd08] mb-8 tracking-tight uppercase">
             Especializado
           </h1>
 
-          <p className="text-xl italic font-light text-gray-300 mb-8 uppercase tracking-widest">
+          <p className="text-xl italic font-light text-gray-300 mb-8 tracking-widest uppercase">
             TU SOLUCION CONFIABLE
           </p>
 
-          <div className="inline-block border border-accent/50 bg-[#0a1128]/50 px-8 py-2 rounded-full text-accent font-semibold text-sm tracking-wide mb-10">
+          <div className="inline-block border border-[#fbbd08]/50 bg-[#0a1128]/50 px-8 py-2 rounded-full text-[#fbbd08] font-semibold text-sm tracking-wide mb-10">
             Cobertura Integral en Mar del Plata
           </div>
 
           <div className="text-left max-w-2xl w-full relative">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-full"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#fbbd08] rounded-full"></div>
             <div className="bg-[#16203d]/40 backdrop-blur-sm p-10 rounded-r-2xl border border-white/5 ml-1">
-              <h2 className="text-2xl font-bold text-accent mb-6 uppercase tracking-wider">
+              <h2 className="text-2xl font-bold text-[#fbbd08] mb-6 uppercase tracking-wider">
                 7 Años Innovando en la Ciudad
               </h2>
 

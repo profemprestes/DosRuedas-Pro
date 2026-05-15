@@ -59,7 +59,7 @@ export default function ExportacionPage() {
       {/* A4 Sheets */}
       <div className="flex flex-col gap-8 w-full max-w-[210mm]">
         {paginas.map((pagina, index) => (
-          <div key={index} className="print:m-0 print:p-0 print:shadow-none break-after-page">
+          <div key={index} className="print:m-0 print:p-0 print:shadow-none break-after-page shadow-2xl">
             {pagina}
           </div>
         ))}

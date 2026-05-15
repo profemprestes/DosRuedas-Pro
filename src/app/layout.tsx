@@ -3,8 +3,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'DosRuedas Pro - Propuesta Comercial',
-  description: 'Logística Corporativa de Alta Precisión',
+  title: 'Envíos DosRuedas - Propuesta Operativa',
+  description: 'Logística Corporativa de Alta Precisión en Mar del Plata',
 };
 
 export default function RootLayout({
