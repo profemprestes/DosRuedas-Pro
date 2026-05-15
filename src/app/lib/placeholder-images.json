@@ -1,35 +1,364 @@
-
 {
   "placeholderImages": [
     {
-      "id": "hero-bg",
-      "description": "Modern warehouse at night with blue lighting",
-      "imageUrl": "https://picsum.photos/seed/dosruedas-hero/1200/800",
-      "imageHint": "logistics warehouse night"
+      "id": "hero-obelisco-night-express",
+      "description": "Cinematic shot of a high-tech delivery motorcycle speeding past the Obelisco in Buenos Aires at night. Long exposure blue light trails, neon blue LED accents on the bike, dark tech aesthetic, volumetric fog, 8k resolution.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-obelisco/1200/800",
+      "imageHint": "delivery motorcycle obelisco night"
     },
     {
-      "id": "delivery-truck",
-      "description": "Electric delivery motorcycle in urban setting",
-      "imageUrl": "https://picsum.photos/seed/dosruedas-moto/600/400",
-      "imageHint": "delivery motorcycle"
+      "id": "hero-puerto-madero-sunset-fleet",
+      "description": "Wide angle view of Puerto Madero docks at sunset. A fleet of sleek black electric vans with cyan LED strips parked near the Puente de la Mujer. Glassmorphism overlays, professional lighting, urban logistic vibe.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-puerto/1200/800",
+      "imageHint": "electric fleet puerto madero"
     },
     {
-      "id": "logistics-tech",
-      "description": "Digital logistics tracking on a tablet",
-      "imageUrl": "https://picsum.photos/seed/dosruedas-tech/600/400",
-      "imageHint": "logistics technology"
+      "id": "hero-avenida-9-de-julio-motion",
+      "description": "Dynamic top-down view of Avenida 9 de Julio at night. Delivery vehicles moving through traffic, motion blur, cyan and deep blue color palette, futuristic smart city atmosphere, high contrast.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-9julio/1200/800",
+      "imageHint": "buenos aires traffic night"
     },
     {
-      "id": "page-bg-1",
-      "description": "Dark logistics background with subtle textures",
-      "imageUrl": "https://picsum.photos/seed/dr-bg-1/1200/1600",
-      "imageHint": "dark warehouse"
+      "id": "hero-microcentro-alley-delivery",
+      "description": "Dark, moody street in Buenos Aires Microcentro. A courier on a bicycle with a glowing delivery box, narrow street architecture, rain-slicked asphalt reflecting blue neon signs, hyper-realistic.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-micro/1200/800",
+      "imageHint": "courier microcentro rainy night"
     },
     {
-      "id": "dr-logo",
-      "description": "Envíos DosRuedas Logo",
-      "imageUrl": "/LogoEnviosDosRuedas.webp",
-      "imageHint": "logistics logo"
+      "id": "hero-mobile-madero-towers",
+      "description": "Vertical mobile banner featuring the skyscrapers of Puerto Madero. A delivery drone or high-tech van in the foreground, sleek minimalist UI elements floating, dark tech style.",
+      "imageUrl": "https://picsum.photos/seed/dr-mob-madero/800/1200",
+      "imageHint": "mobile logistics puerto madero"
+    },
+    {
+      "id": "hero-autopista-illia-flow",
+      "description": "Cinematic view of Autopista Illia at dusk. Logistics trucks with glowing logos, city lights in the background, sharp industrial textures, premium logistic service aesthetic.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-illia/1200/800",
+      "imageHint": "highway logistics dusk"
+    },
+    {
+      "id": "fleet-electric-moto-side",
+      "description": "Studio shot of a matte black electric delivery motorcycle. Cyan neon wheel rims, carbon fiber textures, sleek aerodynamic delivery box, professional product photography, dark background.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-moto/1080/1080",
+      "imageHint": "electric motorcycle tech"
+    },
+    {
+      "id": "fleet-ev-van-kangoo-style",
+      "description": "Modern electric utility van (Kangoo style) parked in a futuristic charging station. Minimalist branding, LED headlights, glass reflections, clean industrial design.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-van/1080/1080",
+      "imageHint": "electric delivery van"
+    },
+    {
+      "id": "fleet-cargo-bike-night",
+      "description": "High-end cargo e-bike designed for urban narrow streets. Robust frame, neon blue accents, parked under a street lamp in San Telmo, cobblestone street background.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-bike/1080/1080",
+      "imageHint": "cargo e-bike urban"
+    },
+    {
+      "id": "fleet-heavy-utilitarian-truck",
+      "description": "Large logistics truck with 'Envíos DosRuedas' branding in a dark tech style. Chrome accents, blue lighting under the chassis, night time highway setting.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-truck/1080/1080",
+      "imageHint": "heavy logistics truck"
+    },
+    {
+      "id": "tech-tracking-app-interface",
+      "description": "Hand holding a bezel-less smartphone showing a dark mode tracking map of Buenos Aires. 3D map pins, neon blue route lines, glassmorphism UI buttons, blurred city background.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-app/1080/1080",
+      "imageHint": "tracking app dark mode"
+    },
+    {
+      "id": "tech-qr-scanner-operation",
+      "description": "Extreme close up of a rugged handheld scanner emitting a blue laser over a QR code on a sleek black package. High-tech industrial aesthetic, shallow depth of field.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-qr/1080/1080",
+      "imageHint": "qr scanner logistics"
+    },
+    {
+      "id": "tech-control-center-monitors",
+      "description": "A logistics control room with multiple ultrawide monitors. Maps of CABA with real-time data visualizations, heatmaps in blue and violet, dark workspace, technical UI.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-control/1200/800",
+      "imageHint": "logistics control center"
+    },
+    {
+      "id": "tech-smart-watch-notif",
+      "description": "Close up of a driver's wrist wearing a smartwatch with a 'New Delivery' notification. Sleek digital interface, blue accents, motorcycle handlebar in the background.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-watch/1080/1080",
+      "imageHint": "smartwatch delivery notification"
+    },
+    {
+      "id": "infra-smart-hub-exterior",
+      "description": "Exterior shot of a modern logistics hub in Buenos Aires outskirts. Concrete and glass architecture, blue exterior LED lighting, automated gates, dark night sky.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-hub/1200/800",
+      "imageHint": "smart warehouse hub"
+    },
+    {
+      "id": "infra-dark-warehouse-robots",
+      "description": "Interior of an automated warehouse. Small robotic platforms moving shelves, blue laser guidance lines on the floor, high shelves reaching into shadows, industrial tech.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-bots/1200/800",
+      "imageHint": "automated warehouse robots"
+    },
+    {
+      "id": "infra-conveyor-belt-sorting",
+      "description": "High-speed conveyor belt system in a dark facility. Packages with glowing tracking labels, mechanical arms, blue ambient lighting, sharp metallic details.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-belt/1200/800",
+      "imageHint": "automated sorting system"
+    },
+    {
+      "id": "ops-delivery-handover-office",
+      "description": "A professional courier handing over a premium black package to a receptionist in a Puerto Madero corporate building. Elegant glass interior, twilight city view outside.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-handover/1080/1080",
+      "imageHint": "corporate delivery handover"
+    },
+    {
+      "id": "ops-night-loading-dock",
+      "description": "Loading dock at 3 AM. Workers in technical uniforms loading electric vans, bright blue floodlights, steam rising from the ground, cinematic industrial photography.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-loading/1200/800",
+      "imageHint": "night loading operations"
+    },
+    {
+      "id": "ops-customer-support-b2b",
+      "description": "A support agent in a dark, modern office using high-tech headsets. Background with blurred blue data screens, focused professional atmosphere.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-support/1080/1080",
+      "imageHint": "b2b customer support"
+    },
+    {
+      "id": "icon-delivery-fast",
+      "description": "Minimalist 3D icon of a speeding motorcycle with neon blue trails. Glass material, soft shadows, isolated on dark gray background.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-fast/400/400",
+      "imageHint": "fast delivery icon"
+    },
+    {
+      "id": "icon-security-package",
+      "description": "Icon of a package encased in a blue holographic shield. High-tech security aesthetic, transparent glass textures.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-sec/400/400",
+      "imageHint": "package security icon"
+    },
+    {
+      "id": "icon-real-time-tracking",
+      "description": "Icon of a radar or GPS pulse in cyan blue. Circular wave effect, glowing center, tech UI style.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-gps/400/400",
+      "imageHint": "real time tracking icon"
+    },
+    {
+      "id": "icon-eco-friendly",
+      "description": "Icon of a leaf integrated with a power plug in neon blue and green. Translucent materials, sustainable technology vibe.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-eco/400/400",
+      "imageHint": "eco friendly icon"
+    },
+    {
+      "id": "icon-24-7-support",
+      "description": "Icon of a glowing digital clock with 24/7 text. Neon blue outlines, sleek futuristic typography.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-247/400/400",
+      "imageHint": "24/7 support icon"
+    },
+    {
+      "id": "social-ig-promo-fast",
+      "description": "Instagram post template. Left side: blurred shot of a courier in CABA. Right side: dark overlay with 'ENTREGA FLASH' text in neon blue, 1080x1080.",
+      "imageUrl": "https://picsum.photos/seed/dr-ig-promo1/1080/1080",
+      "imageHint": "instagram delivery promo"
+    },
+    {
+      "id": "social-linkedin-header-corporate",
+      "description": "LinkedIn cover image. Panoramic view of Buenos Aires skyline in blue tones, minimalist logo in the center, professional logistics connectivity graphics.",
+      "imageUrl": "https://picsum.photos/seed/dr-li-header/1200/400",
+      "imageHint": "linkedin corporate banner"
+    },
+    {
+      "id": "social-ad-fleet-electric",
+      "description": "Marketing ad showing three electric vans side by side. Text space on top, dark tech environment, blue floor reflections, 1080x1350.",
+      "imageUrl": "https://picsum.photos/seed/dr-ad-fleet/1080/1350",
+      "imageHint": "electric fleet ad"
+    },
+    {
+      "id": "empty-state-no-orders",
+      "description": "Visual for 'No orders yet'. A stylized empty 3D delivery box with blue glowing edges in a vast dark space, minimalist and clean.",
+      "imageUrl": "https://picsum.photos/seed/dr-empty-orders/800/600",
+      "imageHint": "empty state orders"
+    },
+    {
+      "id": "onboarding-step-1-app",
+      "description": "Onboarding illustration: Hand interacting with a holographic CABA map. Floating UI elements, blue light, premium tech feel.",
+      "imageUrl": "https://picsum.photos/seed/dr-onboard-1/800/1200",
+      "imageHint": "app onboarding map"
+    },
+    {
+      "id": "onboarding-step-2-delivery",
+      "description": "Onboarding illustration: A sleek motorcycle silhouette with a 'verified' checkmark. Blue neon circles, dark background.",
+      "imageUrl": "https://picsum.photos/seed/dr-onboard-2/800/1200",
+      "imageHint": "app onboarding delivery"
+    },
+    {
+      "id": "onboarding-step-3-success",
+      "description": "Onboarding illustration: A package successfully placed in a digital locker. Radiant blue light, finish line aesthetic.",
+      "imageUrl": "https://picsum.photos/seed/dr-onboard-3/800/1200",
+      "imageHint": "app onboarding success"
+    },
+    {
+      "id": "fleet-electric-scooter-city",
+      "description": "Compact electric delivery scooter for Microcentro. Agile design, neon blue fenders, urban setting with historic BA buildings blurred in background.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-scooter/1080/1080",
+      "imageHint": "delivery scooter city"
+    },
+    {
+      "id": "ops-courier-helmet-closeup",
+      "description": "Close up of a courier's helmet. Matte black finish, cyan blue visor reflection of city lights, integrated HUD (Heads-up display) graphics.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-helmet/1080/1080",
+      "imageHint": "courier helmet tech"
+    },
+    {
+      "id": "tech-data-center-server",
+      "description": "Row of server racks in the company's data center. Blue cooling lights, high-speed cables, clean industrial high-tech environment.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-server/1200/800",
+      "imageHint": "logistics data server"
+    },
+    {
+      "id": "infra-automated-locker",
+      "description": "A smart package locker located in a modern apartment building lobby. Touchscreen interface, blue LED compartment lights, glassmorphism UI.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-locker/1080/1080",
+      "imageHint": "smart package locker"
+    },
+    {
+      "id": "social-ig-story-tracking",
+      "description": "Instagram story layout. Top half shows a real-time map pulse, bottom half has interactive stickers and 'Sigue tu envío' text.",
+      "imageUrl": "https://picsum.photos/seed/dr-ig-story/800/1422",
+      "imageHint": "instagram story tracking"
+    },
+    {
+      "id": "hero-avenida-corrientes-lights",
+      "description": "Horizontal banner of Avenida Corrientes at night. Theaters, neon signs, and a DosRuedas motorcycle in the foreground, cinematic grain.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-corrientes/1200/600",
+      "imageHint": "corrientes avenue night"
+    },
+    {
+      "id": "icon-warehouse-location",
+      "description": "3D icon of a modern warehouse building with a location pin on top. Glossy black and neon blue colors.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-wh/400/400",
+      "imageHint": "warehouse icon"
+    },
+    {
+      "id": "icon-document-secure",
+      "description": "Icon for secure document delivery. An envelope with a glowing blue digital seal and lock icon.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-doc/400/400",
+      "imageHint": "secure document icon"
+    },
+    {
+      "id": "fleet-maintenance-lab",
+      "description": "A clean, white and blue laboratory where electric bikes are being serviced. Robotic arms, specialized tools, high-tech workshop.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-lab/1200/800",
+      "imageHint": "electric bike maintenance"
+    },
+    {
+      "id": "ops-sorting-hands-gloved",
+      "description": "Close up of hands in technical gloves sorting small high-value items. Blue lighting, precision focus, professional handling.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-hands/1080/1080",
+      "imageHint": "precision sorting hands"
+    },
+    {
+      "id": "tech-tablet-dashboard-truck",
+      "description": "A tablet mounted on a truck dashboard. Professional logistics app showing route optimization, traffic alerts in blue, night driving view.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-tablet/1200/800",
+      "imageHint": "truck dashboard tablet"
+    },
+    {
+      "id": "infra-drone-landing-pad",
+      "description": "A circular landing pad on a skyscraper roof in Puerto Madero. A logistics drone with blue LEDs landing, night cityscape background.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-drone/1200/800",
+      "imageHint": "delivery drone landing"
+    },
+    {
+      "id": "social-ads-mobile-app-store",
+      "description": "App store promotional image. Smartphone showing the app UI with 'BA Express' title, blue neon background, floating icons.",
+      "imageUrl": "https://picsum.photos/seed/dr-ad-app/1080/1080",
+      "imageHint": "mobile app promo"
+    },
+    {
+      "id": "icon-customer-support-agent",
+      "description": "Minimalist avatar icon with a headset and a blue circle. Tech support aesthetic, flat but with subtle glass gradients.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-agent/400/400",
+      "imageHint": "support agent icon"
+    },
+    {
+      "id": "icon-payment-secure",
+      "description": "Icon of a credit card with a blue pulse and shield. Digital payment security theme.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-pay/400/400",
+      "imageHint": "secure payment icon"
+    },
+    {
+      "id": "icon-weight-limit",
+      "description": "Icon of a scale or weight with a blue numerical display. Heavy duty logistics symbol.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-weight/400/400",
+      "imageHint": "weight limit icon"
+    },
+    {
+      "id": "ops-team-briefing-night",
+      "description": "A group of couriers in tech-wear jackets standing around a large digital map table. Blue light illuminating their faces, tactical vibe.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-brief/1200/800",
+      "imageHint": "logistics team briefing"
+    },
+    {
+      "id": "infra-vertical-storage-system",
+      "description": "High-tech vertical carousel storage system. Dark warehouse, blue status lights on each drawer, automated efficiency.",
+      "imageUrl": "https://picsum.photos/seed/dr-infra-vertical/1200/800",
+      "imageHint": "vertical storage system"
+    },
+    {
+      "id": "social-ig-testimonial-driver",
+      "description": "Instagram square showing a smiling driver leaning on an e-moto. Cyan lighting, text bubble on the right with review text.",
+      "imageUrl": "https://picsum.photos/seed/dr-ig-test/1080/1080",
+      "imageHint": "driver testimonial social"
+    },
+    {
+      "id": "social-twitter-announcement",
+      "description": "Twitter/X header for new service launch. 'NUEVA ZONA: NORTE' text in bold neon, abstract blue grid background.",
+      "imageUrl": "https://picsum.photos/seed/dr-tw-ann/1500/500",
+      "imageHint": "service launch announcement"
+    },
+    {
+      "id": "hero-zona-norte-panoramic",
+      "description": "View of the Panamericana highway at dusk. Traffic flow, logistics trucks moving towards the city, blue and purple sky gradient.",
+      "imageUrl": "https://picsum.photos/seed/dr-hero-norte/1200/600",
+      "imageHint": "panamericana highway dusk"
+    },
+    {
+      "id": "icon-fragile-handle",
+      "description": "Icon of a cracked glass or wine glass in blue neon. Minimalist 'Fragile' warning symbol for high-end items.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-fragile/400/400",
+      "imageHint": "fragile handling icon"
+    },
+    {
+      "id": "icon-express-shipping",
+      "description": "Icon of a lightning bolt combined with a box. Glowing blue energy, dynamic movement lines.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-bolt/400/400",
+      "imageHint": "express shipping icon"
+    },
+    {
+      "id": "icon-address-search",
+      "description": "Icon of a magnifying glass over a building pin. Blue glass transparency, search UI style.",
+      "imageUrl": "https://picsum.photos/seed/dr-icon-search/400/400",
+      "imageHint": "address search icon"
+    },
+    {
+      "id": "fleet-electric-bicycle-sleek",
+      "description": "Ultra-lightweight electric bicycle for documents. Slim black frame, hidden battery, cyan light on the front, city alleyway.",
+      "imageUrl": "https://picsum.photos/seed/dr-fleet-ebike/1080/1080",
+      "imageHint": "sleek e-bicycle"
+    },
+    {
+      "id": "ops-packaging-premium-box",
+      "description": "Close up of a DosRuedas premium package. Black matte box, glossy UV spot logo, magnetic closure, luxury unboxing feel.",
+      "imageUrl": "https://picsum.photos/seed/dr-ops-pkg/1080/1080",
+      "imageHint": "premium packaging close-up"
+    },
+    {
+      "id": "tech-ar-glasses-warehouse",
+      "description": "Point of view shot through AR glasses in a warehouse. Digital overlays showing box information, destination, and blue navigation arrows.",
+      "imageUrl": "https://picsum.photos/seed/dr-tech-ar/1200/800",
+      "imageHint": "ar logistics glasses"
+    },
+    {
+      "id": "social-ig-reel-cover-speed",
+      "description": "Vertical cover for a Reel. Blur of a motorcycle headlight, large '00:15 min' text in cyan neon, energetic urban vibe.",
+      "imageUrl": "https://picsum.photos/seed/dr-ig-reel/1080/1920",
+      "imageHint": "ig reel cover"
     }
   ]
 }
