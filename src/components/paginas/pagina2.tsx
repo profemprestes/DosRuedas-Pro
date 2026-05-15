@@ -22,7 +22,7 @@ export default function Pagina2() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/90 via-[#0a1128]/95 to-[#0a1128] z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full p-[16mm]">
         {/* Header Section */}
         <header>
           <div className="flex justify-between items-center mb-4">
@@ -57,22 +57,22 @@ export default function Pagina2() {
           <div className="h-0.5 w-full bg-[#fbbd08] opacity-50 mb-8"></div>
         </header>
 
-        {/* Main Content */}
-        <div className="flex-grow flex flex-col">
+        {/* Main Content Area */}
+        <div className="flex-grow">
           {/* Main Title */}
-          <div className="flex items-center gap-3 mb-8 bg-[#fbbd08]/10 p-4 rounded-lg border-l-4 border-[#fbbd08]">
-            <Zap className="w-8 h-8 text-[#fbbd08] fill-[#fbbd08]" />
+          <div className="flex items-center gap-3 mb-6 bg-[#fbbd08]/10 p-3 rounded-lg border-l-4 border-[#fbbd08]">
+            <Zap className="w-6 h-6 text-[#fbbd08] fill-[#fbbd08]" />
             <h2 className="text-3xl font-black text-white tracking-tight uppercase italic">ENVÍOS EXPRESS</h2>
           </div>
 
           {/* Featured Card */}
-          <section className="bg-white/5 border-l-4 border-[#fbbd08] rounded-r-xl p-8 mb-8 backdrop-blur-sm">
+          <section className="bg-white/5 border-l-4 border-[#fbbd08] rounded-r-xl p-6 mb-8 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 italic">Entregas con Elección de Rango Horario.</h3>
             <p className="text-gray-300 text-[15px] leading-relaxed mb-6">
               La principal ventaja de este servicio es la personalización y la certeza. Usted nos indica el rango o límite horario (por ejemplo, "entregar antes de las 17:00hs") y nosotros cumplimos, ideal para ventas exigentes.
             </p>
-            <div className="bg-[#0a1128]/80 border border-white/5 rounded-lg p-5 flex items-start gap-4">
-              <Clock className="w-6 h-6 text-[#fbbd08] shrink-0 mt-0.5" />
+            <div className="bg-[#0a1128]/80 border border-white/5 rounded-lg p-4 flex items-start gap-3">
+              <Clock className="w-5 h-5 text-[#fbbd08] shrink-0 mt-0.5" />
               <p className="text-[#fbbd08] text-sm font-semibold leading-snug italic">
                 Importante: Para organizar la logística y garantizar el cumplimiento, se requiere solicitar el envío con un mínimo de 2 horas de anticipación.
               </p>
@@ -80,13 +80,13 @@ export default function Pagina2() {
           </section>
 
           {/* Pricing Table */}
-          <section className="mb-10">
-            <div className="flex justify-between items-end border-b border-[#fbbd08]/40 pb-3 mb-4">
-              <h4 className="text-[#fbbd08] font-bold tracking-widest text-xs uppercase">Zonificación de Entrega</h4>
-              <h4 className="text-[#fbbd08] font-bold tracking-widest text-xs uppercase text-right">Valor Final</h4>
+          <section className="mb-8">
+            <div className="flex justify-between items-end border-b border-[#fbbd08]/40 pb-2 mb-3">
+              <h4 className="text-[#fbbd08] font-bold tracking-widest text-[11px] uppercase">Zonificación de Entrega</h4>
+              <h4 className="text-[#fbbd08] font-bold tracking-widest text-[11px] uppercase text-right">Valor Final</h4>
             </div>
             
-            <div className="space-y-1">
+            <div className="space-y-0 text-base">
               {[
                 { zone: "Zona 1 (Hasta 3 km)", price: "$3.700" },
                 { zone: "Zona 2 (3 a 5 km)", price: "$4.600" },
@@ -94,56 +94,60 @@ export default function Pagina2() {
                 { zone: "Zona 4 (7 a 10 km)", price: "$8.200" },
                 { zone: "Zona 5 (Más de 10 km)", price: "$1.000 x km" },
               ].map((item, idx) => (
-                <div key={idx} className="flex justify-between items-center py-3 border-b border-white/5 hover:bg-white/5 transition-colors px-4 rounded-md group">
-                  <span className="font-medium text-sm text-gray-300 group-hover:text-white transition-colors">{item.zone}</span>
-                  <span className="text-[#fbbd08] font-black text-xl tracking-tight">{item.price}</span>
+                <div key={idx} className="flex justify-between py-2 border-b border-white/5 hover:bg-white/5 transition-colors px-2 rounded">
+                  <span className="font-medium text-sm text-gray-300">{item.zone}</span>
+                  <span className="text-[#fbbd08] font-bold text-lg">{item.price}</span>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Additional Conditions */}
-          <section className="mt-auto">
-            <h4 className="text-[#fbbd08] font-bold tracking-widest text-[10px] uppercase mb-6 opacity-60">Condiciones Adicionales Operativas</h4>
+          {/* Additional Conditions Grid */}
+          <section>
+            <h4 className="text-[#fbbd08] font-bold tracking-widest text-[11px] uppercase mb-4 opacity-70 italic">Condiciones Adicionales Operativas</h4>
             
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
-                <div className="flex items-center gap-3 mb-3">
+            <div className="grid grid-cols-2 gap-3">
+              {/* Condition 1 */}
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                <div className="flex items-center gap-3 mb-2">
                   <CloudDrizzle className="w-5 h-5 text-blue-400" />
-                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase tracking-wider">Clima Adverso</h5>
+                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase">Clima Adverso</h5>
                 </div>
-                <p className="text-[11px] text-gray-400 leading-snug italic">
-                  (Lluvia/calzada mojada): Recargo del 50% sobre el valor del viaje solicitado.
+                <p className="text-[10px] text-gray-400 leading-snug italic">
+                  (Lluvia/calzada mojada): Recargo del 50% sobre el valor del viaje.
                 </p>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
-                <div className="flex items-center gap-3 mb-3">
+              {/* Condition 2 */}
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                <div className="flex items-center gap-3 mb-2">
                   <Clock className="w-5 h-5 text-[#fbbd08]" />
-                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase tracking-wider">Demora en Domicilio</h5>
+                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase">Demora en Domicilio</h5>
                 </div>
-                <p className="text-[11px] text-gray-400 leading-snug italic">
-                  Tolerancia 10 min. de espera sin cargo. Luego, +$2.200 por cada 10 min adicionales.
+                <p className="text-[10px] text-gray-400 leading-snug italic">
+                  Tolerancia 10 min. Luego, +$2.200 cada 10 min de espera.
                 </p>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
-                <div className="flex items-center gap-3 mb-3">
+              {/* Condition 3 */}
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                <div className="flex items-center gap-3 mb-2">
                   <Package className="w-5 h-5 text-[#fbbd08]" />
-                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase tracking-wider">Bulto Excedente</h5>
+                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase">Bulto Excedente</h5>
                 </div>
-                <p className="text-[11px] text-gray-400 leading-snug italic">
-                  Mayor a 5Kg o 40x40x30cm. Adicional desde $1.800 según dimensiones finales.
+                <p className="text-[10px] text-gray-400 leading-snug italic">
+                  Mayor a 5Kg o 40x40x30cm. Adicional desde $1.800 por bulto.
                 </p>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
-                <div className="flex items-center gap-3 mb-3">
+              {/* Condition 4 */}
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                <div className="flex items-center gap-3 mb-2">
                   <Undo2 className="w-5 h-5 text-purple-400" />
-                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase tracking-wider">Retorno / Vuelta</h5>
+                  <h5 className="text-[#fbbd08] font-bold text-[10px] uppercase">Retorno / Vuelta</h5>
                 </div>
-                <p className="text-[11px] text-gray-400 leading-snug italic">
-                  Retorno inmediato o 2da visita: Se factura al 50% del valor del viaje original.
+                <p className="text-[10px] text-gray-400 leading-snug italic">
+                  Inmediata o 2da visita: Se factura al 50% del valor original.
                 </p>
               </div>
             </div>
@@ -151,11 +155,14 @@ export default function Pagina2() {
         </div>
 
         {/* Footer Section */}
-        <footer className="mt-12 pt-8 pb-4">
+        <footer className="mt-8 pt-4 pb-0">
           <div className="h-[1px] w-full bg-white/10 mb-4"></div>
+          
           <div className="flex justify-between items-center text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">
-            <div className="w-1/3">Propuesta Operativa 2026</div>
-            <div className="w-1/3 text-center lowercase tracking-normal text-white/40 italic">@enviosdosruedas</div>
+            <div className="w-1/3 text-left">Propuesta Operativa 2026</div>
+            <div className="w-1/3 flex justify-center items-center gap-4 lowercase tracking-normal text-white/50">
+              <span className="italic">@enviosdosruedas</span>
+            </div>
             <div className="w-1/3 text-right">2 / 11</div>
           </div>
         </footer>
