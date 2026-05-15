@@ -1,34 +1,23 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Pagina1() {
-  const bgImg = PlaceHolderImages.find(img => img.id === 'page-bg-1');
-  const logoImg = PlaceHolderImages.find(img => img.id === 'dr-logo');
-
   return (
-    <div className="a4-container mx-auto bg-[#0a1128] relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat">
+    <div className="a4-container mx-auto bg-[#0a1128] relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
       {/* Background with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={bgImg?.imageUrl || ''}
-          alt="Background"
-          fill
-          className="object-cover opacity-30"
-          data-ai-hint="dark warehouse"
-        />
+      <div className="absolute inset-0 z-0" suppressHydrationWarning>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/85 to-[#0a1128]/95 z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full p-16" suppressHydrationWarning>
         {/* Header Section */}
         <header className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-4">
               <div className="h-16 w-32 relative">
                 <Image 
-                  src={logoImg?.imageUrl || '/LogoEnviosDosRuedas.webp'} 
+                  src="/LogoEnviosDosRuedas.webp" 
                   alt="Envíos DosRuedas Logo" 
                   fill 
                   className="object-contain"
@@ -36,7 +25,7 @@ export default function Pagina1() {
                 />
               </div>
               <div className="flex flex-col">
-                <div className="text-2xl font-black skew-x-[-5deg] tracking-tighter leading-none flex gap-1">
+                <div className="text-2xl font-black italic skew-x-[-5deg] tracking-tighter leading-none flex gap-1">
                   <span className="text-white">ENVIOS</span>
                   <span className="text-[#fbbd08]">DOSRUEDAS</span>
                 </div>

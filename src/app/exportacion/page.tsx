@@ -1,7 +1,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Printer } from 'lucide-react';
 import Pagina1 from '@/components/paginas/pagina1';
@@ -17,6 +17,16 @@ import Pagina10 from '@/components/paginas/pagina10';
 import Pagina11 from '@/components/paginas/pagina11';
 
 export default function ExportacionPage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="min-h-screen bg-slate-900" />;
+  }
+
   const paginas = [
     <Pagina1 key="p1" />,
     <Pagina2 key="p2" />,
@@ -32,9 +42,9 @@ export default function ExportacionPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 py-12 px-4 flex flex-col items-center gap-12">
+    <div className="min-h-screen bg-slate-900 py-12 px-4 flex flex-col items-center gap-12" suppressHydrationWarning>
       {/* Print Button */}
-      <div className="fixed bottom-8 right-8 z-50 no-print">
+      <div className="fixed bottom-8 right-8 z-50 no-print" suppressHydrationWarning>
         <Button 
           size="lg" 
           className="rounded-full bg-accent text-primary font-bold shadow-2xl hover:scale-105 transition-transform"
@@ -46,7 +56,7 @@ export default function ExportacionPage() {
       </div>
 
       {/* Header Info */}
-      <div className="text-center no-print max-w-2xl">
+      <div className="text-center no-print max-w-2xl" suppressHydrationWarning>
         <h1 className="text-4xl font-black text-white uppercase tracking-tighter mb-4">
           Visualizador de <span className="text-accent">Exportación</span>
         </h1>
@@ -57,9 +67,9 @@ export default function ExportacionPage() {
       </div>
 
       {/* A4 Sheets */}
-      <div className="flex flex-col gap-8 w-full max-w-[210mm]">
+      <div className="flex flex-col gap-8 w-full max-w-[210mm]" suppressHydrationWarning>
         {paginas.map((pagina, index) => (
-          <div key={index} className="print:m-0 print:p-0 print:shadow-none break-after-page shadow-2xl">
+          <div key={index} className="print:m-0 print:p-0 print:shadow-none break-after-page shadow-2xl" suppressHydrationWarning>
             {pagina}
           </div>
         ))}

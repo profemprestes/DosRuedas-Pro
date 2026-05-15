@@ -1,15 +1,27 @@
+
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import { A4Page } from '@/components/A4Page';
 import { AIOptimizationTrigger } from '@/components/AIOptimizationTrigger';
 import { Button } from '@/components/ui/button';
 import { Printer } from 'lucide-react';
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="min-h-screen bg-slate-900" />;
+  }
+
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative" suppressHydrationWarning>
       {/* Web Controls */}
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 no-print">
+      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 no-print" suppressHydrationWarning>
         <Button 
           variant="default" 
           size="lg" 
@@ -21,12 +33,12 @@ export default function Home() {
         </Button>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center" suppressHydrationWarning>
         {/* The Proposal Document */}
         <A4Page />
 
         {/* Interactive Feature Demo (only web) */}
-        <div className="w-full bg-primary py-12 px-6">
+        <div className="w-full bg-primary py-12 px-6" suppressHydrationWarning>
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-headline font-black text-white mb-4 uppercase tracking-tighter">
               Tecnología Propietaria de <span className="text-accent">Vanguardia</span>
@@ -42,7 +54,7 @@ export default function Home() {
       </div>
 
       {/* Background Decorative Elements */}
-      <div className="fixed inset-0 pointer-events-none z-[-1] opacity-20 no-print">
+      <div className="fixed inset-0 pointer-events-none z-[-1] opacity-20 no-print" suppressHydrationWarning>
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent blur-[150px] rounded-full mix-blend-screen" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-slate-700 blur-[150px] rounded-full mix-blend-screen" />
       </div>
