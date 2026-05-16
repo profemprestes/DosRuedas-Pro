@@ -1,9 +1,11 @@
-import Pagina9 from '@/components/paginas/pagina9';
+import Pagina9 from "@/components/paginas/pagina9";
 
-export default function Page9() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-8">
-      <Pagina9 />
+    <div className="flex min-h-screen items-center justify-center bg-gray-900 p-8">
+      <div className="bg-white shadow-2xl">
+        <Pagina9 />
+      </div>
     </div>
   );
 }
