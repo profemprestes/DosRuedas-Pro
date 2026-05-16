@@ -5,7 +5,7 @@ import { ShieldCheck } from 'lucide-react';
 
 export default function Pagina8() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
@@ -54,72 +54,72 @@ export default function Pagina8() {
             </div>
 
             {/* Comparison Table */}
-            <div className="overflow-hidden bg-black/20 rounded-xl border border-white/10 flex-grow flex flex-col justify-center">
-                <table className="w-full text-[9px] sm:text-[10px]">
-                    <thead>
-                        <tr className="text-accent uppercase font-bold text-center border-b border-white/10">
-                            <th className="p-2 text-left w-1/6">Característica</th>
-                            <th className="p-2 w-1/6">Express</th>
-                            <th className="p-2 w-1/6">Lowcost</th>
-                            <th className="p-2 w-1/6">Cta. Corriente</th>
-                            <th className="p-2 w-1/6">Flex (ML)</th>
-                            <th className="p-2 w-1/6">E-Commerce 3PL</th>
+            <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 flex-grow flex flex-col justify-center">
+                <table className="w-full text-xs text-slate-700">
+                    <thead className="bg-slate-50 border-b border-slate-200">
+                        <tr className="text-xs font-semibold tracking-wider text-slate-500 uppercase text-center">
+                            <th className="px-4 py-3 text-left w-1/6">Característica</th>
+                            <th className="px-4 py-3 w-1/6">Express</th>
+                            <th className="px-4 py-3 w-1/6">Lowcost</th>
+                            <th className="px-4 py-3 w-1/6">Cta. Corriente</th>
+                            <th className="px-4 py-3 w-1/6">Flex (ML)</th>
+                            <th className="px-4 py-3 w-1/6">E-Commerce 3PL</th>
                         </tr>
                     </thead>
-                    <tbody className="text-center font-medium">
+                    <tbody className="text-center font-medium divide-y divide-slate-100">
                         {/* Row 1 */}
-                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">Estructura Tarifa</td>
-                            <td className="p-2">Zonificada</td>
-                            <td className="p-2">Zonificada</td>
-                            <td className="p-2 text-accent">Tarifa LowCost</td>
-                            <td className="p-2">Por Nivel (Zon. / Plana)</td>
-                            <td className="p-2 text-emerald-500 font-bold">Tarifa Plana</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Estructura Tarifa</td>
+                            <td className="px-4 py-3">Zonificada</td>
+                            <td className="px-4 py-3">Zonificada</td>
+                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">Tarifa LowCost</span></td>
+                            <td className="px-4 py-3">Por Nivel</td>
+                            <td className="px-4 py-3"><span className="bg-emerald-100 text-emerald-800 rounded-full px-2 py-1 text-[10px] font-bold">Tarifa Plana</span></td>
                         </tr>
                         {/* Row 2 */}
-                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">Rango Horario</td>
-                            <td className="p-2">Sí (Elección)</td>
-                            <td className="p-2">No (Transcurso día)</td>
-                            <td className="p-2 text-accent">Sí (Beneficio Exclusivo)</td>
-                            <td className="p-2">No (Antes 20hs)</td>
-                            <td className="p-2 text-emerald-500">No (Transcurso día)</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Rango Horario</td>
+                            <td className="px-4 py-3"><span className="bg-blue-100 text-blue-800 rounded-full px-2 py-1 text-[10px] font-bold">Sí (Elección)</span></td>
+                            <td className="px-4 py-3 text-slate-500">No (Día)</td>
+                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">Sí (Beneficio)</span></td>
+                            <td className="px-4 py-3 text-slate-500">No (Antes 20hs)</td>
+                            <td className="px-4 py-3 text-slate-500">No (Día)</td>
                         </tr>
                         {/* Row 3 */}
-                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">Corte de Pedidos</td>
-                            <td className="p-2">Hasta 15hs</td>
-                            <td className="p-2">Hasta 13hs</td>
-                            <td className="p-2 text-accent">Hasta 15hs</td>
-                            <td className="p-2">Hasta 15hs</td>
-                            <td className="p-2 text-emerald-500">Hasta 15hs</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Corte de Pedidos</td>
+                            <td className="px-4 py-3 font-semibold">15:00 hs</td>
+                            <td className="px-4 py-3 font-semibold text-slate-500">13:00 hs</td>
+                            <td className="px-4 py-3 font-semibold">15:00 hs</td>
+                            <td className="px-4 py-3 font-semibold">15:00 hs</td>
+                            <td className="px-4 py-3 font-semibold text-emerald-700">15:00 hs</td>
                         </tr>
                         {/* Row 4 */}
-                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">Anticipación Mín.</td>
-                            <td className="p-2">2 Horas</td>
-                            <td className="p-2">2 Horas</td>
-                            <td className="p-2 text-accent">2 Horas</td>
-                            <td className="p-2 text-slate-400 italic">No aplica</td>
-                            <td className="p-2 text-emerald-500">Fulfillment propio</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Anticipación Mín.</td>
+                            <td className="px-4 py-3">2 Horas</td>
+                            <td className="px-4 py-3">2 Horas</td>
+                            <td className="px-4 py-3">2 Horas</td>
+                            <td className="px-4 py-3 text-slate-400 italic text-[10px]">No aplica</td>
+                            <td className="px-4 py-3 text-emerald-600 font-semibold text-[10px]">Fulfillment</td>
                         </tr>
                         {/* Row 5 */}
-                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">Pago en Destino</td>
-                            <td className="p-2">Sí (Sin Costo)</td>
-                            <td className="p-2">Sí (Sin Costo)</td>
-                            <td className="p-2 text-accent">Sí (Sin Costo)</td>
-                            <td className="p-2">N/A (Pago en App)</td>
-                            <td className="p-2 text-emerald-500">Sí (Sin Costo)</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Pago en Destino</td>
+                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-slate-400 italic text-[10px]">N/A</td>
+                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
                         </tr>
                         {/* Row 6 */}
-                        <tr className="hover:bg-white/5 transition-colors">
-                            <td className="p-2 text-left font-bold text-white text-[11px]">2da Visita</td>
-                            <td className="p-2">100% (Nuevo Envío)</td>
-                            <td className="p-2">100% (Nuevo Envío)</td>
-                            <td className="p-2 text-accent">50% del valor</td>
-                            <td className="p-2">Según Nivel (50% a S/C)</td>
-                            <td className="p-2 text-emerald-500 font-bold text-[11px]">100% Bonificada</td>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">2da Visita</td>
+                            <td className="px-4 py-3 text-slate-500">100%</td>
+                            <td className="px-4 py-3 text-slate-500">100%</td>
+                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">50%</span></td>
+                            <td className="px-4 py-3"><span className="bg-slate-200 text-slate-700 rounded-full px-2 py-1 text-[10px] font-bold">Según Nivel</span></td>
+                            <td className="px-4 py-3"><span className="bg-emerald-100 text-emerald-800 rounded-full px-2 py-1 text-[10px] font-bold">Bonificada</span></td>
                         </tr>
                     </tbody>
                 </table>

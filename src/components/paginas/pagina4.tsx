@@ -4,14 +4,14 @@ import { PageFooter } from './shared/PageFooter';
 
 export default function Pagina4() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="MERCADOLIBRE FLEX" />
 
-        <main className="flex-grow flex flex-col">
+        <main className="flex-1 flex flex-col justify-center gap-2">
           {/* Section Title Flex */}
           <div className="flex items-center gap-4 mb-5">
               <div className="bg-accent p-2 rounded-lg">
