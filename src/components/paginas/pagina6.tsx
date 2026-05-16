@@ -5,19 +5,19 @@ import { Truck, Percent } from 'lucide-react';
 
 export default function Pagina6() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="E-COMMERCE 24HS" />
 
-        <main className="flex-1 flex flex-col mt-4 mb-4">
+        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
           {/* Main Title Section */}
           <section className="mb-4">
               <div className="flex items-center gap-3 mb-2">
                   <Truck className="w-10 h-10 text-accent flex-shrink-0" />
-                  <h2 className="text-4xl font-black tracking-tight leading-none uppercase">
+                  <h2 className="text-4xl font-black font-headline tracking-tight leading-none uppercase">
                       PLAN E-COMMERCE <span className="text-accent">24HS</span>
                   </h2>
               </div>
@@ -67,12 +67,12 @@ export default function Pagina6() {
                   <Percent className="w-16 h-16" />
               </div>
               <div className="relative z-10 text-center">
-                  <h3 className="text-lg font-black uppercase mb-2 tracking-tighter">Opción Drop-Off (Ahorro Inteligente)</h3>
+                  <h3 className="text-lg font-black font-headline uppercase mb-2 tracking-tighter">Opción Drop-Off (Ahorro Inteligente)</h3>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-3">
                       <p className="font-semibold text-slate-800 leading-tight max-w-lg text-xs">
                           Traiga sus paquetes a nuestro depósito (Friuli 1972) y obtenga directo sobre la tarifa y evite costos de retiro.
                       </p>
-                      <div className="bg-slate-900 text-white px-4 py-2 rounded-lg font-black text-base whitespace-nowrap shadow-lg">
+                      <div className="bg-slate-900 text-white px-4 py-2 rounded-lg font-black font-headline text-base whitespace-nowrap shadow-lg">
                           20% DE DESCUENTO
                       </div>
                   </div>
@@ -83,7 +83,7 @@ export default function Pagina6() {
           <div className="grid grid-cols-2 gap-4 mt-auto">
               {/* Dinámica */}
               <div className="bg-black/20 border border-white/10 rounded-xl p-4">
-                  <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Dinámica de Servicio</h4>
+                  <h4 className="text-xs font-black font-headline uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Dinámica de Servicio</h4>
                   <ul className="space-y-2 text-xs font-medium">
                       <li className="flex items-start gap-2">
                           <span className="text-accent mt-0.5">•</span>
@@ -106,7 +106,7 @@ export default function Pagina6() {
 
               {/* Excepciones */}
               <div className="bg-black/20 border border-white/10 rounded-xl p-4">
-                  <h4 className="text-xs font-black uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Excepciones y Costos</h4>
+                  <h4 className="text-xs font-black font-headline uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Excepciones y Costos</h4>
                   <ul className="space-y-2 text-xs font-medium">
                       <li className="flex items-start gap-2">
                           <span className="text-accent mt-0.5">•</span>

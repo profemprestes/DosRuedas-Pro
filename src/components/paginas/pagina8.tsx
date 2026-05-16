@@ -5,29 +5,29 @@ import { ShieldCheck } from 'lucide-react';
 
 export default function Pagina8() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="RESUMEN EJECUTIVO" />
 
-        <main className="flex-1 flex flex-col mt-4 mb-4">
+        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
             {/* Main Hero Box */}
-            <div className="border-2 border-emerald-500 rounded-3xl p-6 mb-4 relative overflow-hidden flex-shrink-0">
+            <div className="border-2 border-accent rounded-3xl p-6 mb-4 relative overflow-hidden flex-shrink-0">
                 {/* Background Decoration */}
-                <div className="absolute top-0 left-0 w-full h-full bg-emerald-500 opacity-5 pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-accent opacity-5 pointer-events-none"></div>
 
                 <div className="flex items-start gap-4 mb-3">
                     {/* Icon */}
-                    <div className="text-emerald-500 mt-1">
+                    <div className="text-accent mt-1">
                         <ShieldCheck className="w-8 h-8" />
                     </div>
                     <div>
-                        <h1 className="text-3xl font-black text-emerald-500 leading-none mb-1 italic uppercase">
+                        <h1 className="text-3xl font-black font-headline text-accent leading-none mb-1 italic uppercase">
                             Gestión de Cobranzas en Destino
                         </h1>
-                        <p className="text-emerald-500 font-bold text-xs tracking-wide">
+                        <p className="text-accent font-bold text-xs tracking-wide">
                             (SERVICIO DE CONTRAREEMBOLSO SIN COSTO)
                         </p>
                     </div>
@@ -48,7 +48,7 @@ export default function Pagina8() {
 
             {/* Section Title */}
             <div className="text-center mb-3 flex-shrink-0">
-                <h2 className="text-accent font-black text-base tracking-[0.2em] uppercase">
+                <h2 className="text-accent font-black font-headline text-base tracking-[0.2em] uppercase">
                     Tabla Comparativa de Modelos
                 </h2>
             </div>
@@ -72,16 +72,16 @@ export default function Pagina8() {
                             <td className="px-4 py-3 text-left font-bold text-slate-800">Estructura Tarifa</td>
                             <td className="px-4 py-3">Zonificada</td>
                             <td className="px-4 py-3">Zonificada</td>
-                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">Tarifa LowCost</span></td>
+                            <td className="px-4 py-3"><span className="bg-accent/20 text-primary rounded-full px-2 py-1 text-[10px] font-bold">Tarifa LowCost</span></td>
                             <td className="px-4 py-3">Por Nivel</td>
-                            <td className="px-4 py-3"><span className="bg-emerald-100 text-emerald-800 rounded-full px-2 py-1 text-[10px] font-bold">Tarifa Plana</span></td>
+                            <td className="px-4 py-3"><span className="bg-primary/10 text-primary rounded-full px-2 py-1 text-[10px] font-bold">Tarifa Plana</span></td>
                         </tr>
                         {/* Row 2 */}
                         <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
                             <td className="px-4 py-3 text-left font-bold text-slate-800">Rango Horario</td>
-                            <td className="px-4 py-3"><span className="bg-blue-100 text-blue-800 rounded-full px-2 py-1 text-[10px] font-bold">Sí (Elección)</span></td>
+                            <td className="px-4 py-3"><span className="bg-accent/20 text-primary rounded-full px-2 py-1 text-[10px] font-bold">Sí (Elección)</span></td>
                             <td className="px-4 py-3 text-slate-500">No (Día)</td>
-                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">Sí (Beneficio)</span></td>
+                            <td className="px-4 py-3"><span className="bg-accent/20 text-primary rounded-full px-2 py-1 text-[10px] font-bold">Sí (Beneficio)</span></td>
                             <td className="px-4 py-3 text-slate-500">No (Antes 20hs)</td>
                             <td className="px-4 py-3 text-slate-500">No (Día)</td>
                         </tr>
@@ -92,7 +92,7 @@ export default function Pagina8() {
                             <td className="px-4 py-3 font-semibold text-slate-500">13:00 hs</td>
                             <td className="px-4 py-3 font-semibold">15:00 hs</td>
                             <td className="px-4 py-3 font-semibold">15:00 hs</td>
-                            <td className="px-4 py-3 font-semibold text-emerald-700">15:00 hs</td>
+                            <td className="px-4 py-3 font-semibold text-primary font-black">15:00 hs</td>
                         </tr>
                         {/* Row 4 */}
                         <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
@@ -101,25 +101,25 @@ export default function Pagina8() {
                             <td className="px-4 py-3">2 Horas</td>
                             <td className="px-4 py-3">2 Horas</td>
                             <td className="px-4 py-3 text-slate-400 italic text-[10px]">No aplica</td>
-                            <td className="px-4 py-3 text-emerald-600 font-semibold text-[10px]">Fulfillment</td>
+                            <td className="px-4 py-3 text-primary font-semibold text-[10px]">Fulfillment</td>
                         </tr>
                         {/* Row 5 */}
                         <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
                             <td className="px-4 py-3 text-left font-bold text-slate-800">Pago en Destino</td>
-                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
-                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
-                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-primary font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-primary font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-primary font-bold">Sí (Sin Costo)</td>
                             <td className="px-4 py-3 text-slate-400 italic text-[10px]">N/A</td>
-                            <td className="px-4 py-3 text-emerald-600 font-bold">Sí (Sin Costo)</td>
+                            <td className="px-4 py-3 text-primary font-bold">Sí (Sin Costo)</td>
                         </tr>
                         {/* Row 6 */}
                         <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
                             <td className="px-4 py-3 text-left font-bold text-slate-800">2da Visita</td>
                             <td className="px-4 py-3 text-slate-500">100%</td>
                             <td className="px-4 py-3 text-slate-500">100%</td>
-                            <td className="px-4 py-3"><span className="bg-amber-100 text-amber-800 rounded-full px-2 py-1 text-[10px] font-bold">50%</span></td>
+                            <td className="px-4 py-3"><span className="bg-accent/20 text-primary rounded-full px-2 py-1 text-[10px] font-bold">50%</span></td>
                             <td className="px-4 py-3"><span className="bg-slate-200 text-slate-700 rounded-full px-2 py-1 text-[10px] font-bold">Según Nivel</span></td>
-                            <td className="px-4 py-3"><span className="bg-emerald-100 text-emerald-800 rounded-full px-2 py-1 text-[10px] font-bold">Bonificada</span></td>
+                            <td className="px-4 py-3"><span className="bg-primary/10 text-primary rounded-full px-2 py-1 text-[10px] font-bold">Bonificada</span></td>
                         </tr>
                     </tbody>
                 </table>

@@ -5,14 +5,14 @@ import { Rocket, Phone, Globe, Mail, MapPin } from 'lucide-react';
 
 export default function Pagina11() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="ESCALEMOS JUNTOS" />
 
-        <main className="flex-grow flex flex-col items-center justify-center py-6">
+        <main className="flex-1 flex flex-col items-center justify-center py-6 mt-4 mb-4 gap-4">
 
             {/* Header / Rocket Icon */}
             <div className="relative mb-6">
@@ -23,7 +23,7 @@ export default function Pagina11() {
 
             {/* Title Section */}
             <div className="text-center mb-8">
-                <h1 className="text-5xl font-black tracking-tighter mb-2 italic">ESCALEMOS JUNTOS</h1>
+                <h1 className="text-5xl font-black font-headline tracking-tighter mb-2 italic">ESCALEMOS JUNTOS</h1>
                 <p className="text-accent text-xl font-bold italic tracking-widest">EL MOTOR DE SU ÚLTIMA MILLA</p>
             </div>
 

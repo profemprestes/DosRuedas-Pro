@@ -11,7 +11,7 @@ export default function Pagina2() {
   const bgImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -29,11 +29,11 @@ export default function Pagina2() {
         <PageHeader badgeText="POR DEMANDA" />
 
         {/* Main Content Area */}
-        <main className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col mt-4 mb-4">
           {/* Main Title */}
           <div className="flex items-center gap-3 mb-6 bg-accent/10 p-3 rounded-lg border-l-4 border-accent">
             <Zap className="w-6 h-6 text-accent fill-accent" />
-            <h2 className="text-3xl font-black text-white tracking-tight uppercase italic">ENVÍOS EXPRESS</h2>
+            <h2 className="text-3xl font-black font-headline text-white tracking-tight uppercase italic">ENVÍOS EXPRESS</h2>
           </div>
 
           {/* Featured Card */}
@@ -50,28 +50,41 @@ export default function Pagina2() {
             </div>
           </section>
 
-          {/* Pricing Table */}
-          <section className="mb-8">
-            <div className="flex justify-between items-end border-b border-accent/40 pb-2 mb-3">
-              <h4 className="text-accent font-bold tracking-widest text-[11px] uppercase">Zonificación de Entrega</h4>
-              <h4 className="text-accent font-bold tracking-widest text-[11px] uppercase text-right">Valor Final</h4>
+
+            {/* Pricing Table (Enterprise Style) */}
+            <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 mb-8 flex-grow flex flex-col justify-center">
+                <table className="w-full text-xs text-slate-700">
+                    <thead className="bg-slate-50 border-b border-slate-200">
+                        <tr className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                            <th className="px-4 py-3 text-left">Zonificación de Entrega</th>
+                            <th className="px-4 py-3 text-right">Valor Final</th>
+                        </tr>
+                    </thead>
+                    <tbody className="text-sm font-medium divide-y divide-slate-100">
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 1 (Hasta 3 km)</td>
+                            <td className="px-4 py-3 text-right text-accent font-bold text-lg">$3.700</td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 2 (3 a 5 km)</td>
+                            <td className="px-4 py-3 text-right text-accent font-bold text-lg">$4.600</td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 3 (5 a 7 km)</td>
+                            <td className="px-4 py-3 text-right text-accent font-bold text-lg">$6.100</td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 4 (7 a 10 km)</td>
+                            <td className="px-4 py-3 text-right text-accent font-bold text-lg">$8.200</td>
+                        </tr>
+                        <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                            <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 5 (Más de 10 km)</td>
+                            <td className="px-4 py-3 text-right text-accent font-bold text-lg">$1.000 x km</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <div className="space-y-0 text-base">
-              {[
-                { zone: "Zona 1 (Hasta 3 km)", price: "$3.700" },
-                { zone: "Zona 2 (3 a 5 km)", price: "$4.600" },
-                { zone: "Zona 3 (5 a 7 km)", price: "$6.100" },
-                { zone: "Zona 4 (7 a 10 km)", price: "$8.200" },
-                { zone: "Zona 5 (Más de 10 km)", price: "$1.000 x km" },
-              ].map((item, idx) => (
-                <div key={idx} className="flex justify-between py-2 border-b border-white/5 hover:bg-white/5 transition-colors px-2 rounded">
-                  <span className="font-medium text-sm text-gray-300">{item.zone}</span>
-                  <span className="text-accent font-bold text-lg">{item.price}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+
 
           {/* Additional Conditions Grid */}
           <section className="mt-auto">
