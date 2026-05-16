@@ -5,14 +5,14 @@ import { CloudRain, Box, Clock, CornerUpLeft } from 'lucide-react';
 
 export default function Pagina3() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header */}
         <PageHeader badgeText="SOLUCIÓN LOWCOST" />
 
-        <main className="flex-grow flex flex-col">
+        <main className="flex-1 flex flex-col">
           {/* Main Title Section */}
           <div className="flex items-center gap-3 mb-6 bg-accent/10 p-3 rounded-lg border-l-4 border-accent">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
