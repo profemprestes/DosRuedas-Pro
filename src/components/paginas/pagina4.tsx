@@ -4,20 +4,20 @@ import { PageFooter } from './shared/PageFooter';
 
 export default function Pagina4() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="MERCADOLIBRE FLEX" />
 
-        <main className="flex-1 flex flex-col justify-center gap-2">
+        <main className="flex-1 flex flex-col mt-4 mb-4">
           {/* Section Title Flex */}
           <div className="flex items-center gap-4 mb-5">
               <div className="bg-accent p-2 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 14 8 16"/><path d="M14 10 16 8"/><path d="M18 14V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8"/><path d="M22 13a3 3 0 1 0-4-4l-3 3 2 2Z"/></svg>
               </div>
-              <h2 className="text-4xl font-black italic uppercase">Envíos Flex</h2>
+              <h2 className="text-4xl font-black font-headline italic uppercase">Envíos Flex</h2>
               <div className="bg-accent text-primary px-3 py-1 rounded font-extrabold text-sm tracking-tight ml-2">
                   MERCADOLIBRE
               </div>
@@ -90,7 +90,7 @@ export default function Pagina4() {
                 <div className="flex justify-between items-start mb-1">
                     <div className="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1v-1h14v1z"/></svg>
-                        <h3 className="text-lg font-black uppercase tracking-tighter">Nivel 3: Grandes Cuentas</h3>
+                        <h3 className="text-lg font-black font-headline uppercase tracking-tighter">Nivel 3: Grandes Cuentas</h3>
                     </div>
                     <div className="bg-primary text-blue-400 px-3 py-1 rounded text-[11px] font-bold shrink-0">+10 envíos / día</div>
                 </div>
@@ -100,7 +100,7 @@ export default function Pagina4() {
 
                 <div className="flex justify-between items-end border-t border-primary/20 pt-3 mb-3">
                     <span className="text-base font-extrabold uppercase italic tracking-tight">Tarifa Plana a todo Mar del Plata</span>
-                    <span className="text-4xl font-black tracking-tighter">$4.500</span>
+                    <span className="text-4xl font-black font-headline tracking-tighter">$4.500</span>
                 </div>
 
                 <div className="bg-[#1e3a8a] text-white py-2 px-4 rounded-xl flex justify-center items-center gap-2 text-[10px] font-bold uppercase shadow-lg">

@@ -5,14 +5,14 @@ import { Package, Smartphone, Check, Clock, Box } from 'lucide-react';
 
 export default function Pagina5() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full p-16">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="SAME DAY DELIVERY" />
 
-        <main className="flex-grow flex flex-col">
+        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
           {/* Main Title Section */}
           <section className="mb-4">
               <div className="flex items-start gap-4 mb-2">
@@ -20,8 +20,8 @@ export default function Pagina5() {
                       <Package className="w-12 h-12" />
                   </div>
                   <div>
-                      <h2 className="text-5xl font-black text-accent leading-none uppercase">Plan E-Commerce</h2>
-                      <h2 className="text-5xl font-black text-white leading-tight uppercase">Same Day</h2>
+                      <h2 className="text-5xl font-black font-headline text-accent leading-none uppercase">Plan E-Commerce</h2>
+                      <h2 className="text-5xl font-black font-headline text-white leading-tight uppercase">Same Day</h2>
                   </div>
               </div>
 
@@ -41,7 +41,7 @@ export default function Pagina5() {
               {/* Price Card */}
               <div className="border-2 border-accent rounded-2xl p-8 flex flex-col items-center justify-center text-center bg-white/5">
                   <h3 className="text-xs font-bold tracking-widest text-accent mb-6">TARIFA PLANA INTEGRAL</h3>
-                  <div className="text-6xl font-black mb-2">$6.000</div>
+                  <div className="text-6xl font-black font-headline mb-2">$6.000</div>
                   <p className="text-[10px] font-bold tracking-widest opacity-70">TODO MAR DEL PLATA</p>
               </div>
 

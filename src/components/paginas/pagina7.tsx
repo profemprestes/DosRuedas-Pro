@@ -5,17 +5,17 @@ import { Check, Star } from 'lucide-react';
 
 export default function Pagina7() {
   return (
-    <div className="mx-auto w-[210mm] h-[297mm] bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-montserrat" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         {/* Header Section */}
         <PageHeader badgeText="CUENTA CORRIENTE" />
 
-        <main className="flex-1 flex flex-col mt-4 mb-4">
+        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
             {/* Main Title Section */}
             <section className="mb-4">
-                <h1 className="text-4xl md:text-5xl font-black mb-1 tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-black font-headline mb-1 tracking-tight">
                     CUENTA CORRIENTE <span className="text-accent">FLEXIBLE</span>
                 </h1>
                 <p className="text-accent italic font-medium text-base tracking-[0.15em]">
@@ -109,7 +109,7 @@ export default function Pagina7() {
                     <div className="bg-emerald-900/20 border border-emerald-500/50 rounded-xl p-3 text-center">
                         <div className="flex items-center justify-center gap-2 mb-1">
                             <Star className="h-4 w-4 text-emerald-400 fill-emerald-400" />
-                            <h5 className="text-emerald-400 font-black text-sm tracking-tight">2DA VISITA BONIFICADA</h5>
+                            <h5 className="text-emerald-400 font-black font-headline text-sm tracking-tight">2DA VISITA BONIFICADA</h5>
                         </div>
                         <p className="text-slate-300 text-[10px] font-medium">
                             Si el cliente final está ausente, la <span className="text-white font-bold">2da visita se cobra solo al 50%</span> del valor original.
