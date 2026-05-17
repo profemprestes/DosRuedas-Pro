@@ -1,135 +1,107 @@
 import React from 'react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
-import { Truck, Percent } from 'lucide-react';
+import { Truck, Percent, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function Pagina6() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
+    <div className="flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-primary relative text-white font-body" suppressHydrationWarning>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(253,195,34,0.05)_0%,_transparent_50%)] z-10" />
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
-        {/* Header Section */}
+      <div className="relative z-20 flex flex-col h-full p-16 justify-between box-border">
         <PageHeader badgeText="E-COMMERCE 24HS" />
 
-        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
-          {/* Main Title Section */}
-          <section className="mb-4">
-              <div className="flex items-center gap-3 mb-2">
-                  <Truck className="w-10 h-10 text-accent flex-shrink-0" />
-                  <h2 className="text-4xl font-black font-headline tracking-tight leading-none uppercase">
-                      PLAN E-COMMERCE <span className="text-accent">24HS</span>
-                  </h2>
+        <main className="flex-1 flex flex-col justify-center overflow-hidden gap-6">
+          <section className="shrink-0">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="bg-accent/10 p-3 rounded-2xl border border-accent/20">
+                <Truck className="w-10 h-10 text-accent" />
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed max-w-3xl">
-                  Escale su tienda online con una tarifa plana previsible a todo Mar del Plata. Usted prepara los paquetes, nosotros retiramos hoy y entregamos mañana en toda la ciudad. <span className="text-white font-bold">Costos fijos y máxima rentabilidad.</span>
-              </p>
+              <h2 className="text-5xl font-black font-headline tracking-tight leading-none uppercase">
+                PLAN E-COMMERCE <span className="text-accent italic">24HS</span>
+              </h2>
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl">
+              Escale su tienda online con una tarifa plana previsible. Usted prepara, nosotros retiramos hoy y entregamos mañana. <span className="text-white font-bold underline decoration-accent decoration-2">Costos fijos y rentabilidad garantizada.</span>
+            </p>
           </section>
 
-          {/* Pricing Table */}
-          <div className="mb-4 overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-              <table className="w-full text-left border-collapse">
-                  <thead>
-                      <tr className="border-b border-white/10 bg-black/20">
-                          <th className="px-4 py-2 text-xs font-bold text-accent tracking-widest uppercase">Nivel Comercial</th>
-                          <th className="px-4 py-2 text-xs font-bold text-accent tracking-widest uppercase text-center">Volumen Mensual</th>
-                          <th className="px-4 py-2 text-xs font-bold text-accent tracking-widest uppercase text-right">Valor x Envío (Plano)</th>
-                      </tr>
-                  </thead>
-                  <tbody className="text-white font-medium">
-                      <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                          <td className="px-4 py-2 uppercase text-sm">Inicial</td>
-                          <td className="px-4 py-2 text-center text-gray-300 text-sm">1 a 199 envíos</td>
-                          <td className="px-4 py-2 text-right text-lg font-bold text-accent tracking-tighter">$3.800</td>
-                      </tr>
-                      <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                          <td className="px-4 py-2 uppercase text-sm">Pro</td>
-                          <td className="px-4 py-2 text-center text-gray-300 text-sm">200 a 1.199 envíos</td>
-                          <td className="px-4 py-2 text-right text-lg font-bold text-accent tracking-tighter">$3.500</td>
-                      </tr>
-                      <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-white/5">
-                          <td className="px-4 py-2 uppercase text-accent text-sm">Elite</td>
-                          <td className="px-4 py-2 text-center text-gray-300 text-sm">1.200 a 1.999 envíos</td>
-                          <td className="px-4 py-2 text-right text-lg font-bold text-accent tracking-tighter">$3.200</td>
-                      </tr>
-                      <tr className="hover:bg-white/5 transition-colors">
-                          <td className="px-4 py-2 uppercase text-sm">Partner</td>
-                          <td className="px-4 py-2 text-center text-gray-300 text-sm">+2.000 envíos</td>
-                          <td className="px-4 py-2 text-right text-lg font-bold text-accent tracking-tighter">$3.000</td>
-                      </tr>
-                  </tbody>
-              </table>
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl flex-grow flex flex-col">
+            <table className="w-full text-left border-collapse flex-1">
+              <thead>
+                <tr className="border-b border-white/10 bg-black/20">
+                  <th className="px-8 py-5 text-xs font-black text-accent tracking-[0.2em] uppercase">Nivel Comercial</th>
+                  <th className="px-8 py-5 text-xs font-black text-accent tracking-[0.2em] uppercase text-center">Volumen Mensual</th>
+                  <th className="px-8 py-5 text-xs font-black text-accent tracking-[0.2em] uppercase text-right">Valor x Envío</th>
+                </tr>
+              </thead>
+              <tbody className="text-white font-bold divide-y divide-white/5">
+                {[
+                  { n: "Inicial", v: "1 a 199 envíos", p: "$3.800" },
+                  { n: "Pro", v: "200 a 1.199 envíos", p: "$3.500" },
+                  { n: "Elite", v: "1.200 a 1.999 envíos", p: "$3.200", hl: true },
+                  { n: "Partner", v: "+2.000 envíos", p: "$3.000" },
+                ].map((row, i) => (
+                  <tr key={i} className={`hover:bg-white/5 transition-colors ${row.hl ? 'bg-accent/10' : ''}`}>
+                    <td className={`px-8 py-5 uppercase text-[15px] ${row.hl ? 'text-accent' : ''}`}>{row.n}</td>
+                    <td className="px-8 py-5 text-center text-gray-300 font-medium">{row.v}</td>
+                    <td className="px-8 py-5 text-right text-2xl font-headline tracking-tighter text-accent">{row.p}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
-          {/* Drop-Off Card */}
-          <div className="bg-emerald-500 text-slate-900 rounded-2xl p-4 mb-4 relative overflow-hidden shadow-lg border border-emerald-400/50">
-              <div className="absolute top-0 right-0 p-2 opacity-20">
-                  <Percent className="w-16 h-16" />
+          <div className="bg-emerald-500 text-slate-900 rounded-3xl p-8 relative overflow-hidden shadow-2xl shrink-0">
+            <div className="absolute -right-6 -bottom-6 opacity-10 rotate-12">
+              <Percent className="w-40 h-40" />
+            </div>
+            <div className="relative z-10 text-center flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-left">
+                <h3 className="text-2xl font-black font-headline uppercase mb-1 tracking-tighter">Opción Drop-Off</h3>
+                <p className="font-bold text-slate-800 leading-tight text-sm max-w-sm">
+                  Despache directo en nuestro centro logístico y optimice sus costos operativos eliminando cargos de retiro.
+                </p>
               </div>
-              <div className="relative z-10 text-center">
-                  <h3 className="text-lg font-black font-headline uppercase mb-2 tracking-tighter">Opción Drop-Off (Ahorro Inteligente)</h3>
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-3">
-                      <p className="font-semibold text-slate-800 leading-tight max-w-lg text-xs">
-                          Traiga sus paquetes a nuestro depósito (Friuli 1972) y obtenga directo sobre la tarifa y evite costos de retiro.
-                      </p>
-                      <div className="bg-slate-900 text-white px-4 py-2 rounded-lg font-black font-headline text-base whitespace-nowrap shadow-lg">
-                          20% DE DESCUENTO
-                      </div>
-                  </div>
+              <div className="bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-3xl font-headline whitespace-nowrap shadow-2xl scale-105">
+                20% OFF
               </div>
+            </div>
           </div>
 
-          {/* Info Boxes Grid */}
-          <div className="grid grid-cols-2 gap-4 mt-auto">
-              {/* Dinámica */}
-              <div className="bg-black/20 border border-white/10 rounded-xl p-4">
-                  <h4 className="text-xs font-black font-headline uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Dinámica de Servicio</h4>
-                  <ul className="space-y-2 text-xs font-medium">
-                      <li className="flex items-start gap-2">
-                          <span className="text-accent mt-0.5">•</span>
-                          <span><strong className="text-white">Next Day:</strong> Retiro hoy, entrega mañana.</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                          <span className="text-accent mt-0.5">•</span>
-                          <span><strong className="text-white">Franja Abierta:</strong> 9 a 20 hs (Sin horario fijo).</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-emerald-400 font-bold">
-                          <span className="mt-0.5">•</span>
-                          <span>2da Visita GRATIS (Bonificada).</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-emerald-400 font-bold">
-                          <span className="mt-0.5">•</span>
-                          <span>Cobranza en Destino GRATIS.</span>
-                      </li>
-                  </ul>
+          <div className="grid grid-cols-2 gap-6 shrink-0 mb-2">
+            <div className="bg-secondary/40 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-2">
+                <CheckCircle2 className="w-5 h-5 text-accent" />
+                <h4 className="text-xs font-black uppercase text-accent tracking-widest font-headline">Servicios Incluidos</h4>
               </div>
+              <ul className="space-y-3 text-[13px] font-bold">
+                <li className="flex items-center gap-2 text-emerald-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 2da Visita 100% Bonificada
+                </li>
+                <li className="flex items-center gap-2 text-emerald-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Cobranza en Destino GRATIS
+                </li>
+              </ul>
+            </div>
 
-              {/* Excepciones */}
-              <div className="bg-black/20 border border-white/10 rounded-xl p-4">
-                  <h4 className="text-xs font-black font-headline uppercase text-accent mb-2 tracking-widest border-b border-white/10 pb-2">Excepciones y Costos</h4>
-                  <ul className="space-y-2 text-xs font-medium">
-                      <li className="flex items-start gap-2">
-                          <span className="text-accent mt-0.5">•</span>
-                          <span><strong className="text-white">Log. Inversa:</strong> Cambios a 50% del valor original.</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                          <span className="text-accent mt-0.5">•</span>
-                          <span><strong className="text-white">Lluvia:</strong> Recargo 50% (u opción de posponer).</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                          <span className="text-accent mt-0.5">•</span>
-                          <span><strong className="text-white">Bulto:</strong> {">"}5kg o 40x40x30cm. Adicional desde $1.800.</span>
-                      </li>
-                      <li className="flex items-start gap-2 text-accent">
-                          <span className="mt-0.5">•</span>
-                          <span className="italic"><strong className="text-white not-italic">Retiro Diario:</strong> GRATIS (+10 paq). Menos volumen: $4.000.</span>
-                      </li>
-                  </ul>
+            <div className="bg-secondary/40 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-2">
+                <AlertCircle className="w-5 h-5 text-accent" />
+                <h4 className="text-xs font-black uppercase text-accent tracking-widest font-headline">Excepciones</h4>
               </div>
+              <ul className="space-y-3 text-[13px] font-medium text-gray-300">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span> Logística Inversa: 50% Tarifa
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span> Retiro Diario (+10 paq): GRATIS
+                </li>
+              </ul>
+            </div>
           </div>
         </main>
 
-        {/* Footer Section */}
         <PageFooter pageNumber="6 / 11" />
       </div>
     </div>
