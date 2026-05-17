@@ -8,63 +8,60 @@ export default function Pagina1() {
   const bgImg = PlaceHolderImages.find((img) => img.id === 'hero-bg');
 
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImg?.imageUrl || 'https://picsum.photos/seed/dosruedas-hero/1200/800'}
           alt="Background"
           fill
-          className="object-cover opacity-15"
+          className="object-cover opacity-20 grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/90 to-primary/95 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#2563eb]/20 to-[#0a0a0a] mix-blend-multiply z-10" />
       </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
-        <PageHeader badgeText="LOGÍSTICA CORPORATIVA" />
+        <PageHeader badgeText="ÚLTIMA MILLA & 3PL FULFILLMENT" />
 
         {/* Hero Section */}
-        <main className="flex-1 flex flex-col justify-center items-center text-center mt-4 mb-4">
-          <h1 className="text-[52px] leading-none font-black font-headline text-white mb-2 tracking-tight uppercase">
-            Partner Logístico
-          </h1>
-          <h1 className="text-[52px] leading-none font-black font-headline text-accent mb-8 tracking-tight uppercase">
-            Especializado
-          </h1>
-
-          <p className="text-xl italic font-light text-gray-300 mb-8 font-headline tracking-[0.2em]">
-            TU SOLUCION CONFIABLE
+        <main className="flex-1 flex flex-col justify-center items-start text-left mt-4 mb-4">
+          <p className="text-[#fbc107] font-semibold tracking-widest uppercase mb-4 text-sm">
+            Tu Departamento de Logística Externo
           </p>
 
-          <div className="inline-block border border-accent/50 bg-primary/50 px-8 py-2 rounded-full text-accent font-semibold text-sm tracking-wide mb-10">
-            Cobertura Integral en Mar del Plata
+          <h1 className="text-[56px] leading-[1.1] font-black font-headline text-white mb-6 tracking-tight uppercase max-w-3xl">
+            LOGÍSTICA <span className="text-[#fbc107]">DE PRECISIÓN</span>
+          </h1>
+
+          <div className="inline-flex items-center gap-2 border border-white/10 bg-black/50 px-6 py-2.5 rounded-full text-white font-medium text-sm tracking-wide mb-12 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-[#fbc107] animate-pulse"></span>
+            7 AÑOS LIDERANDO MAR DEL PLATA
           </div>
 
-          <div className="text-left max-w-2xl w-full relative">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-full"></div>
-            <div className="bg-secondary/40 backdrop-blur-sm p-10 rounded-r-2xl border border-white/5 ml-1">
-              <h2 className="text-2xl font-bold text-accent mb-6 uppercase tracking-wider font-headline">
-                7 Años Innovando en la Ciudad
-              </h2>
+          <div className="max-w-2xl w-full bg-black/40 backdrop-blur-md border-l-4 border-l-[#2563eb] border border-white/10 p-8 rounded-r-xl">
+            <h2 className="text-2xl font-bold text-white mb-4 uppercase tracking-wider font-headline">
+              Transformamos costos fijos en <span className="text-[#fbc107]">ventaja competitiva</span>
+            </h2>
 
-              <div className="space-y-4 text-gray-200 leading-relaxed text-[15px]">
-                <p>
-                  Nacimos en Mar del Plata y llevamos más de 7 años operando, creciendo e innovando de manera
-                  constante. Desde nuestros inicios, nos guía un único propósito: brindar un servicio
-                  logístico de excelencia y confianza.
-                </p>
-                <p>
-                  Hoy nos especializamos en la logística de última milla para <span className="font-bold text-white">E-Commerce, plataformas y pymes</span>, posicionándonos
-                  como el partner logístico de referencia en la ciudad.
-                </p>
-                <p>
-                  Nos integramos a su operación comercial como un aliado estratégico, para que usted se
-                  enfoque exclusivamente en escalar sus ventas con la seguridad de que su mercadería está en
-                  manos de especialistas.
-                </p>
-              </div>
-            </div>
+            <p className="text-gray-300 leading-relaxed text-[16px] mb-6 font-body">
+              Nos integramos a la infraestructura comercial de E-commerce, plataformas y empresas corporativas. No somos una mensajería tradicional; operamos como un partner estratégico impulsado por tecnología.
+            </p>
+
+            <ul className="space-y-4 font-body">
+              <li className="flex items-start gap-3 text-gray-200">
+                <span className="text-[#2563eb] text-lg leading-none mt-0.5">✓</span>
+                <span>Absoluta certeza en SLA (Acuerdos de Nivel de Servicio).</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <span className="text-[#2563eb] text-lg leading-none mt-0.5">✓</span>
+                <span>Escalabilidad operativa inmediata.</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-200">
+                <span className="text-[#2563eb] text-lg leading-none mt-0.5">✓</span>
+                <span>Foco exclusivo: Usted vende, nosotros garantizamos la entrega.</span>
+              </li>
+            </ul>
           </div>
         </main>
 
