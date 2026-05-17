@@ -12,11 +12,13 @@ export default function Pagina3() {
         <PageHeader badgeText="SOLUCIÓN LOWCOST" />
 
         <main className="flex-1 flex flex-col justify-center overflow-hidden gap-8">
+          {/* Section Title */}
           <div className="flex items-center gap-3 bg-accent/10 p-4 rounded-lg border-l-4 border-accent shrink-0">
             <Zap className="w-8 h-8 text-accent fill-accent" />
             <h2 className="text-4xl font-black font-headline text-white tracking-tight uppercase">ENVÍOS LOWCOST</h2>
           </div>
 
+          {/* Service Description */}
           <div className="bg-secondary/60 border-l-[6px] border-accent rounded-r-2xl p-6 shrink-0">
             <h3 className="text-accent font-black font-headline text-xl mb-4 tracking-wide uppercase">Eficiencia en ruteo diario</h3>
             <p className="text-gray-200 leading-relaxed text-base mb-4">
@@ -25,26 +27,28 @@ export default function Pagina3() {
             <div className="bg-primary/80 p-4 rounded-xl flex items-start gap-3 border border-white/5">
               <Clock className="text-accent shrink-0 w-6 h-6" />
               <p className="text-accent text-[13px] font-semibold italic leading-snug">
-                Importante: Al igual que en envíos Express, se requiere un mínimo de 2 horas de anticipación para organizar la logística y retiro.
+                Importante: Al igual que en envíos Express, se requiere un mínimo de 2 hours de anticipación para organizar la logística y retiro.
               </p>
             </div>
           </div>
 
+          {/* Section Divider */}
           <div className="flex items-center justify-center gap-4 shrink-0">
             <div className="h-[1px] bg-white/20 grow"></div>
             <h4 className="text-xl font-bold tracking-[0.2em] uppercase font-headline">Tarifario Zonificado</h4>
             <div className="h-[1px] bg-white/20 grow"></div>
           </div>
 
-          <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 flex-grow flex flex-col">
-            <table className="w-full text-xs text-slate-700 h-full">
-              <thead className="bg-slate-50 border-b border-slate-200">
-                <tr className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-                  <th className="px-6 py-4 text-left">Zonificación de Entrega</th>
-                  <th className="px-6 py-4 text-right">Valor Final</th>
+          {/* Pricing Table - Redesigned for Dark Premium Identity */}
+          <div className="overflow-hidden bg-white/5 border border-white/10 rounded-xl shadow-2xl backdrop-blur-md w-full shrink-0">
+            <table className="w-full border-collapse text-left text-sm text-gray-300">
+              <thead className="bg-white/10 border-b border-white/10">
+                <tr className="text-[11px] font-bold tracking-wider text-accent uppercase">
+                  <th scope="col" className="px-6 py-3.5">Zonificación de Entrega</th>
+                  <th scope="col" className="px-6 py-3.5 text-right">Valor Final</th>
                 </tr>
               </thead>
-              <tbody className="text-base font-medium divide-y divide-slate-100 flex-1">
+              <tbody className="divide-y divide-white/5 bg-transparent">
                 {[
                   { z: "Zona 1 (Hasta 3 km)", p: "$3.000" },
                   { z: "Zona 2 (3 a 5 km)", p: "$4.000" },
@@ -52,15 +56,19 @@ export default function Pagina3() {
                   { z: "Zona 4 (7 a 10 km)", p: "$7.000" },
                   { z: "Zona 5 (Más de 10 km)", p: "$700 x km" },
                 ].map((row, i) => (
-                  <tr key={i} className="odd:bg-white even:bg-slate-50/30">
-                    <td className="px-6 py-4 font-bold text-slate-800">{row.z}</td>
-                    <td className="px-6 py-4 text-right text-accent font-black text-2xl tracking-tighter">{row.p}</td>
+                  <tr 
+                    key={i} 
+                    className="transition-colors hover:bg-white/5 odd:bg-transparent even:bg-white/[0.02]"
+                  >
+                    <td className="px-6 py-2.5 font-semibold text-gray-100">{row.z}</td>
+                    <td className="px-6 py-2.5 text-right text-accent font-black text-xl tracking-tight">{row.p}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
+          {/* Additional Conditions Grid */}
           <div className="shrink-0">
             <h4 className="text-accent font-bold tracking-widest uppercase mb-4 border-b border-white/10 pb-2 text-[11px] italic font-headline">Condiciones Adicionales Estándar</h4>
             <div className="grid grid-cols-4 gap-4">

@@ -73,17 +73,17 @@ export default function Pagina2() {
             </div>
           </section>
 
-          {/* Pricing Table - Optimized to match reference image */}
-          <section className="mb-8 flex-1 flex flex-col overflow-hidden">
-            <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col h-full max-h-fit border border-slate-200">
-              <table className="w-full text-left border-collapse">
-                <thead className="bg-slate-50/50 border-b border-slate-100">
-                  <tr className="text-[10px] font-bold tracking-[0.15em] text-slate-400 uppercase">
-                    <th className="px-10 py-6">Zonificación de Entrega</th>
-                    <th className="px-10 py-6 text-right uppercase">Valor Final</th>
+          {/* Pricing Table - Redesigned to match the dark identity */}
+          <section className="mb-8 shrink-0">
+            <div className="overflow-hidden bg-white/5 border border-white/10 rounded-xl shadow-2xl backdrop-blur-md w-full">
+              <table className="w-full border-collapse text-left text-sm text-gray-300">
+                <thead className="bg-white/10 border-b border-white/10">
+                  <tr className="text-[11px] font-bold tracking-wider text-[#fbbd08] uppercase">
+                    <th scope="col" className="px-6 py-3.5">Zonificación de Entrega</th>
+                    <th scope="col" className="px-6 py-3.5 text-right">Valor Final</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-50">
+                <tbody className="divide-y divide-white/5">
                   {[
                     { z: "Zona 1 (Hasta 3 km)", p: "$3.700" },
                     { z: "Zona 2 (3 a 5 km)", p: "$4.600" },
@@ -91,9 +91,16 @@ export default function Pagina2() {
                     { z: "Zona 4 (7 a 10 km)", p: "$8.200" },
                     { z: "Zona 5 (Más de 10 km)", p: "$1.000 x km" },
                   ].map((row, i) => (
-                    <tr key={i} className="hover:bg-slate-50/30 transition-colors">
-                      <td className="px-10 py-5 text-slate-800 font-bold text-lg">{row.z}</td>
-                      <td className="px-10 py-5 text-right text-[#fbbd08] font-black text-2xl tracking-tight">{row.p}</td>
+                    <tr 
+                      key={i} 
+                      className="transition-colors hover:bg-white/5 odd:bg-transparent even:bg-white/[0.02]"
+                    >
+                      <td className="px-6 py-3 font-semibold text-gray-100">
+                        {row.z}
+                      </td>
+                      <td className="px-6 py-3 text-right font-black text-[#fbbd08] text-base tracking-tight">
+                        {row.p}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
