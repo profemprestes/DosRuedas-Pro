@@ -1,134 +1,122 @@
 import React from 'react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
-import { CheckCircle2, Star, CreditCard, Layers } from 'lucide-react';
+import { CheckCircle2, CloudRain, Package, Clock, Undo2, CalendarCheck, ShieldCheck } from 'lucide-react';
 
 export default function Pagina7() {
   return (
-    <div className="flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-primary relative text-white font-body shadow-2xl print:shadow-none" suppressHydrationWarning>
-      {/* Background Subtle Gradient Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(253,195,34,0.06)_0%,_transparent_60%)] z-10" />
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-secondary/70 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full p-[16mm] justify-between box-border">
-        {/* Unified Top Header Component */}
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="CUENTA CORRIENTE" />
 
-        {/* Main Content Layout Optimized for A4 Envelope */}
-        <main className="flex-1 flex flex-col overflow-hidden mt-4 gap-4">
+        <main className="flex-1 flex flex-col mt-4 mb-4 gap-5 overflow-hidden">
           
           {/* Main Title Section */}
           <section className="shrink-0">
-            <h1 className="text-4xl font-black font-headline mb-1 tracking-tight leading-none uppercase italic skew-x-[-5deg]">
+            <h1 className="text-5xl md:text-6xl font-black font-headline tracking-tight uppercase leading-none mb-2 italic skew-x-[-5deg]">
               CUENTA CORRIENTE <span className="text-accent">FLEXIBLE</span>
             </h1>
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-accent" />
-              <p className="text-accent italic font-bold text-xs tracking-[0.12em] uppercase font-headline">
-                SIMPLICIDAD PARA NEGOCIOS SIN VOLUMEN FIJO
-              </p>
-            </div>
+            <p className="text-accent italic font-bold text-lg tracking-[0.15em] font-headline">
+              SIMPLICIDAD PARA NEGOCIOS SIN VOLUMEN FIJO
+            </p>
           </section>
 
-          {/* Intro Callout Card */}
+          {/* Description Box */}
           <section className="shrink-0">
-            <div className="bg-blue-950/40 border-l-4 border-accent rounded-r-2xl p-5 backdrop-blur-md border border-white/5 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-2 opacity-5 pointer-events-none">
-                <CreditCard className="w-24 h-24" />
-              </div>
-              <p className="text-gray-300 text-[14px] leading-relaxed font-medium relative z-10">
-                Diseñado para empresas que buscan profesionalizar sus envíos con <strong className="text-white underline decoration-accent decoration-2">flexibilidad total</strong>. Acceda a los mejores beneficios logísticos del mercado trabajando de forma exclusiva, sin importar la variabilidad de su volumen diario.
+            <div className="bg-secondary/50 backdrop-blur-sm border-l-4 border-accent rounded-r-xl p-6 shadow-lg">
+              <p className="text-gray-200 text-[15px] leading-relaxed font-medium">
+                Diseñado especialmente para emprendedores y empresas que buscan simplificar y profesionalizar sus envíos, pero que no cuentan con un volumen fijo o este es muy variable. Al trabajar de forma exclusiva con nosotros, accede a los mejores beneficios logísticos.
               </p>
             </div>
           </section>
 
-          {/* Core Split Grid Section */}
-          <div className="grid grid-cols-2 gap-6 shrink-0">
-            {/* Left Column: Benefits */}
-            <section className="flex flex-col">
-              <h3 className="text-accent font-black tracking-[0.2em] mb-3 text-[11px] uppercase font-headline border-b border-white/10 pb-1.5 italic">
+          {/* Content Columns - Beneficios y Frecuencia */}
+          <div className="flex-1 grid grid-cols-2 gap-8 min-h-0">
+            
+            {/* Beneficios Exclusivos */}
+            <section className="flex flex-col gap-4">
+              <h3 className="text-accent font-black font-headline tracking-widest text-sm border-b border-white/10 pb-2 uppercase">
                 Beneficios Exclusivos
               </h3>
-              <div className="space-y-4">
-                <div className="flex gap-3 items-start">
-                  <div className="bg-emerald-500 rounded-full p-0.5 shadow-lg shadow-emerald-500/20 shrink-0 mt-0.5">
-                    <CheckCircle2 className="h-4 w-4 text-primary" strokeWidth={3} />
-                  </div>
-                  <div>
-                    <strong className="text-gray-100 text-sm font-bold block mb-0.5">Servicio Express, Valor LowCost</strong> 
-                    <p className="text-xs text-gray-400 leading-normal">
-                      Abona la tarifa económica pero goza de condiciones Express: elección de rango horario y recepción hasta las 15:00hs.
-                    </p>
-                  </div>
+              <div className="space-y-4 overflow-y-auto pr-2">
+                <div className="flex gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+                  <p className="text-[13px] text-gray-300 leading-relaxed">
+                    <strong className="text-white">Valor LowCost, Servicio Express:</strong> Abona la tarifa económica (LowCost), pero goza de las condiciones de envío Express: <span className="text-white font-bold underline decoration-accent underline-offset-2">elección de rango horario</span>, límite de recepción hasta 15:00hs, y un mínimo de 2hs de anticipación.
+                  </p>
                 </div>
 
-                <div className="flex gap-3 items-start">
-                  <div className="bg-emerald-500 rounded-full p-0.5 shadow-lg shadow-emerald-500/20 shrink-0 mt-0.5">
-                    <CheckCircle2 className="h-4 w-4 text-primary" strokeWidth={3} />
-                  </div>
-                  <div>
-                    <strong className="text-gray-100 text-sm font-bold block mb-0.5">Flexibilidad en Pagos</strong> 
-                    <p className="text-xs text-gray-400 leading-normal">
-                      Gestione el costo del envío de forma centralizada o permita que el cliente final abone en destino al recibir.
-                    </p>
-                  </div>
+                <div className="flex gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+                  <p className="text-[13px] text-gray-300 leading-relaxed">
+                    <strong className="text-white">Flexibilidad Total en Pagos:</strong> El envío puede ser abonado por usted (quien lo solicita) o por el cliente que recibe en destino.
+                  </p>
                 </div>
               </div>
             </section>
 
-            {/* Right Column: Frequencies */}
-            <section className="flex flex-col">
-              <h3 className="text-accent font-black tracking-[0.2em] mb-3 text-[11px] uppercase font-headline border-b border-white/10 pb-1.5 italic">
-                Frecuencia de Cierre
+            {/* Frecuencia de Cierre */}
+            <section className="flex flex-col gap-4">
+              <h3 className="text-accent font-black font-headline tracking-widest text-sm border-b border-white/10 pb-2 uppercase flex items-center gap-2">
+                <CalendarCheck className="w-5 h-5" /> Frecuencia de Cierre
               </h3>
-              <div className="grid grid-cols-2 gap-2.5">
-                {["DIARIO", "SEMANAL", "QUINCENAL"].map((f, i) => (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center justify-center text-center backdrop-blur-sm">
-                    <span className="text-gray-400 font-bold text-[11px] tracking-wider">{f}</span>
+              <div className="grid grid-cols-2 gap-3 flex-1 content-start">
+                {["Diario (x Envío)", "Semanal", "Quincenal"].map((freq, idx) => (
+                  <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center text-center shadow-inner">
+                    <span className="text-gray-300 font-bold text-xs uppercase tracking-wider">{freq}</span>
                   </div>
                 ))}
-                <div className="bg-accent text-primary rounded-xl p-3 flex flex-col items-center justify-center text-center shadow-lg border border-accent">
-                  <span className="font-black text-[11px] tracking-wider leading-none">MENSUAL</span>
-                  <span className="text-[8px] font-black opacity-80 mt-0.5">RECOMENDADO</span>
+                {/* Mensual Highlighted */}
+                <div className="bg-accent/10 border-2 border-accent rounded-xl p-4 flex items-center justify-center text-center shadow-[0_0_15px_rgba(251,189,8,0.15)]">
+                  <span className="text-accent font-black font-headline text-sm uppercase tracking-widest">Mensual</span>
                 </div>
               </div>
             </section>
+
           </div>
 
-          {/* Bottom Conditions and Bonifications Panel */}
-          <section className="shrink-0 mt-2">
-            <div className="bg-black/20 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-md">
-              {/* Micro Metric Grid */}
-              <div className="grid grid-cols-4 gap-3 mb-4">
-                {[
-                  { l: "LLUVIA", v: "+50%" },
-                  { l: "BULTO", v: "+$1.800" },
-                  { l: "DEMORA", v: "+$2.200" },
-                  { l: "VUELTA", v: "50%" },
-                ].map((c, i) => (
-                  <div key={i} className="bg-primary/40 py-2.5 px-2 rounded-xl text-center border border-white/5 shadow-inner">
-                    <span className="text-gray-400 text-[9px] block font-bold tracking-wider mb-0.5">{c.l}</span>
-                    <span className="text-white font-black text-sm tracking-tight">{c.v}</span>
-                  </div>
-                ))}
-              </div>
+          {/* Additional Conditions Box */}
+          <section className="shrink-0 mt-auto bg-black/40 border border-white/10 rounded-2xl p-6">
+            <div className="flex items-center justify-center gap-4 mb-5">
+              <div className="h-[1px] bg-white/20 flex-grow"></div>
+              <h4 className="text-accent font-bold tracking-widest text-[11px] uppercase font-headline">
+                Condiciones Operativas Adicionales
+              </h4>
+              <div className="h-[1px] bg-white/20 flex-grow"></div>
+            </div>
 
-              {/* Highlighted Bonification Banner */}
-              <div className="bg-emerald-950/30 border border-emerald-500/20 rounded-xl p-4 text-center">
-                <div className="flex items-center justify-center gap-2 mb-1.5">
-                  <Star className="h-5 w-5 text-emerald-400 fill-emerald-400 animate-pulse" />
-                  <h5 className="text-emerald-400 font-black text-base font-headline tracking-tight uppercase italic skew-x-[-3deg]">
-                    2DA VISITA BONIFICADA AL 50%
-                  </h5>
+            <div className="grid grid-cols-4 gap-3 mb-5">
+              {[
+                { icon: <CloudRain className="w-5 h-5 mb-1 text-blue-400" />, title: "LLUVIA", text: "+50%" },
+                { icon: <Package className="w-5 h-5 mb-1 text-gray-400" />, title: "BULTO", text: "+$1.800" },
+                { icon: <Clock className="w-5 h-5 mb-1 text-accent" />, title: "DEMORA", text: "+$2.200" },
+                { icon: <Undo2 className="w-5 h-5 mb-1 text-purple-400" />, title: "VUELTA", text: "50%" },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 py-3 px-2 rounded-xl flex flex-col items-center justify-center text-center">
+                  {item.icon}
+                  <span className="text-gray-400 text-[9px] font-bold tracking-widest mb-0.5">{item.title}</span>
+                  <span className="text-white font-bold text-sm">{item.text}</span>
                 </div>
-                <p className="text-gray-300 text-xs font-medium leading-relaxed">
-                  Optimizamos la frustración del ausente: si el cliente no está, la segunda gestión tiene un costo preferencial.
-                </p>
+              ))}
+            </div>
+
+            {/* 2da Visita Banner */}
+            <div className="bg-emerald-900/30 border border-emerald-500/40 rounded-xl p-4 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-2">
+                <ShieldCheck className="w-6 h-6 text-emerald-400" />
+                <h5 className="text-emerald-400 font-black text-sm uppercase font-headline">2DA VISITA BONIFICADA</h5>
               </div>
+              <p className="text-gray-300 text-[12px] font-medium border-l border-emerald-500/30 pl-4 text-left">
+                Si el cliente final está ausente, la <strong className="text-white">2da visita se cobra solo al 50%</strong> del valor original.
+              </p>
             </div>
           </section>
+
         </main>
 
-        {/* Unified Bottom Footer Component */}
         <PageFooter pageNumber="7 / 11" />
       </div>
     </div>

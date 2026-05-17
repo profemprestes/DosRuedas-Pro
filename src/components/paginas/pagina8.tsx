@@ -1,103 +1,142 @@
 import React from 'react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
-import { ShieldCheck, Table } from 'lucide-react';
+import { BadgeDollarSign } from 'lucide-react';
 
 export default function Pagina8() {
   return (
-    <div className="flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-primary relative text-white font-body shadow-2xl print:shadow-none" suppressHydrationWarning>
-      {/* Background Subtle Gradient Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.03)_0%,_transparent_70%)] z-10" />
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-secondary/80 z-10" />
+      </div>
 
-      <div className="relative z-20 flex flex-col h-full p-[16mm] justify-between box-border">
-        {/* Unified Top Header Component */}
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="RESUMEN EJECUTIVO" />
 
-        {/* Main Content Layout Optimized for A4 Envelope */}
-        <main className="flex-1 flex flex-col overflow-hidden mt-4 gap-4">
+        <main className="flex-1 flex flex-col mt-2 mb-4 gap-6 overflow-hidden">
           
-          {/* Top Feature Card: Cash on Delivery */}
-          <div className="border border-accent/30 rounded-2xl p-5 bg-accent/5 shadow-2xl shrink-0 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-5 rotate-12 pointer-events-none">
-              <ShieldCheck className="w-28 h-28" />
-            </div>
-            <div className="flex items-start gap-4 mb-4">
-              <div className="text-accent bg-accent/10 p-2.5 rounded-xl shadow-xl shrink-0">
-                <ShieldCheck className="w-8 h-8" />
+          {/* Main Hero Box - Cobranzas en Destino */}
+          <section className="shrink-0 border border-emerald-500/40 rounded-3xl p-6 relative overflow-hidden bg-emerald-900/10 shadow-xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div className="flex items-start gap-4 mb-4 relative z-10">
+              <div className="bg-emerald-500/20 p-3 rounded-2xl border border-emerald-500/30 text-emerald-400 mt-1 shrink-0">
+                <BadgeDollarSign className="w-8 h-8" />
               </div>
               <div>
-                <h1 className="text-2xl font-black text-accent leading-tight mb-0.5 italic uppercase font-headline tracking-tight">
+                <h1 className="text-3xl font-black text-emerald-400 leading-none mb-2 italic font-headline uppercase skew-x-[-5deg]">
                   Gestión de Cobranzas en Destino
                 </h1>
-                <p className="text-accent font-black text-[10px] tracking-[0.18em] uppercase opacity-90">
-                  (SERVICIO DE CONTRAREEMBOLSO SIN COSTO)
+                <p className="text-emerald-400/80 font-bold text-xs tracking-widest uppercase">
+                  (Servicio de Contrareembolso sin costo)
                 </p>
               </div>
             </div>
 
-            <div className="space-y-2.5 text-gray-300 text-xs leading-relaxed max-w-3xl font-medium">
+            <div className="space-y-3 text-gray-300 text-[13px] leading-relaxed relative z-10">
               <p>
-                Para potenciar sus canales de venta, nos encargamos de recaudar el valor de sus productos al momento de la entrega. <strong className="text-white">Garantizamos una transacción profesional y segura.</strong>
+                Para potenciar sus canales de venta, nos encargamos de recaudar el valor de sus productos al momento de la entrega en la puerta de su cliente. Garantizamos una transacción profesional y segura.
               </p>
               <p>
-                La rendición de los fondos se realiza con la agilidad que su caja requiere (en el día, a las 24hs o semanalmente) mediante transferencia bancaria o efectivo, acompañada siempre de un arqueo detallado.
+                La rendición de los fondos se realiza con la agilidad que su caja requiere (en el día, a las 24hs o semanalmente) mediante transferencia bancaria o efectivo, siempre acompañada de un arqueo detallado.
               </p>
-              <p className="italic text-[9px] text-gray-500 pt-2 border-t border-white/5 uppercase font-bold tracking-widest">
-                * Nota: El valor físico transportado corre por cuenta y orden del cliente solicitante.
+              <p className="italic text-[11px] text-gray-500 mt-2 font-bold">
+                * Nota de seguridad: El valor físico transportado corre por cuenta y orden del cliente solicitante.
               </p>
             </div>
-          </div>
+          </section>
 
-          {/* Table Subtitle Section */}
+          {/* Section Title */}
           <div className="text-center shrink-0">
-            <div className="flex items-center justify-center gap-2">
-              <Table className="w-4 h-4 text-accent opacity-50" />
-              <h2 className="text-accent font-black text-[11px] tracking-[0.25em] uppercase font-headline italic">
-                Tabla Comparativa de Modelos
-              </h2>
-            </div>
+            <h2 className="text-accent font-black font-headline text-lg tracking-[0.2em] uppercase border-b border-accent/20 inline-block pb-2">
+              Tabla Comparativa de Modelos
+            </h2>
           </div>
 
-          {/* Matrix Table - Redesigned for Dark Premium Identity */}
-          <div className="overflow-hidden bg-white/5 border border-white/10 rounded-xl shadow-2xl backdrop-blur-md w-full shrink-0">
-            <table className="w-full border-collapse text-center text-[11px] text-gray-300 table-fixed">
-              <thead className="bg-white/10 border-b border-white/10">
-                <tr className="font-bold text-accent uppercase tracking-wider text-[9px]">
-                  <th className="px-2 py-3 text-left w-[20%] font-semibold">CARACTERÍSTICA</th>
-                  <th className="px-1 py-3 font-semibold">EXPRESS</th>
-                  <th className="px-1 py-3 font-semibold">LOWCOST</th>
-                  <th className="px-1 py-3 font-bold text-white bg-white/5">CTA. CORRIENTE</th>
-                  <th className="px-1 py-3 font-semibold">FLEX (ML)</th>
-                  <th className="px-1 py-3 font-semibold">3PL 360</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/5 bg-transparent">
-                {[
-                  { c: "Tarifa", v1: "Zonificada", v2: "Zonificada", v3: "Económica", v4: "Híbrida", v5: "PLANA", s: true },
-                  { c: "Horario", v1: "ELECCIÓN", v2: "Día", v3: "ELECCIÓN", v4: "Antes 20hs", v5: "Día" },
-                  { c: "Corte", v1: "15:00 hs", v2: "13:00 hs", v3: "15:00 hs", v4: "15:00 hs", v5: "15:00 hs" },
-                  { c: "Previo", v1: "2 Horas", v2: "2 Horas", v3: "2 Horas", v4: "Inmediato", v5: "Picking" },
-                  { c: "Pago Destino", v1: "SÍ", v2: "SÍ", v3: "SÍ", v4: "NO (App)", v5: "SÍ" },
-                  { c: "2da Visita", v1: "100%", v2: "100%", v3: "50%", v4: "Según Nivel", v5: "GRATIS", s: true },
-                ].map((row, i) => (
-                  <tr 
-                    key={i} 
-                    className="transition-colors hover:bg-white/5 odd:bg-transparent even:bg-white/[0.02]"
-                  >
-                    <td className="px-2 py-2.5 text-left font-bold text-gray-100 border-r border-white/5 bg-white/[0.01]">{row.c}</td>
-                    <td className="px-1 py-2.5 border-r border-white/5 text-gray-400">{row.v1}</td>
-                    <td className="px-1 py-2.5 border-r border-white/5 text-gray-400">{row.v2}</td>
-                    <td className="px-1 py-2.5 border-r border-white/5 text-accent font-extrabold bg-accent/5">{row.v3}</td>
-                    <td className="px-1 py-2.5 border-r border-white/5 text-gray-400">{row.v4}</td>
-                    <td className={`px-1 py-2.5 ${row.s ? 'text-emerald-400 font-extrabold bg-emerald-500/10' : 'text-gray-400'}`}>{row.v5}</td>
+          {/* Comparison Table Container */}
+          <section className="shrink-0 flex-grow flex flex-col justify-center min-h-0">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl w-full">
+              <table className="w-full text-left border-collapse text-[11px]">
+                <thead>
+                  <tr className="bg-black/40 border-b border-white/10 text-accent uppercase font-black tracking-wider text-center font-headline">
+                    <th className="p-4 text-left w-[20%]">Característica</th>
+                    <th className="p-4 w-[16%]">Express</th>
+                    <th className="p-4 w-[16%]">Lowcost</th>
+                    <th className="p-4 w-[16%]">Cta. Corriente</th>
+                    <th className="p-4 w-[16%]">Flex (ML)</th>
+                    <th className="p-4 w-[16%]">E-Commerce 3PL</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="text-center font-medium divide-y divide-white/5">
+                  
+                  {/* Row 1 */}
+                  <tr className="transition-colors hover:bg-white/5">
+                    <td className="p-3 text-left font-bold text-white">Estructura Tarifa</td>
+                    <td className="p-3 text-gray-300">Zonificada</td>
+                    <td className="p-3 text-gray-300">Zonificada</td>
+                    <td className="p-3 text-accent font-bold">Tarifa LowCost</td>
+                    <td className="p-3 text-gray-300">Por Nivel (Zon. / Plana)</td>
+                    <td className="p-3 text-emerald-400 font-bold">Tarifa Plana</td>
+                  </tr>
+
+                  {/* Row 2 */}
+                  <tr className="transition-colors hover:bg-white/5 bg-white/[0.02]">
+                    <td className="p-3 text-left font-bold text-white">Rango Horario</td>
+                    <td className="p-3 text-gray-300">Sí (Elección)</td>
+                    <td className="p-3 text-gray-300">No (Transcurso día)</td>
+                    <td className="p-3 text-accent font-bold">Sí (Exclusivo)</td>
+                    <td className="p-3 text-gray-300">No (Antes 20hs)</td>
+                    <td className="p-3 text-emerald-400">No (Transcurso día)</td>
+                  </tr>
+
+                  {/* Row 3 */}
+                  <tr className="transition-colors hover:bg-white/5">
+                    <td className="p-3 text-left font-bold text-white">Corte de Pedidos</td>
+                    <td className="p-3 text-gray-300">Hasta 15hs</td>
+                    <td className="p-3 text-gray-300">Hasta 13hs</td>
+                    <td className="p-3 text-accent font-bold">Hasta 15hs</td>
+                    <td className="p-3 text-gray-300">Hasta 15hs</td>
+                    <td className="p-3 text-emerald-400">Hasta 15hs</td>
+                  </tr>
+
+                  {/* Row 4 */}
+                  <tr className="transition-colors hover:bg-white/5 bg-white/[0.02]">
+                    <td className="p-3 text-left font-bold text-white">Anticipación Mín.</td>
+                    <td className="p-3 text-gray-300">2 Horas</td>
+                    <td className="p-3 text-gray-300">2 Horas</td>
+                    <td className="p-3 text-accent font-bold">2 Horas</td>
+                    <td className="p-3 text-slate-500 italic">No aplica</td>
+                    <td className="p-3 text-emerald-400">Fulfillment propio</td>
+                  </tr>
+
+                  {/* Row 5 */}
+                  <tr className="transition-colors hover:bg-white/5">
+                    <td className="p-3 text-left font-bold text-white">Pago en Destino</td>
+                    <td className="p-3 text-gray-300">Sí (Sin Costo)</td>
+                    <td className="p-3 text-gray-300">Sí (Sin Costo)</td>
+                    <td className="p-3 text-accent font-bold">Sí (Sin Costo)</td>
+                    <td className="p-3 text-gray-300">N/A (App)</td>
+                    <td className="p-3 text-emerald-400">Sí (Sin Costo)</td>
+                  </tr>
+
+                  {/* Row 6 */}
+                  <tr className="transition-colors hover:bg-white/5 bg-black/20 border-t border-accent/20">
+                    <td className="p-3 text-left font-black text-white">2da Visita</td>
+                    <td className="p-3 text-gray-400">100% (Nuevo Envío)</td>
+                    <td className="p-3 text-gray-400">100% (Nuevo Envío)</td>
+                    <td className="p-3 text-accent font-bold">50% del valor</td>
+                    <td className="p-3 text-gray-300">Según Nivel</td>
+                    <td className="p-3 text-emerald-400 font-black">100% Bonificada</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </section>
+
         </main>
 
-        {/* Unified Bottom Footer Component */}
         <PageFooter pageNumber="8 / 11" />
       </div>
     </div>

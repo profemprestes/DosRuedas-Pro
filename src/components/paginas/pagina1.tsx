@@ -1,61 +1,31 @@
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { PageHeader } from './shared/PageHeader';
+import { PageFooter } from './shared/PageFooter';
 
 export default function Pagina1() {
-  const bgImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
+  const bgImg = PlaceHolderImages.find((img) => img.id === 'hero-bg');
 
   return (
-    <div className="flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-[#0a1128] relative text-white font-body shadow-2xl print:shadow-none" suppressHydrationWarning>
+    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src={bgImg?.imageUrl || 'https://picsum.photos/seed/dosruedas-hero/1200/800'} 
-          alt="Background" 
-          fill 
+        <Image
+          src={bgImg?.imageUrl || 'https://picsum.photos/seed/dosruedas-hero/1200/800'}
+          alt="Background"
+          fill
           className="object-cover opacity-15"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/85 via-[#0a1128]/90 to-[#0a1128]/95 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/90 to-primary/95 z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full p-16 justify-between box-border">
-        {/* Header Section */}
-        <header className="w-full">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center gap-4">
-              <div className="h-16 w-32 relative">
-                <Image 
-                  src="/LogoEnviosDosRuedas.webp" 
-                  alt="Envíos DosRuedas Logo" 
-                  fill 
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <div className="flex flex-col">
-                <div className="text-2xl font-black font-headline italic -skew-x-12 tracking-tighter leading-none">
-                  <span className="text-white">ENVIOS</span>
-                  <span className="text-accent">DOSRUEDAS</span>
-                </div>
-                <div className="text-[10px] font-bold tracking-[0.3em] text-accent uppercase mt-1">
-                  TU SOLUCION CONFIABLE
-                </div>
-              </div>
-            </div>
-            <div className="relative flex items-center h-12">
-              <div className="absolute -left-2 w-1 h-8 bg-accent rounded-full opacity-70"></div>
-              <div className="bg-primary/40 border border-accent/30 text-accent px-6 h-10 rounded-xl text-[13px] font-black font-headline tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl shadow-black/20 uppercase">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#FDC322]"></div>
-                LOGÍSTICA CORPORATIVA
-              </div>
-            </div>
-          </div>
-          <div className="h-0.5 w-full bg-accent opacity-50"></div>
-        </header>
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+        <PageHeader badgeText="LOGÍSTICA CORPORATIVA" />
 
         {/* Hero Section */}
-        <main className="flex-1 flex flex-col justify-center items-center text-center overflow-hidden">
+        <main className="flex-1 flex flex-col justify-center items-center text-center mt-4 mb-4">
           <h1 className="text-[52px] leading-none font-black font-headline text-white mb-2 tracking-tight uppercase">
             Partner Logístico
           </h1>
@@ -98,17 +68,7 @@ export default function Pagina1() {
           </div>
         </main>
 
-        {/* Footer Section */}
-        <footer className="w-full pt-8">
-          <div className="h-[1px] w-full bg-white/10 mb-4"></div>
-          <div className="flex justify-between items-center text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">
-            <div className="w-1/3 text-left">Propuesta Operativa 2026</div>
-            <div className="w-1/3 flex justify-center items-center gap-4 lowercase tracking-normal text-white/50">
-              <span>@enviosdosruedas</span>
-            </div>
-            <div className="w-1/3 text-right">1 / 11</div>
-          </div>
-        </footer>
+        <PageFooter pageNumber="1 / 11" />
       </div>
     </div>
   );
