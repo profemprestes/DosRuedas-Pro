@@ -1,132 +1,96 @@
 import React from 'react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
-import { Truck, Percent, CheckCircle, AlertCircle } from 'lucide-react';
+import { MapPin, Percent, Store, CheckCircle2 } from 'lucide-react';
 
 export default function Pagina6() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/95 to-secondary/60 z-10" />
+    <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+      {/* Background Image Placeholder with Dark Overlay */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop")' }}
+      />
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm z-10" />
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
-        <PageHeader badgeText="E-COMMERCE 24HS" />
+        <PageHeader badgeText="MAXIMIZACIÓN DE MARGEN" />
 
-        <main className="flex-1 flex flex-col mt-4 mb-4 gap-4 overflow-hidden">
+        <main className="flex-1 flex flex-col mt-4 mb-4 gap-8 justify-center overflow-hidden">
           
           {/* Main Title Section */}
-          <section className="shrink-0">
-            <div className="flex items-center gap-4 mb-3">
-              <div className="bg-accent/10 p-3 rounded-xl border border-accent/20">
-                <Truck className="w-10 h-10 text-accent" />
-              </div>
-              <h2 className="text-4xl font-black font-headline tracking-tight leading-none uppercase italic skew-x-[-5deg]">
-                PLAN E-COMMERCE <span className="text-accent">24HS</span>
-              </h2>
-            </div>
-            <p className="text-gray-300 text-[14px] leading-relaxed max-w-3xl">
-              Escale su tienda online con una tarifa plana previsible a todo Mar del Plata. Usted prepara los paquetes, nosotros retiramos hoy y entregamos mañana en toda la ciudad. <strong className="text-white">Costos fijos y máxima rentabilidad.</strong>
-            </p>
-          </section>
-
-          {/* Pricing Table */}
-          <div className="shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-xl">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="border-b border-white/10 bg-black/20">
-                  <th className="px-6 py-4 text-[11px] font-bold text-accent tracking-widest uppercase font-headline">Nivel Comercial</th>
-                  <th className="px-6 py-4 text-[11px] font-bold text-accent tracking-widest uppercase text-center font-headline">Volumen Mensual</th>
-                  <th className="px-6 py-4 text-[11px] font-bold text-accent tracking-widest uppercase text-right font-headline">Valor x Envío</th>
-                </tr>
-              </thead>
-              <tbody className="text-white text-sm">
-                {[
-                  { n: "Inicial", v: "1 a 199 envíos", p: "$3.800" },
-                  { n: "Pro", v: "200 a 1.199 envíos", p: "$3.500" },
-                  { n: "Elite", v: "1.200 a 1.999 envíos", p: "$3.200", highlight: true },
-                  { n: "Partner", v: "+2.000 envíos", p: "$3.000" },
-                ].map((row, i) => (
-                  <tr key={i} className="border-b border-white/5 transition-colors hover:bg-white/5">
-                    <td className={`px-6 py-3.5 uppercase font-bold ${row.highlight ? 'text-accent' : ''}`}>{row.n}</td>
-                    <td className="px-6 py-3.5 text-center text-gray-300">{row.v}</td>
-                    <td className="px-6 py-3.5 text-right text-xl font-black text-accent tracking-tighter font-headline">{row.p}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="text-center shrink-0">
+            <h1 className="text-5xl font-black font-headline text-[#ffffff] leading-tight uppercase mb-2">
+              MODALIDAD DROP-OFF
+            </h1>
+            <h2 className="text-3xl font-bold font-headline text-[#fbc107] bg-[#fbc107]/10 inline-block px-6 py-2 rounded-lg border border-[#fbc107]/30">
+              -20% de Ahorro Directo
+            </h2>
           </div>
 
-          {/* Drop-Off Card (Enterprise Emerald Variant) */}
-          <div className="bg-gradient-to-r from-emerald-900/40 to-emerald-800/40 border border-emerald-500/30 rounded-2xl p-6 relative overflow-hidden shrink-0 shadow-lg">
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Percent className="w-24 h-24 text-emerald-400" />
-            </div>
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1">
-                <h3 className="text-lg font-black uppercase mb-2 tracking-tighter font-headline text-emerald-400">Opción Drop-Off (Ahorro Inteligente)</h3>
-                <p className="font-medium text-gray-300 text-[13px] leading-relaxed">
-                  Traiga sus paquetes a nuestro depósito (Friuli 1972) y obtenga el descuento directo sobre la tarifa evitando costos de recolección.
+          {/* Split View Structure */}
+          <div className="flex-1 flex gap-8 min-h-0 mt-4">
+
+            {/* Left Side: Explanation */}
+            <div className="w-1/2 flex flex-col justify-center gap-6">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md h-full flex flex-col justify-center relative overflow-hidden">
+                <div className="absolute -left-10 -top-10 p-4 opacity-5">
+                  <MapPin className="w-48 h-48 text-[#ffffff]" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#2563eb] font-headline uppercase mb-4 flex items-center gap-3 relative z-10">
+                  <Store className="w-6 h-6" /> Despacho en Nuestro Hub
+                </h3>
+
+                <p className="text-gray-300 text-[15px] leading-relaxed mb-6 relative z-10">
+                  Optimiza tus costos logísticos eliminando la recolección. Al traer tus paquetes directamente a nuestro centro operativo, reduces los tiempos muertos y maximizas tu margen de ganancia por envío.
                 </p>
-              </div>
-              <div className="bg-emerald-500 text-slate-950 px-6 py-3 rounded-xl font-black text-lg whitespace-nowrap shadow-xl font-headline tracking-tighter">
-                20% DE DESCUENTO
-              </div>
-            </div>
-          </div>
 
-          {/* Info Boxes Grid */}
-          <div className="flex-1 grid grid-cols-2 gap-6 min-h-0">
-            {/* Dinámica */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col">
-              <div className="flex items-center gap-2 border-b border-white/10 pb-3 mb-3">
-                <CheckCircle className="w-5 h-5 text-accent" />
-                <h4 className="text-[11px] font-black uppercase text-accent tracking-widest font-headline">Dinámica de Servicio</h4>
+                <ul className="space-y-4 relative z-10">
+                  {[
+                    "Procesamiento inmediato",
+                    "Horarios de recepción extendidos",
+                    "Ahorro directo en la tarifa final"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-sm">
+                      <CheckCircle2 className="w-5 h-5 text-[#2563eb] shrink-0" />
+                      <span className="text-gray-200 font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-3 text-[12px] font-medium text-gray-300 flex-1 overflow-y-auto pr-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  <span><strong className="text-white">Next Day:</strong> Retiro hoy, entrega mañana.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  <span><strong className="text-white">Franja Abierta:</strong> 9 a 20 hs (Sin horario fijo).</span>
-                </li>
-                <li className="flex items-start gap-2 text-emerald-400 font-bold bg-emerald-500/10 p-1.5 rounded">
-                  <span>•</span>
-                  <span>2da Visita GRATIS (Bonificada).</span>
-                </li>
-                <li className="flex items-start gap-2 text-emerald-400 font-bold bg-emerald-500/10 p-1.5 rounded">
-                  <span>•</span>
-                  <span>Cobranza en Destino GRATIS.</span>
-                </li>
-              </ul>
             </div>
 
-            {/* Excepciones */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col">
-              <div className="flex items-center gap-2 border-b border-white/10 pb-3 mb-3">
-                <AlertCircle className="w-5 h-5 text-accent" />
-                <h4 className="text-[11px] font-black uppercase text-accent tracking-widest font-headline">Excepciones y Costos</h4>
+            {/* Right Side: Corporate Discount Ticket */}
+            <div className="w-1/2 flex flex-col justify-center">
+              <div className="bg-gradient-to-br from-[#2563eb]/20 to-black border-2 border-[#2563eb]/50 rounded-3xl p-8 backdrop-blur-lg relative overflow-hidden flex flex-col items-center justify-center text-center shadow-[0_0_40px_rgba(37,99,235,0.15)] h-full">
+
+                {/* Perforated edge effect for ticket look */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-[#0a0a0a] rounded-full border-r-2 border-[#2563eb]/50 z-20"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-8 h-8 bg-[#0a0a0a] rounded-full border-l-2 border-[#2563eb]/50 z-20"></div>
+                <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 border-t-2 border-dashed border-[#2563eb]/30 z-10"></div>
+
+                <div className="relative z-20 mb-8">
+                  <Percent className="w-16 h-16 text-[#fbc107] mx-auto mb-4" />
+                  <p className="text-gray-300 text-sm font-bold tracking-widest uppercase mb-2">
+                    Beneficio Corporativo
+                  </p>
+                  <h4 className="text-6xl font-black text-[#ffffff] font-headline tracking-tighter">
+                    20<span className="text-[#fbc107]">%</span> OFF
+                  </h4>
+                </div>
+
+                <div className="relative z-20 mt-8 pt-6">
+                  <p className="text-[#2563eb] font-bold text-lg uppercase tracking-wide">
+                    Sobre la tarifa plana
+                  </p>
+                  <p className="text-gray-400 text-xs mt-2">
+                    *Válido exclusivamente para entregas en Hub operativo.
+                  </p>
+                </div>
               </div>
-              <ul className="space-y-3 text-[12px] font-medium text-gray-300 flex-1 overflow-y-auto pr-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  <span><strong className="text-white">Log. Inversa:</strong> Cambios a 50% del valor.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  <span><strong className="text-white">Lluvia:</strong> Recargo 50% (u opción posponer).</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  <span><strong className="text-white">Bulto:</strong> &gt;5kg o 40x40x30cm. Adic. desde $1.800.</span>
-                </li>
-                <li className="flex items-start gap-2 text-accent mt-2 pt-2 border-t border-white/5">
-                  <span>•</span>
-                  <span className="italic"><strong className="text-white not-italic">Retiro Diario:</strong> GRATIS (+10 paq). Menos volumen: $4.000 el retiro.</span>
-                </li>
-              </ul>
             </div>
+
           </div>
 
         </main>
