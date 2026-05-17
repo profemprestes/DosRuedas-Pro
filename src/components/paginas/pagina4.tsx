@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
-import { ShoppingCart, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
+import { ShoppingCart, MapPin, CheckCircle, ArrowRight, Zap } from 'lucide-react';
 
 export default function Pagina4() {
   return (
