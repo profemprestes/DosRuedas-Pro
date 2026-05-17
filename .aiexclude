@@ -1,8 +1,13 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==============================================================================
+# .aiexclude - Gemini Code Assist & AI Agent Exclusion List
+# ==============================================================================
+# Optimiza la ventana de contexto ignorando archivos binarios, dependencias pesadas,
+# logs y builds. Permite a los agentes enfocarse en el "core" del proyecto.
 
-# dependencies
-/node_modules
-/.pnp
+# 1. DEPENDENCIAS Y PAQUETES (Optimización masiva de contexto)
+# Ignorar dependencias descargadas, ya que no son parte del código fuente a editar.
+/node_modules/
+/.pnp/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,37 +15,49 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# 2. DIRECTORIOS DE BUILD Y ARTEFACTOS DE COMPILACIÓN (Evitar ruido de lectura)
+# Estos archivos son auto-generados por Next.js y tsc, no deben ser analizados o editados por IA.
 /.next/
 /out/
+/build/
+/dist/
+*.tsbuildinfo
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# 3. LOGS Y DATOS DE DEPURACIÓN PESADOS (Ahorro de tokens)
+# Excluir archivos de log crudos, volcados de memoria y debuggers de npm/yarn/firebase.
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-.genkit/*
-.env*
-
-# firebase
 firebase-debug.log
 firestore-debug.log
+dev_output.log
+dev_server.log
+next_output.log
+npm_output.log
+
+# 4. ARCHIVOS DEL SISTEMA Y METADATA (Limpieza de contexto)
+# Ignorar metadatos de SO que no aportan valor algorítmico al agente de IA.
+.DS_Store
+*.pem
+*.swp
+*.bak
+
+# 5. ENTORNO VIRTUAL DE IA Y VARIABLES SENSIBLES (Seguridad)
+# Protege claves secretas y previene bucles de lectura sobre el propio caché del AI (Genkit).
+.genkit/*
+.env*
+.vercel/
+
+# 6. DATOS MULTIMEDIA Y ASSETS COMPILADOS
+# Bloquear binarios de imagen, bases de datos SQLite temporales o JSON inmensos estáticos.
+*.sqlite
+*.sqlite3
+*.db
 src/app/lib/placeholder-images.json
+
+# 7. SCRIPTS DE MIGRACIÓN Y PRUEBA EXTERNOS
+# (Dependerá del caso, pero si no forman parte de la arquitectura central)
+*.pyc
+__pycache__/
