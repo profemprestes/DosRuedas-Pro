@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, Phone } from 'lucide-react';
 
 export default function Pagina11() {
   return (
@@ -9,78 +10,82 @@ export default function Pagina11() {
 
       <div className="relative z-20 flex flex-col h-full justify-center items-center p-10">
         
-        <main className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl text-center">
+        <main className="flex-1 flex flex-col items-center justify-center w-full max-w-4xl text-center gap-16">
 
-          {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-7xl font-black font-headline tracking-tighter uppercase text-[#fbc107] mb-4">
-              EL PRÓXIMO PASO
+          {/* Centro Superior */}
+          <div className="flex flex-col items-center gap-4">
+            <Image
+              src="/LogoEnviosDosRuedas.webp"
+              alt="Logo Envios Dos Ruedas"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+            <h1 className="text-6xl font-black font-headline tracking-tighter uppercase text-white drop-shadow-lg">
+              ENVÍOS DOSRUEDAS
             </h1>
-            <h2 className="text-3xl font-bold font-headline text-[#ffffff] uppercase tracking-widest">
-              Transformemos tu logística hoy.
+          </div>
+
+          {/* Centro Medio */}
+          <div>
+            <h2 className="text-4xl font-bold font-headline text-[#fbc107] uppercase tracking-widest drop-shadow-md">
+              Transformá tus costos logísticos hoy.
             </h2>
           </div>
 
-          {/* Contact Block */}
-          <div className="w-full bg-black/70 border border-white/10 rounded-2xl p-10 shadow-2xl backdrop-blur-md flex flex-col items-center justify-center gap-8 relative overflow-hidden">
+          {/* Sección Inferior */}
+          <div className="w-full bg-black/70 border border-white/10 rounded-2xl p-10 shadow-2xl backdrop-blur-md flex flex-row items-center justify-between relative overflow-hidden">
             
             {/* Decorative Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#2563eb] shadow-[0_0_20px_#2563eb]"></div>
 
-            <div className="w-full flex flex-col gap-6 text-left">
+            {/* Mitad Izquierda */}
+            <div className="flex-1 flex flex-col gap-8 text-left border-r border-white/10 pr-10">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#2563eb]/10 border border-[#2563eb]/30 flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-[#2563eb]" />
+                <div className="w-14 h-14 rounded-lg bg-[#2563eb]/20 border border-[#2563eb]/30 flex items-center justify-center shrink-0">
+                  <Mail className="w-7 h-7 text-[#2563eb]" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-widest font-headline mb-1">Email</p>
-                  <p className="text-lg font-bold text-white tracking-wide">comercial@enviosdosruedas.com</p>
+                  <p className="text-sm text-gray-400 uppercase tracking-widest font-headline mb-1">Email Comercial</p>
+                  <p className="text-xl font-bold text-white tracking-wide">comercial@enviosdosruedas.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#2563eb]/10 border border-[#2563eb]/30 flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-[#2563eb]" />
+                <div className="w-14 h-14 rounded-lg bg-[#2563eb]/20 border border-[#2563eb]/30 flex items-center justify-center shrink-0">
+                  <Phone className="w-7 h-7 text-[#2563eb]" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-widest font-headline mb-1">Tel/WhatsApp</p>
-                  <p className="text-lg font-bold text-white tracking-wide">+54 223 660-2699</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#2563eb]/10 border border-[#2563eb]/30 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-[#2563eb]" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-widest font-headline mb-1">Base Operativa</p>
-                  <p className="text-lg font-bold text-white tracking-wide">Mar del Plata, Argentina</p>
+                  <p className="text-sm text-gray-400 uppercase tracking-widest font-headline mb-1">Contacto Directo</p>
+                  <p className="text-xl font-bold text-white tracking-wide">+54 223 660-2699</p>
                 </div>
               </div>
             </div>
 
-            {/* QR Code Placeholder */}
-            <div className="mt-6 flex flex-col items-center gap-3">
-              <div className="w-[150px] h-[150px] border-2 border-[#2563eb] border-dashed rounded-xl flex items-center justify-center bg-black/50 p-2 shadow-[0_0_15px_rgba(37,99,235,0.2)]">
-                <div className="w-full h-full bg-white/5 rounded-lg flex items-center justify-center">
-                  <span className="text-xs text-gray-400 font-headline uppercase tracking-wider text-center">
-                    [QR CODE<br/>PLACEHOLDER]
-                  </span>
+            {/* Mitad Derecha (QR Code) */}
+            <div className="flex-1 flex flex-col items-center justify-center pl-10 gap-4">
+              <div className="w-[150px] h-[150px] border-4 border-[#fbc107] bg-white rounded-xl flex items-center justify-center relative p-2 shadow-[0_0_25px_rgba(251,193,7,0.3)]">
+                {/* Simulated QR Pattern (Placeholder) */}
+                <div className="w-full h-full bg-black/10 rounded flex items-center justify-center">
+                    <div className="w-8 h-8 bg-white border border-gray-200 rounded flex items-center justify-center absolute z-10">
+                        <Image
+                           src="/LogoEnviosDosRuedas.webp"
+                           alt="Logo Mini"
+                           width={24}
+                           height={24}
+                           className="object-contain"
+                        />
+                    </div>
                 </div>
               </div>
-              <p className="text-xs text-[#fbc107] font-headline tracking-widest uppercase">Escanea para contactar</p>
+              <p className="text-sm text-white font-headline tracking-widest uppercase mt-2">
+                Escaneá para chatear con un asesor
+              </p>
             </div>
 
           </div>
 
         </main>
-
-        <footer className="mt-auto pt-10 text-center w-full">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold font-headline">
-            © 2026 ENVÍOS DOSRUEDAS | Logística de Precisión
-          </p>
-        </footer>
-
       </div>
     </div>
   );
