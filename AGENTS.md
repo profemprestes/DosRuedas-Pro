@@ -1,31 +1,34 @@
-# Guía de Comportamiento para Agentes Autónomos - Dos Ruedas Pro
+# System Role & Context
+El propósito de este repositorio es el desarrollo y mantenimiento de **Dos Ruedas Pro**, una plataforma logística de última milla.
+El core del sistema se centra en la gestión operativa, propuestas comerciales e itinerarios, destacándose por la generación y exportación de documentos en alta fidelidad como PDFs en formato A4.
 
-## System Role & Context
-Este repositorio contiene **Dos Ruedas Pro**, una plataforma de gestión logística de última milla basada en Argentina. Su propósito principal es la generación y visualización de propuestas comerciales operativas diseñadas para ser exportadas a PDF en formato A4 de alta fidelidad.
+Como agente autónomo, tu rol es mantener la integridad arquitectónica y proveer soluciones que no comprometan la visualización estricta requerida por la logística corporativa.
 
-## Core Stack Rules
-- **Framework:** Next.js 15+ (App Router).
-- **Styling:** Tailwind CSS (Uso estricto de variables HSL de ShadCN).
-- **Layout:** Maquetación orientada a impresión. Cada página en `src/components/paginas/` debe respetar `w-[210mm]` y `h-[297mm]`.
-- **Typing:** TypeScript estricto. Importación de tipos con `import type`.
-- **Icons:** `lucide-react` únicamente.
+# Core Stack Rules
+- **Arquitectura Base:** Next.js utilizando estrictamente **App Router**.
+- **Estructura de UI:** Todos los componentes principales de interfaz y de páginas deben alojarse de forma modular en `src/components/paginas/`.
+- **Tipado:** Uso riguroso de TypeScript. El uso explícito del tipo `any` está prohibido.
+- **Estilos y Exportación PDF:**
+  - Tailwind CSS es la única herramienta de estilos permitida.
+  - Para maquetación de PDFs, debes aplicar invariablemente la clase `.a4-container` (que fija dimensiones en 210mm x 297mm).
+  - Controla el desbordamiento de contenido con `overflow-hidden`.
+  - Prioriza los colores temáticos definidos en `tailwind.config.ts` (`primary`, `accent`, etc.) por encima de valores hex hardcodeados.
+  - Se debe utilizar la estética Enterprise / shadcn/ui para las tablas de datos (fondos sutiles, headers pequeños en mayúsculas, filas alternadas y badges estilizados para estados).
 
-## AI Agent Flows (Genkit)
-El core inteligente reside en `src/ai/flows/optimize-delivery-routes.ts`.
-- **Input:** Lista de locaciones B2B, detalles de pedidos y capacidades de vehículos.
-- **Output:** Itinerario secuencial optimizado, estimación de tiempo/combustible y razonamiento lógico.
-- **Engine:** Genkit 1.x con Google AI Plugin.
+# AI Agent Flows (Genkit)
+El flujo inteligente del proyecto reside en `src/ai/flows/optimize-delivery-routes.ts`.
+- **Inputs Esperados:** Estructuras de datos conteniendo rutas, lista de direcciones de entrega, ventanas de tiempo y capacidades de carga.
+- **Outputs Requeridos:** Itinerarios optimizados, ordenados cronológicamente con estimaciones de tiempos y distancias.
+- **Herramientas de Agente:** Funciones de geolocalización, estimación de tráfico y mapeo de distancias. El flujo debe ser determinista frente al frontend.
 
-## Strict Guidelines
+# Strict Guidelines ("Qué hacer" vs "Qué NO hacer")
 
-### SÍ (Hacer)
-- Mantener la integridad del contenedor A4 (`a4-container`).
-- Usar `flex flex-col justify-between` para asegurar que el footer siempre toque el borde inferior de la hoja.
-- Ajustar `gap`, `padding` y `font-size` de forma granular si el contenido desborda la página.
-- Utilizar `suppressHydrationWarning` en componentes que manejan estados de montaje.
+### SÍ Hacer:
+- **Mantener layout elástico:** En vistas A4, estructura los componentes con un contenedor flexbox vertical (`flex flex-col h-full justify-between max-h-full`) y un cuerpo elástico (`flex-1`) para prevenir desbordamientos.
+- **Control de espacios:** Utiliza márgenes y paddings precisos (puedes valerte de equivalencias en `mm` si está extendido en Tailwind) para garantizar la alineación de impresión.
+- **Usar iconos del stack:** Emplea exclusivamente `lucide-react` para la iconografía del proyecto.
 
-### NO (No hacer)
-- **NO** eliminar contenido informativo para ganar espacio; reorganizar visualmente (grids/flex).
-- **NO** inyectar estilos `position: absolute` que rompan el flujo secuencial de la página de exportación.
-- **NO** usar librerías de UI externas que no sean las configuradas en `components.json`.
-- **NO** modificar la lógica de inicialización de Genkit sin solicitud explícita.
+### NO Hacer:
+- **NO eliminar contenido para encajar:** Jamás reduzcas, abrevies o elimines texto o datos reales con tal de hacerlos caber en el A4. En su lugar: adapta, reduce los espacios circundantes o reorganiza la estructura visual mediante grillas o flexbox.
+- **NO utilizar CSS externo:** Está estrictamente prohibido importar o usar librerías CSS ajenas a Tailwind.
+- **NO romper la arquitectura App Router:** Evita crear estructuras de *Pages Router* heredadas o mezclar paradigmas de hidratación de estados ineficientemente.
