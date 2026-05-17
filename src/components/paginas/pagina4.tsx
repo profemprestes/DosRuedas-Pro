@@ -4,21 +4,21 @@ import { PageFooter } from './shared/PageFooter';
 
 export default function Pagina4() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <PageHeader badgeText="MERCADOLIBRE FLEX" />
 
-        <main className="flex-1 flex flex-col mt-4 mb-4">
+        <main className="flex-1 flex flex-col mt-2 mb-2 max-h-full">
           {/* Section Title Flex */}
-          <div className="flex items-center gap-4 mb-5">
+          <div className="flex items-center gap-4 mb-2">
               <div className="bg-accent p-2 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 14 8 16"/><path d="M14 10 16 8"/><path d="M18 14V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8"/><path d="M22 13a3 3 0 1 0-4-4l-3 3 2 2Z"/></svg>
               </div>
               <h2 className="text-4xl font-black font-headline italic uppercase">Envíos Flex</h2>
-              <div className="bg-accent text-primary px-3 py-1 rounded font-extrabold text-sm tracking-tight ml-2">
+              <div className="bg-accent text-primary px-3 py-1 rounded font-extrabold text-[10px] tracking-tight ml-2">
                   MERCADOLIBRE
               </div>
           </div>
@@ -30,13 +30,13 @@ export default function Pagina4() {
           </div>
 
           {/* SLA Note */}
-          <div className="border-l-4 border-accent pl-4 mb-6">
-              <p className="italic text-slate-300 text-sm leading-relaxed">
+          <div className="border-l-4 border-accent pl-4 mb-3">
+              <p className="italic text-slate-300 text-[10px] leading-relaxed">
                   SLA Garantizado: Ventas concretadas hasta las 15:00hs serán entregadas en el día antes de las 20:00hs.
               </p>
           </div>
 
-          <div className="flex-grow flex flex-col space-y-4">
+          <div className="flex-grow flex flex-col space-y-2">
             {/* Card Nivel 1 */}
             <div className="border border-accent/50 rounded-2xl p-5 bg-slate-900/40">
                 <div className="flex justify-between items-start mb-3">
@@ -47,7 +47,7 @@ export default function Pagina4() {
                     <div className="bg-slate-700/50 text-slate-300 px-3 py-1 rounded text-[11px] font-bold shrink-0">1 a 4 envíos / día</div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-y-2 gap-x-12 text-sm font-semibold border-t border-white/10 pt-3">
+                <div className="grid grid-cols-2 gap-y-2 gap-x-12 text-[10px] font-semibold border-t border-white/10 pt-3">
                     <div className="flex justify-between"><span>Z1 (Hasta 3 km):</span> <span>$3.000</span></div>
                     <div className="flex justify-between"><span>Z2 (3 a 5 km):</span> <span>$4.000</span></div>
                     <div className="flex justify-between"><span>Z3 (5 a 7 km):</span> <span>$5.300</span></div>
@@ -71,7 +71,7 @@ export default function Pagina4() {
                 </div>
                 <p className="text-[11px] text-slate-400 mb-3">Tarifa Híbrida. Mantiene costos bajos en zonas cercanas y establece un tope fijo para largas distancias, acotando su riesgo.</p>
 
-                <div className="grid grid-cols-2 gap-y-2 gap-x-12 text-sm font-semibold border-t border-white/10 pt-3">
+                <div className="grid grid-cols-2 gap-y-2 gap-x-12 text-[10px] font-semibold border-t border-white/10 pt-3">
                     <div className="flex justify-between"><span>Z1 (Hasta 3 km):</span> <span>$3.000</span></div>
                     <div className="flex justify-between"><span>Z2 (3 a 5 km):</span> <span>$4.000</span></div>
                     <div className="flex justify-between"><span>Z3 (5 a 7 km):</span> <span>$5.300</span></div>
@@ -111,7 +111,7 @@ export default function Pagina4() {
           </div>
 
           {/* Weather Note */}
-          <div className="mt-4 bg-white/5 border border-white/10 p-3 rounded-xl flex justify-center items-center gap-4 text-xs font-medium text-slate-300">
+          <div className="mt-4 bg-white/5 border border-white/10 p-3 rounded-xl flex justify-center items-center gap-4 text-[10px] font-medium text-slate-300">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.5 19c.7 0 1.2-.2 1.7-.5m-1.7.5c-.7 0-1.2-.2-1.7-.5M17.5 19v-2m-3.5 1.5c.7 0 1.2-.2 1.7-.5m-1.7.5c-.7 0-1.2-.2-1.7-.5M14 18v-2m3.5-4.5c.7 0 1.2-.2 1.7-.5m-1.7.5c-.7 0-1.2-.2-1.7-.5M17.5 13v-2m-3.5 1.5c.7 0 1.2-.2 1.7-.5m-1.7.5c-.7 0-1.2-.2-1.7-.5M14 12v-2m2-5c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z"/><path d="M20 17.58A5 5 0 0 0 18 8a7 7 0 1 0-13.31 3.5"/></svg>
               <span><strong className="text-accent uppercase">Clima Adverso / Lluvia:</strong> Recargo operativo exclusivo para Flex reducido al <strong className="text-white">30%</strong>.</span>
           </div>

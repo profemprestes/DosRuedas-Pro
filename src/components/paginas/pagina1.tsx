@@ -7,7 +7,7 @@ export default function Pagina1() {
   const bgImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -20,7 +20,7 @@ export default function Pagina1() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/85 via-[#0a1128]/90 to-[#0a1128]/95 z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <header>
           <div className="flex justify-between items-center mb-4">
@@ -48,7 +48,7 @@ export default function Pagina1() {
               {/* Accent Line */}
               <div className="absolute -left-2 w-1 h-8 bg-accent rounded-full opacity-70"></div>
               {/* Badge Body */}
-              <div className="bg-primary/40 border border-accent/30 text-accent px-6 h-10 rounded-xl text-[13px] font-black font-headline tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl shadow-black/20">
+              <div className="bg-primary/40 border border-accent/30 text-accent px-4 h-10 rounded-xl text-[13px] font-black font-headline tracking-[0.2em] backdrop-blur-md flex items-center gap-2 shadow-xl shadow-black/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#FDC322]"></div>
                 LOGÍSTICA CORPORATIVA
               </div>
@@ -58,34 +58,34 @@ export default function Pagina1() {
         </header>
 
         {/* Hero Section */}
-        <main className="flex-1 flex flex-col justify-center items-center text-center mt-4 mb-4">
+        <main className="flex-1 flex flex-col justify-center items-center text-center mt-2 mb-2 max-h-full">
           {/* Title */}
           <h1 className="text-[52px] leading-none font-black font-headline text-white mb-2 tracking-tight uppercase">
             Partner Logístico
           </h1>
-          <h1 className="text-[52px] leading-none font-black font-headline text-accent mb-8 tracking-tight uppercase">
+          <h1 className="text-[52px] leading-none font-black font-headline text-accent mb-4 tracking-tight uppercase">
             Especializado
           </h1>
 
           {/* Slogan */}
-          <p className="text-xl italic font-light text-gray-300 mb-8">
+          <p className="text-xl italic font-light text-gray-300 mb-4">
             TU SOLUCION CONFIABLE
           </p>
 
           {/* Pill */}
-          <div className="inline-block border border-accent/50 bg-primary/50 px-8 py-2 rounded-full text-accent font-semibold text-sm tracking-wide">
+          <div className="inline-block border border-accent/50 bg-primary/50 px-5 py-2 rounded-full text-accent font-semibold text-[10px] tracking-wide">
             Cobertura Integral en Mar del Plata
           </div>
 
           {/* Content Card */}
-          <div className="mt-10 text-left max-w-2xl w-full relative">
+          <div className="mt-2 text-left max-w-2xl w-full relative">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-full"></div>
-            <div className="bg-[#16203d]/40 backdrop-blur-sm p-10 rounded-r-2xl border border-white/5 ml-1">
-              <h2 className="text-2xl font-bold text-accent mb-6 uppercase tracking-wider">
+            <div className="bg-[#16203d]/40 backdrop-blur-sm p-4 rounded-r-2xl border border-white/5 ml-1">
+              <h2 className="text-2xl font-bold text-accent mb-3 uppercase tracking-wider">
                 7 Años Innovando en la Ciudad
               </h2>
 
-              <div className="space-y-5 text-gray-200 leading-relaxed text-sm">
+              <div className="space-y-2 text-gray-200 leading-relaxed text-[10px]">
                 <p>
                   Nacimos en Mar del Plata y llevamos más de 7 años operando, creciendo e innovando de manera
                   constante. Desde nuestros inicios, nos guía un único propósito: brindar un servicio

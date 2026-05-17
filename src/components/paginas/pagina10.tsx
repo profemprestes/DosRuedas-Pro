@@ -5,16 +5,16 @@ import { ShieldAlert } from 'lucide-react';
 
 export default function Pagina10() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <PageHeader badgeText="SOPORTE Y CONDICIONES" />
 
-        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
+        <main className="flex-1 flex flex-col justify-center mt-2 mb-2 gap-2 max-h-full">
             {/* Título de Sección */}
-            <div className="mb-6 relative">
+            <div className="mb-3 relative">
                 <div className="flex items-baseline gap-3 border-b border-white/20 pb-2">
                     <h1 className="text-4xl font-black font-headline tracking-tight">PREGUNTAS FRECUENTES</h1>
                     <span className="text-2xl font-light text-gray-500">(2/2)</span>
@@ -26,7 +26,7 @@ export default function Pagina10() {
 
                 {/* Bloque 1 */}
                 <div className="bg-black/20 rounded-xl border-l-[4px] border-accent p-5 shadow-xl">
-                    <h3 className="text-accent font-bold text-sm mb-2 tracking-wide uppercase">
+                    <h3 className="text-accent font-bold text-[10px] mb-2 tracking-wide uppercase">
                         ¿QUÉ PASA SI EL COMPRADOR BRINDÓ UNA DIRECCIÓN INCORRECTA?
                     </h3>
                     <p className="text-gray-200 text-[13.5px] leading-relaxed">
@@ -36,7 +36,7 @@ export default function Pagina10() {
 
                 {/* Bloque 2 */}
                 <div className="bg-black/20 rounded-xl border-l-[4px] border-accent p-5 shadow-xl">
-                    <h3 className="text-accent font-bold text-sm mb-2 tracking-wide uppercase">
+                    <h3 className="text-accent font-bold text-[10px] mb-2 tracking-wide uppercase">
                         ¿QUÉ SUCEDE SI EL CLIENTE FINAL RECHAZA LA COMPRA EN LA PUERTA?
                     </h3>
                     <p className="text-gray-200 text-[13.5px] leading-relaxed">
@@ -46,7 +46,7 @@ export default function Pagina10() {
 
                 {/* Bloque 3 */}
                 <div className="bg-black/20 rounded-xl border-l-[4px] border-accent p-5 shadow-xl">
-                    <h3 className="text-accent font-bold text-sm mb-2 tracking-wide uppercase">
+                    <h3 className="text-accent font-bold text-[10px] mb-2 tracking-wide uppercase">
                         ¿CÓMO SE GESTIONA EL FRACASO DE UNA ENTREGA POR "AUSENTE"?
                     </h3>
                     <div className="text-gray-200 text-[13.5px] leading-relaxed">
@@ -62,7 +62,7 @@ export default function Pagina10() {
 
                 {/* Bloque 4 */}
                 <div className="bg-black/20 rounded-xl border-l-[4px] border-accent p-5 shadow-xl">
-                    <h3 className="text-accent font-bold text-sm mb-2 tracking-wide uppercase">
+                    <h3 className="text-accent font-bold text-[10px] mb-2 tracking-wide uppercase">
                         ¿CUÁNDO SE APLICA RECARGO POR "LLUVIA" Y "DEMORAS"?
                     </h3>
                     <p className="text-gray-200 text-[13.5px] leading-relaxed">
@@ -72,7 +72,7 @@ export default function Pagina10() {
 
                 {/* Bloque 5 */}
                 <div className="bg-orange-900/10 rounded-xl border-l-[4px] border-orange-500 p-5 shadow-xl relative">
-                    <h3 className="text-orange-400 font-bold text-sm mb-2 tracking-wide uppercase flex items-center gap-2">
+                    <h3 className="text-orange-400 font-bold text-[10px] mb-2 tracking-wide uppercase flex items-center gap-2">
                         <ShieldAlert className="w-5 h-5 text-orange-400" />
                         ¿QUÉ SUCEDE ANTE EVENTUALIDADES O SINIESTROS EN CALLE?
                     </h3>

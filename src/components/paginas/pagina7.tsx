@@ -5,14 +5,14 @@ import { Check, Star } from 'lucide-react';
 
 export default function Pagina7() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <PageHeader badgeText="CUENTA CORRIENTE" />
 
-        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
+        <main className="flex-1 flex flex-col justify-center mt-2 mb-2 gap-2 max-h-full">
             {/* Main Title Section */}
             <section className="mb-4">
                 <h1 className="text-4xl md:text-5xl font-black font-headline mb-1 tracking-tight">
@@ -26,7 +26,7 @@ export default function Pagina7() {
             {/* Description Box */}
             <section className="mb-4">
                 <div className="bg-blue-950/30 border-l-[6px] border-accent rounded-r-xl p-4 relative">
-                    <p className="text-slate-200 text-sm leading-relaxed font-medium">
+                    <p className="text-slate-200 text-[10px] leading-relaxed font-medium">
                         Diseñado especialmente para emprendedores y empresas que buscan simplificar y profesionalizar sus envíos, pero que no cuentan con un volumen fijo o este es muy variable. Al trabajar de forma exclusiva con nosotros, accede a los mejores beneficios logísticos.
                     </p>
                 </div>
@@ -36,15 +36,15 @@ export default function Pagina7() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow">
                 {/* Beneficios */}
                 <section className="flex flex-col">
-                    <h3 className="text-accent font-bold tracking-widest mb-3 text-xs uppercase">Beneficios Exclusivos</h3>
-                    <div className="space-y-4 flex-grow flex flex-col justify-center">
+                    <h3 className="text-accent font-bold tracking-widest mb-3 text-[10px] uppercase">Beneficios Exclusivos</h3>
+                    <div className="space-y-2 flex-grow flex flex-col justify-center">
                         <div className="flex gap-3 items-start">
                             <div className="mt-1 flex-shrink-0">
                                 <div className="bg-emerald-500 rounded-full p-1">
                                     <Check className="h-3 w-3 text-primary" strokeWidth={4} />
                                 </div>
                             </div>
-                            <p className="text-xs text-slate-300 leading-snug">
+                            <p className="text-[10px] text-slate-300 leading-snug">
                                 <strong className="text-white">Valor LowCost, Servicio Express:</strong> Abona la tarifa económica (LowCost), pero goza de las condiciones de envío Express: <span className="text-white font-bold underline decoration-accent">elección de rango horario</span>, límite de recepción hasta 15:00hs, y un mínimo de 2hs de anticipación.
                             </p>
                         </div>
@@ -55,7 +55,7 @@ export default function Pagina7() {
                                     <Check className="h-3 w-3 text-primary" strokeWidth={4} />
                                 </div>
                             </div>
-                            <p className="text-xs text-slate-300 leading-snug">
+                            <p className="text-[10px] text-slate-300 leading-snug">
                                 <strong className="text-white">Flexibilidad Total en Pagos:</strong> El envío puede ser abonado por usted (quien lo solicita) o por el cliente que recibe en destino.
                             </p>
                         </div>
@@ -64,7 +64,7 @@ export default function Pagina7() {
 
                 {/* Frecuencia */}
                 <section className="flex flex-col">
-                    <h3 className="text-accent font-bold tracking-widest mb-3 text-xs uppercase">Frecuencia de cierre a elección</h3>
+                    <h3 className="text-accent font-bold tracking-widest mb-3 text-[10px] uppercase">Frecuencia de cierre a elección</h3>
                     <div className="grid grid-cols-2 gap-2 flex-grow content-center">
                         <div className="bg-slate-800/40 border border-slate-700 rounded-xl p-3 flex items-center justify-center text-center">
                             <span className="text-slate-200 font-bold text-[10px] uppercase tracking-wider">Diario (x Envío)</span>
@@ -109,7 +109,7 @@ export default function Pagina7() {
                     <div className="bg-emerald-900/20 border border-emerald-500/50 rounded-xl p-3 text-center">
                         <div className="flex items-center justify-center gap-2 mb-1">
                             <Star className="h-4 w-4 text-emerald-400 fill-emerald-400" />
-                            <h5 className="text-emerald-400 font-black font-headline text-sm tracking-tight">2DA VISITA BONIFICADA</h5>
+                            <h5 className="text-emerald-400 font-black font-headline text-[10px] tracking-tight">2DA VISITA BONIFICADA</h5>
                         </div>
                         <p className="text-slate-300 text-[10px] font-medium">
                             Si el cliente final está ausente, la <span className="text-white font-bold">2da visita se cobra solo al 50%</span> del valor original.

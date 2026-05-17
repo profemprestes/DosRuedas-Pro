@@ -5,16 +5,16 @@ import { ShieldCheck } from 'lucide-react';
 
 export default function Pagina8() {
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/95 z-10" />
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <PageHeader badgeText="RESUMEN EJECUTIVO" />
 
-        <main className="flex-1 flex flex-col justify-center mt-4 mb-4 gap-4">
+        <main className="flex-1 flex flex-col justify-center mt-2 mb-2 gap-2 max-h-full">
             {/* Main Hero Box */}
-            <div className="border-2 border-accent rounded-3xl p-6 mb-4 relative overflow-hidden flex-shrink-0">
+            <div className="border-2 border-accent rounded-3xl p-4 mb-4 relative overflow-hidden flex-shrink-0">
                 {/* Background Decoration */}
                 <div className="absolute top-0 left-0 w-full h-full bg-accent opacity-5 pointer-events-none"></div>
 
@@ -27,13 +27,13 @@ export default function Pagina8() {
                         <h1 className="text-3xl font-black font-headline text-accent leading-none mb-1 italic uppercase">
                             Gestión de Cobranzas en Destino
                         </h1>
-                        <p className="text-accent font-bold text-xs tracking-wide">
+                        <p className="text-accent font-bold text-[10px] tracking-wide">
                             (SERVICIO DE CONTRAREEMBOLSO SIN COSTO)
                         </p>
                     </div>
                 </div>
 
-                <div className="space-y-3 text-slate-300 text-xs leading-relaxed max-w-3xl">
+                <div className="space-y-1.5 text-slate-300 text-[10px] leading-relaxed max-w-3xl">
                     <p>
                         Para potenciar sus canales de venta, nos encargamos de recaudar el valor de sus productos al momento de la entrega en la puerta de su cliente. Garantizamos una transacción profesional y segura.
                     </p>
@@ -55,9 +55,9 @@ export default function Pagina8() {
 
             {/* Comparison Table */}
             <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 flex-grow flex flex-col justify-center">
-                <table className="w-full text-xs text-slate-700">
+                <table className="w-full text-[10px] text-slate-700">
                     <thead className="bg-slate-50 border-b border-slate-200">
-                        <tr className="text-xs font-semibold tracking-wider text-slate-500 uppercase text-center">
+                        <tr className="text-[10px] font-semibold tracking-wider text-slate-500 uppercase text-center">
                             <th className="px-4 py-3 text-left w-1/6">Característica</th>
                             <th className="px-4 py-3 w-1/6">Express</th>
                             <th className="px-4 py-3 w-1/6">Lowcost</th>

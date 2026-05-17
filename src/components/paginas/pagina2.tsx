@@ -11,7 +11,7 @@ export default function Pagina2() {
   const bgImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
   return (
-    <div className="a4-container mx-auto bg-primary relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
+    <div className="a4-container flex flex-col justify-between w-[210mm] h-[297mm] min-h-[297mm] max-h-[297mm] overflow-hidden box-border bg-white relative shadow-2xl font-body" suppressHydrationWarning>
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -24,27 +24,27 @@ export default function Pagina2() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/95 to-primary z-10" />
       </div>
 
-      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
+      <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-4">
         {/* Header Section */}
         <PageHeader badgeText="POR DEMANDA" />
 
         {/* Main Content Area */}
-        <main className="flex-1 flex flex-col mt-4 mb-4">
+        <main className="flex-1 flex flex-col mt-2 mb-2 max-h-full">
           {/* Main Title */}
-          <div className="flex items-center gap-3 mb-6 bg-accent/10 p-3 rounded-lg border-l-4 border-accent">
+          <div className="flex items-center gap-3 mb-3 bg-accent/10 p-3 rounded-lg border-l-4 border-accent">
             <Zap className="w-6 h-6 text-accent fill-accent" />
             <h2 className="text-3xl font-black font-headline text-white tracking-tight uppercase italic">ENVÍOS EXPRESS</h2>
           </div>
 
           {/* Featured Card */}
-          <section className="bg-white/5 border-l-4 border-accent rounded-r-xl p-6 mb-8 backdrop-blur-sm">
+          <section className="bg-white/5 border-l-4 border-accent rounded-r-xl p-4 mb-4 backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-4 italic">Entregas con Elección de Rango Horario.</h3>
-            <p className="text-gray-300 text-[15px] leading-relaxed mb-6">
+            <p className="text-gray-300 text-[15px] leading-relaxed mb-3">
               La principal ventaja de este servicio es la personalización y la certeza. Usted nos indica el rango o límite horario (por ejemplo, "entregar antes de las 17:00hs") y nosotros cumplimos, ideal para ventas exigentes.
             </p>
             <div className="bg-primary/80 border border-white/5 rounded-lg p-4 flex items-start gap-3">
               <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <p className="text-accent text-sm font-semibold leading-snug italic">
+              <p className="text-accent text-[10px] font-semibold leading-snug italic">
                 Importante: Para organizar la logística y garantizar el cumplimiento, se requiere solicitar el envío con un mínimo de 2 horas de anticipación.
               </p>
             </div>
@@ -52,15 +52,15 @@ export default function Pagina2() {
 
 
             {/* Pricing Table (Enterprise Style) */}
-            <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 mb-8 flex-grow flex flex-col justify-center">
-                <table className="w-full text-xs text-slate-700">
+            <div className="overflow-hidden bg-white rounded-xl shadow-lg border border-slate-200 mb-4 flex-grow flex flex-col justify-center">
+                <table className="w-full text-[10px] text-slate-700">
                     <thead className="bg-slate-50 border-b border-slate-200">
-                        <tr className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                        <tr className="text-[10px] font-semibold tracking-wider text-slate-500 uppercase">
                             <th className="px-4 py-3 text-left">Zonificación de Entrega</th>
                             <th className="px-4 py-3 text-right">Valor Final</th>
                         </tr>
                     </thead>
-                    <tbody className="text-sm font-medium divide-y divide-slate-100">
+                    <tbody className="text-[10px] font-medium divide-y divide-slate-100">
                         <tr className="odd:bg-white even:bg-slate-50/50 hover:bg-slate-50 transition-colors">
                             <td className="px-4 py-3 text-left font-bold text-slate-800">Zona 1 (Hasta 3 km)</td>
                             <td className="px-4 py-3 text-right text-accent font-bold text-lg">$3.700</td>
