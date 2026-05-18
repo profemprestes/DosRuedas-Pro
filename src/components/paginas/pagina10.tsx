@@ -6,8 +6,11 @@ import { BarChart3, FileSignature, Package } from 'lucide-react';
 export default function Pagina10() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Dark Tech Background / Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#2563eb]/20 via-[#0a0a0a] to-[#0a0a0a] z-10" />
+      {/* Background: Tecnología & Onboarding */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111827] to-[#0a0a0a]"></div>
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff03_10px,#ffffff03_20px)]"></div>
+      </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="INTEGRACIÓN B2B" />

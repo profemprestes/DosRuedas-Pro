@@ -6,12 +6,11 @@ import { Warehouse, PackageCheck, Truck } from 'lucide-react';
 export default function Pagina5() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background Image Placeholder with Dark Overlay */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?q=80&w=2070&auto=format&fit=crop")' }}
-      />
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm z-10" />
+      {/* Background: 3PL, Drop-Off, Cuentas */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,#ffffff10_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#fbc107]/10 blur-[120px] rounded-full pointer-events-none"></div>
+      </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="EL ECOSISTEMA 3PL" />

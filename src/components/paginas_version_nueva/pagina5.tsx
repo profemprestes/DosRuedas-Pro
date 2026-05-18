@@ -6,11 +6,11 @@ import { Box, ScanLine, FastForward } from 'lucide-react';
 export default function Pagina5() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=5')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]/80" />
+      {/* Background: 3PL, Drop-Off, Cuentas */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,#ffffff10_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#fbc107]/10 blur-[120px] rounded-full pointer-events-none"></div>
+      </div>
 
       <PageHeader badgeText="EL ECOSISTEMA 3PL" />
 

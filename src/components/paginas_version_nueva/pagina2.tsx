@@ -6,11 +6,11 @@ import { Clock, ShieldAlert, Package, CloudRain } from 'lucide-react';
 export default function Pagina2() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=2')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-[#0a0a0a]/90" />
+      {/* Background: Express / Lowcost */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2563eb]/20 blur-[100px] rounded-full pointer-events-none"></div>
+      </div>
 
       <PageHeader badgeText="SLA DE ALTA CRITICIDAD" />
 

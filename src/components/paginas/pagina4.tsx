@@ -6,8 +6,10 @@ import { ShoppingCart, MapPin, CheckCircle, Zap, CloudDrizzle } from 'lucide-rea
 export default function Pagina4() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0a0a] via-[#0a0a0a]/95 to-[#0a0a0a]/80 z-10" />
+      {/* Background: Flex */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#22c55e]/15 blur-[120px] rounded-full pointer-events-none translate-x-1/4 translate-y-1/4"></div>
+      </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="PROTECCIÓN DE REPUTACIÓN" />

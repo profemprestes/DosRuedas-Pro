@@ -5,13 +5,10 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export default function Pagina11() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=11')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#0a0a0a] to-[#0a0a0a]/90" />
-
-      {/* Contraportada: Sin PageHeader */}
+      {/* Background: Portada / Cierre */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a] overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2563eb]/40 via-[#0a0a0a] to-[#0a0a0a] opacity-60 pointer-events-none"></div>
+      </div>
 
       <main className="flex-1 flex flex-col items-center justify-center px-12 z-10 gap-12 text-center">
 
