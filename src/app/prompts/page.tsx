@@ -1,34 +1,53 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Package, Zap, Store, ShieldCheck, TrendingUp, CheckCircle2 } from 'lucide-react';
+
+const promptsData = [
+  {
+    id: 1,
+    titulo: "Hub Logístico B2B (Portada/3PL)",
+    descripcion: "Para portada principal",
+    icono: Package,
+    promptText: "Subject: Abstract background showing a clean, well-organized regional e-commerce fulfillment warehouse. Medium-sized scale, relatable for local businesses. Shelves filled with perfectly aligned cardboard boxes. Aesthetics: Professional 3PL operations, sleek, dark, and highly reliable. Deep navy blue base (#060B19) with subtle, non-intrusive electric blue (#2563eb) and amber-yellow (#fbc107) ambient lighting. Photography: Shot on 50mm lens, moody exposure. Shallow depth of field (bokeh). 8k, photorealistic. Layouts: Center composition, ample negative space. --ar 4:5 --style raw --v 6.0"
+  },
+  {
+    id: 2,
+    titulo: "Velocidad Express",
+    descripcion: "Para entregas en 24h",
+    icono: Zap,
+    promptText: "Subject: A cinematic, high-speed tracking shot of a modern urban street at dusk. Heavy motion blur on the background city lights. Subtle amber yellow (#fbc107) streetlights reflecting heavily on wet asphalt. Aesthetics: Extreme speed, certainty, B2B logistics. Dark cinematic mood with an electric blue (#2563eb) neon glow cutting through the scene. 8k resolution. Layouts: Ample negative space at the top for text overlays. --ar 4:5 --style raw --v 6.0"
+  },
+  {
+    id: 3,
+    titulo: "Modalidad Drop-Off / Retail",
+    descripcion: "Para puntos de entrega",
+    icono: Store,
+    promptText: "Subject: A sleek, unmarked cardboard E-commerce delivery box resting on a clean counter of a modern local retail store. Aesthetics: Professional retail logistics, accessible but sophisticated. Subtle electric blue (#2563eb) and amber yellow (#fbc107) accent lighting reflecting softly on the surfaces. Photography: Macro commercial product photography, shallow depth of field (bokeh background). Layouts: Left-aligned composition, leaving the right side slightly out of focus and clean for text overlays. --ar 4:5 --style raw --v 6.0"
+  },
+  {
+    id: 4,
+    titulo: "Reputación MercadoLibre Flex",
+    descripcion: "Para envíos Flex",
+    icono: ShieldCheck,
+    promptText: "Subject: A clean, unmarked cardboard e-commerce delivery box resting on a modern, dark metallic surface. Aesthetics: Corporate logistics, highly professional. Color palette is deeply dark, dominated by navy blue (#060B19) and black. Very subtle ambient lighting with a hint of vibrant green (#22c55e) reflecting off the edge of the box to symbolize 'green seller reputation' and speed. Photography: Macro, extremely shallow depth of field. 8k, photorealistic. --ar 4:5 --style raw --v 6.0"
+  },
+  {
+    id: 5,
+    titulo: "Dashboard & Cuentas Corrientes",
+    descripcion: "Para gestión financiera",
+    icono: TrendingUp,
+    promptText: "Subject: A close-up of a modern digital tablet displaying abstract upward growth charts, held by a professional in a smart-casual dark jacket. Aesthetics: Corporate partnership, trust, local business scalability. Dark, moody, premium color palette featuring deep navy blues and subtle electric blue (#2563eb) accents. Photography: Corporate editorial style, sharp focus on the tablet screen, soft blurred background. 8k, photorealistic. --ar 4:5 --style raw --v 6.0"
+  }
+];
 
 export default function PromptsPage() {
-  const prompts = [
-    {
-      title: "Hub Logístico B2B (Portada/3PL)",
-      content: "Subject: Abstract background showing a clean, well-organized regional e-commerce fulfillment warehouse. Medium-sized scale, relatable for local businesses. Shelves filled with perfectly aligned cardboard boxes. Aesthetics: Professional 3PL operations, sleek, dark, and highly reliable. Deep navy blue base (#060B19) with subtle, non-intrusive electric blue (#2563eb) and amber-yellow (#fbc107) ambient lighting. Photography: Shot on 50mm lens, moody exposure. Shallow depth of field (bokeh). 8k, photorealistic. Layouts: Center composition, ample negative space. --ar 4:5 --style raw --v 6.0"
-    },
-    {
-      title: "Velocidad Express",
-      content: "Subject: A cinematic, high-speed tracking shot of a modern urban street at dusk. Heavy motion blur on the background city lights. Subtle amber yellow (#fbc107) streetlights reflecting heavily on wet asphalt. Aesthetics: Extreme speed, certainty, B2B logistics. Dark cinematic mood with an electric blue (#2563eb) neon glow cutting through the scene. 8k resolution. Layouts: Ample negative space at the top for text overlays. --ar 4:5 --style raw --v 6.0"
-    },
-    {
-      title: "Modalidad Drop-Off / Retail",
-      content: "Subject: A sleek, unmarked cardboard E-commerce delivery box resting on a clean counter of a modern local retail store. Aesthetics: Professional retail logistics, accessible but sophisticated. Subtle electric blue (#2563eb) and amber yellow (#fbc107) accent lighting reflecting softly on the surfaces. Photography: Macro commercial product photography, shallow depth of field (bokeh background). Layouts: Left-aligned composition, leaving the right side slightly out of focus and clean for text overlays. --ar 4:5 --style raw --v 6.0"
-    },
-    {
-      title: "Reputación MercadoLibre Flex",
-      content: "Subject: A clean, unmarked cardboard e-commerce delivery box resting on a modern, dark metallic surface. Aesthetics: Corporate logistics, highly professional. Color palette is deeply dark, dominated by navy blue (#060B19) and black. Very subtle ambient lighting with a hint of vibrant green (#22c55e) reflecting off the edge of the box to symbolize 'green seller reputation' and speed. Photography: Macro, extremely shallow depth of field. 8k, photorealistic. --ar 4:5 --style raw --v 6.0"
-    },
-    {
-      title: "Dashboard & Cuentas Corrientes",
-      content: "Subject: A close-up of a modern digital tablet displaying abstract upward growth charts, held by a professional in a smart-casual dark jacket. Aesthetics: Corporate partnership, trust, local business scalability. Dark, moody, premium color palette featuring deep navy blues and subtle electric blue (#2563eb) accents. Photography: Corporate editorial style, sharp focus on the tablet screen, soft blurred background. 8k, photorealistic. --ar 4:5 --style raw --v 6.0"
-    }
-  ];
+  const [copiedId, setCopiedId] = useState<number | null>(null);
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (id: number, text: string) => {
     navigator.clipboard.writeText(text);
-    // Optional: could add a toast notification here
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
   };
 
   return (
@@ -50,25 +69,45 @@ export default function PromptsPage() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {prompts.map((prompt, index) => (
+          {promptsData.map((prompt) => (
             <div
-              key={index}
-              className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-2xl flex flex-col hover:border-[#2563eb]/50 transition-colors"
+              key={prompt.id}
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-2xl flex flex-col hover:border-[#2563eb]/50 hover:bg-white/10 transition-all group"
             >
-              <h3 className="text-lg font-bold text-white mb-4 font-headline uppercase tracking-wide border-l-4 border-[#2563eb] pl-3">
-                {prompt.title}
-              </h3>
-
-              <div className="bg-[#0a0a0a] rounded-lg p-4 text-gray-300 text-sm font-mono leading-relaxed mb-6 flex-1 border border-white/5 overflow-y-auto">
-                {prompt.content}
+              <div className="flex items-center gap-3 mb-4 border-l-4 border-[#2563eb] pl-3">
+                <prompt.icono className="w-6 h-6 text-[#fbc107] group-hover:scale-110 transition-transform" />
+                <div>
+                  <h3 className="text-lg font-bold text-white font-headline uppercase tracking-wide">
+                    {prompt.titulo}
+                  </h3>
+                  <p className="text-xs text-slate-400">{prompt.descripcion}</p>
+                </div>
               </div>
 
-              <button
-                onClick={() => handleCopy(prompt.content)}
-                className="w-full bg-[#2563eb] hover:bg-[#2563eb]/80 text-white font-bold py-3 px-4 rounded-lg transition-colors font-headline tracking-wider uppercase text-sm"
-              >
-                Copiar Prompt
-              </button>
+              <div className="relative flex-1 mb-6 h-48">
+                <pre className="h-full bg-black/80 rounded-lg p-4 text-gray-300 text-sm font-mono leading-relaxed border border-white/5 overflow-y-auto overflow-x-hidden whitespace-pre-wrap">
+                  <code>{prompt.promptText}</code>
+                </pre>
+
+                {/* Floating Action Button */}
+                <button
+                  onClick={() => handleCopy(prompt.id, prompt.promptText)}
+                  className={`absolute bottom-3 right-3 flex items-center justify-center gap-2 font-bold py-2 px-4 rounded-lg transition-all shadow-lg font-headline tracking-wider uppercase text-xs z-10 ${
+                    copiedId === prompt.id
+                      ? 'bg-[#fbc107] text-black shadow-[#fbc107]/50'
+                      : 'bg-[#2563eb] hover:bg-[#2563eb]/80 text-white shadow-[#2563eb]/20'
+                  }`}
+                >
+                  {copiedId === prompt.id ? (
+                    <>
+                      <CheckCircle2 className="w-4 h-4" />
+                      ¡Copiado!
+                    </>
+                  ) : (
+                    'Copiar'
+                  )}
+                </button>
+              </div>
             </div>
           ))}
         </div>
