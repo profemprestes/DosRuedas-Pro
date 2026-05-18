@@ -5,11 +5,10 @@ import { PageFooter } from './shared/PageFooter';
 export default function Pagina1() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-20"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=1')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/50 to-[#0a0a0a]" />
+      {/* Background: Portada / Cierre */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a] overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2563eb]/40 via-[#0a0a0a] to-[#0a0a0a] opacity-60 pointer-events-none"></div>
+      </div>
 
       <PageHeader badgeText="ÚLTIMA MILLA & 3PL FULFILLMENT" />
 

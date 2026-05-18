@@ -5,11 +5,11 @@ import { PageFooter } from './shared/PageFooter';
 export default function Pagina10() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=10')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-[#0a0a0a]/90" />
+      {/* Background: Tecnología & Onboarding */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111827] to-[#0a0a0a]"></div>
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff03_10px,#ffffff03_20px)]"></div>
+      </div>
 
       <PageHeader badgeText="INTEGRACIÓN B2B" />
 

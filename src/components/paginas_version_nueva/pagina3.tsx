@@ -6,11 +6,11 @@ import { ArrowRight, MapPin, Truck } from 'lucide-react';
 export default function Pagina3() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=3')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]" />
+      {/* Background: Express / Lowcost */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2563eb]/20 blur-[100px] rounded-full pointer-events-none"></div>
+      </div>
 
       <PageHeader badgeText="MÁXIMA RENTABILIDAD B2B" />
 

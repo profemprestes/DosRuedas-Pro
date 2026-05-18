@@ -1,12 +1,14 @@
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 
 export default function Pagina11() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Dark Tech Background / Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#2563eb]/20 via-[#0a0a0a] to-[#0a0a0a] z-10" />
+      {/* Background: Portada / Cierre */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a] overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2563eb]/40 via-[#0a0a0a] to-[#0a0a0a] opacity-60 pointer-events-none"></div>
+      </div>
 
       <div className="relative z-20 flex flex-col h-full justify-center items-center p-10">
         

@@ -6,12 +6,11 @@ import { Bike, Navigation, Wrench, Zap } from 'lucide-react';
 export default function Pagina8() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background Image Placeholder with Dark Overlay */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1558981420-c532902e58b4?q=80&w=2070&auto=format&fit=crop")' }}
-      />
-      <div className="absolute inset-0 bg-black/85 backdrop-blur-sm z-10" />
+      {/* Background: Tecnología & Onboarding */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111827] to-[#0a0a0a]"></div>
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff03_10px,#ffffff03_20px)]"></div>
+      </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">
         <PageHeader badgeText="CAPACIDAD OPERATIVA" />

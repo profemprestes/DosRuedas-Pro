@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Zap, Clock, CloudDrizzle, Package, Undo2 } from 'lucide-react';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
@@ -7,16 +6,10 @@ import { PageFooter } from './shared/PageFooter';
 export default function Pagina2() {
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background Overlay */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <Image
-          src="https://picsum.photos/seed/dosruedas-bg-2/1200/1600"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-[#0a0a0a]/95 to-[#0a0a0a] z-10" />
+      {/* Background: Express / Lowcost */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2563eb]/20 blur-[100px] rounded-full pointer-events-none"></div>
       </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">

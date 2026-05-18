@@ -1,24 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { PageHeader } from './shared/PageHeader';
 import { PageFooter } from './shared/PageFooter';
 
 export default function Pagina1() {
-  const bgImg = PlaceHolderImages.find((img) => img.id === 'hero-bg');
-
   return (
     <div className="a4-container mx-auto bg-[#0a0a0a] relative overflow-hidden flex flex-col shadow-2xl text-white font-body" suppressHydrationWarning>
-      {/* Background with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={bgImg?.imageUrl || 'https://picsum.photos/seed/dosruedas-hero/1200/800'}
-          alt="Background"
-          fill
-          className="object-cover opacity-20 grayscale"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#2563eb]/20 to-[#0a0a0a] mix-blend-multiply z-10" />
+      {/* Background: Portada / Cierre */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a] overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2563eb]/40 via-[#0a0a0a] to-[#0a0a0a] opacity-60 pointer-events-none"></div>
       </div>
 
       <div className="relative z-20 flex flex-col h-full justify-between max-h-full p-10">

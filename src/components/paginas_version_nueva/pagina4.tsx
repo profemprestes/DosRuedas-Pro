@@ -6,11 +6,10 @@ import { CheckCircle2, TrendingUp, Award } from 'lucide-react';
 export default function Pagina4() {
   return (
     <div className="a4-container flex flex-col h-full justify-between overflow-hidden relative bg-[#0a0a0a]">
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{ backgroundImage: "url('https://picsum.photos/800/1200?random=4')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      />
-      <div className="absolute inset-0 z-0 bg-[#0a0a0a]/90" />
+      {/* Background: Flex */}
+      <div className="absolute inset-0 z-0 bg-[#0a0a0a]">
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#22c55e]/15 blur-[120px] rounded-full pointer-events-none translate-x-1/4 translate-y-1/4"></div>
+      </div>
 
       <PageHeader
         badgeText="PROTECCIÓN DE REPUTACIÓN"
