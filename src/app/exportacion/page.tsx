@@ -17,7 +17,7 @@ import Pagina9V1 from '@/components/paginas/pagina9';
 import Pagina10V1 from '@/components/paginas/pagina10';
 import Pagina11V1 from '@/components/paginas/pagina11';
 
-// New Pages
+// New Pages (V2)
 import Pagina1V2 from '@/components/paginas_version_nueva/pagina1';
 import Pagina2V2 from '@/components/paginas_version_nueva/pagina2';
 import Pagina3V2 from '@/components/paginas_version_nueva/pagina3';
@@ -30,9 +30,15 @@ import Pagina9V2 from '@/components/paginas_version_nueva/pagina9';
 import Pagina10V2 from '@/components/paginas_version_nueva/pagina10';
 import Pagina11V2 from '@/components/paginas_version_nueva/pagina11';
 
+// Version 3 Pages
+import Pagina1V3 from '@/components/paginas_version_nueva_dos/pagina1';
+import Pagina2V3 from '@/components/paginas_version_nueva_dos/pagina2';
+import Pagina5V3 from '@/components/paginas_version_nueva_dos/pagina5';
+import Pagina6V3 from '@/components/paginas_version_nueva_dos/pagina6';
+
 export default function ExportacionPage() {
   const [mounted, setMounted] = useState(false);
-  const [version, setVersion] = useState<'v1' | 'v2'>('v2');
+  const [version, setVersion] = useState<'v1' | 'v2' | 'v3'>('v2');
 
   useEffect(() => {
     setMounted(true);
@@ -70,13 +76,20 @@ export default function ExportacionPage() {
     <Pagina11V2 key="p11v2" />,
   ];
 
-  const paginasToRender = version === 'v1' ? paginasV1 : paginasV2;
+  const paginasV3 = [
+    <Pagina1V3 key="p1v3" />,
+    <Pagina2V3 key="p2v3" />,
+    <Pagina5V3 key="p5v3" />,
+    <Pagina6V3 key="p6v3" />,
+  ];
+
+  const paginasToRender = version === 'v1' ? paginasV1 : version === 'v2' ? paginasV2 : paginasV3;
 
   return (
     <div className="min-h-screen bg-slate-900 py-12 px-4 flex flex-col items-center gap-12 print:bg-white print:py-0 print:px-0 print:gap-0" suppressHydrationWarning>
 
       {/* Version Selector Panel */}
-      <div className="print:hidden w-full max-w-2xl bg-[#0a0a0a] border border-[#2563eb]/30 rounded-xl p-2 flex gap-2 shadow-2xl mb-8">
+      <div className="print:hidden w-full max-w-4xl bg-[#0a0a0a] border border-[#2563eb]/30 rounded-xl p-2 flex gap-2 shadow-2xl mb-8">
          <button
            onClick={() => setVersion('v1')}
            className={`flex-1 py-3 px-6 rounded-lg font-body font-bold transition-all ${
@@ -85,7 +98,7 @@ export default function ExportacionPage() {
                : 'text-white/50 hover:bg-white/5 border border-transparent'
            }`}
          >
-           Versión Original (V1)
+           V1 (Original)
          </button>
          <button
            onClick={() => setVersion('v2')}
@@ -95,7 +108,17 @@ export default function ExportacionPage() {
                : 'text-white/50 hover:bg-white/5 border border-transparent'
            }`}
          >
-           Versión Nueva V2.0 (V2)
+           V2 (SaaS Tech)
+         </button>
+         <button
+           onClick={() => setVersion('v3')}
+           className={`flex-1 py-3 px-6 rounded-lg font-body font-bold transition-all ${
+             version === 'v3'
+               ? 'bg-[#2563eb]/20 text-[#fbc107] border border-[#2563eb]/50'
+               : 'text-white/50 hover:bg-white/5 border border-transparent'
+           }`}
+         >
+           V3 (Trayectoria B2B)
          </button>
       </div>
 
