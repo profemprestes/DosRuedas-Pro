@@ -24,7 +24,13 @@ import {
   TrendingUp,
   Box,
   Hash,
-  Filter
+  Filter,
+  Compass,
+  HelpCircle,
+  Share2,
+  Lock,
+  Scale,
+  Calculator
 } from 'lucide-react';
 import {
   PROMPTS_CATALOG,
@@ -47,11 +53,19 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   TrendingUp,
   Box,
   CheckCircle2,
-  Hash
+  Hash,
+  Compass,
+  FileText,
+  HelpCircle,
+  Share2,
+  Lock,
+  Scale,
+  Calculator
 };
 
 const CATEGORIES: ('todos' | PromptCategory)[] = [
   'todos',
+  'Hero Sitemap',
   'Servicios',
   'Sellos',
   'Frases Hero',
@@ -326,7 +340,7 @@ export default function PromptsPage() {
 
           <div className="flex items-center gap-2 bg-[#111827] border border-white/15 px-3.5 py-1.5 rounded-full shadow-lg text-xs font-mono">
             <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-            <span className="text-[#FFF12E] font-bold">23 ASSETS TIPOGRÁFICOS ACTIVOS</span>
+            <span className="text-[#FFF12E] font-bold">36 ASSETS TIPOGRÁFICOS & HERO ACTIVOS</span>
           </div>
         </div>
 
@@ -339,23 +353,78 @@ export default function PromptsPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[0.95] mb-3 font-['Anton']">
-            CATÁLOGO DE <span className="text-[#FFF12E]">PROMPTS 3D & SELLOS</span>
+            CATÁLOGO DE <span className="text-[#FFF12E]">PROMPTS 3D, SELLOS & HERO SITEMAP</span>
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-            Directivas maestras de renderizado tipográfico 3D y piezas de identidad para <strong>Envíos DosRuedas</strong>. Cada tarjeta permite copiar el prompt completo con el ancla tipográfica de marca inyectada.
+            Directivas maestras de renderizado tipográfico 3D, sellos y copys de Hero para todas las páginas de <strong>Envíos DosRuedas</strong>. Cada tarjeta permite copiar el prompt completo con el ancla tipográfica de marca inyectada.
           </p>
         </header>
 
+        {/* Ancla Tipográfica de Consistencia */}
+        <div className="mb-8 rounded-2xl p-5 bg-[#111827]/80 border border-white/10 shadow-xl relative overflow-hidden backdrop-blur-md">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-3 border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <Layers className="w-4 h-4 text-[#FFF12E]" />
+              <span className="font-bold uppercase tracking-wider text-xs text-white font-mono">
+                ANCLA DE CONSISTENCIA TIPOGRÁFICA (GLOBAL TYPE ANCHOR)
+              </span>
+            </div>
+            <button
+              onClick={handleCopyAnchorOnly}
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-[#FFF12E] hover:text-white transition-colors cursor-pointer"
+            >
+              {copiedAnchor ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copiedAnchor ? '¡Copiada!' : 'Copiar Solo Ancla'}</span>
+            </button>
+          </div>
+          <p className="text-xs font-mono text-slate-300 leading-relaxed bg-[#0B0F19] p-3.5 rounded-xl border border-white/5 selection:bg-[#FFF12E] selection:text-[#0B0F19]">
+            {TYPE_ANCHOR}
+          </p>
+        </div>
+
+        {/* Barra de Filtros y Búsqueda */}
+        <PromptFilterBar
+          categories={CATEGORIES}
+          activeCategory={activeCategory}
+          onSelectCategory={setActiveCategory}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+
+        {/* Grid de Cards de Prompts */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredPrompts.map((prompt) => (
+            <PromptCard
+              key={prompt.id}
+              prompt={prompt}
+              onCopy={handleCopyPrompt}
+              isCopied={copiedId === prompt.id}
+              copiedType={copiedId === prompt.id ? copiedType : null}
+            />
+          ))}
+        </div>
+
+        {filteredPrompts.length === 0 && (
+          <div className="py-16 text-center text-slate-400 text-sm bg-white/5 rounded-2xl border border-dashed border-white/15 mt-8">
+            No se encontraron prompts para la categoría o búsqueda seleccionada.
+          </div>
+        )}
+
+        {/* Footer Operativo */}
+        <div className="mt-16 rounded-2xl bg-[#111827]/60 backdrop-blur-md border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-[#0B0F19] border border-[#FFF12E]/30 flex items-center justify-center text-[#FFF12E]">
+              <Sparkles className="w-4 h-4" />
             </div>
             <div>
               <p
                 className="font-bold uppercase text-white tracking-wider"
                 style={{ fontFamily: "'Bebas Neue', cursive" }}
               >
-                ENVÍOS DOSRUEDAS · SISTEMA DE ASSETS TIPOGRÁFICOS T1-T23
+                ENVÍOS DOSRUEDAS · SISTEMA DE ASSETS TIPOGRÁFICOS T1-T36
               </p>
-              <p className="text-slate-400">Catálogo estructurado y conectado a los componentes de la aplicación</p>
+              <p className="text-slate-400">Catálogo estructurado y conectado a las 13 rutas y componentes del proyecto</p>
             </div>
           </div>
 
